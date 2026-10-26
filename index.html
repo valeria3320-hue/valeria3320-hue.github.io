@@ -338,17 +338,13 @@ th { font-size: 11.5px; text-transform: uppercase; letter-spacing: .07em; color:
 td.num { font-family: var(--f-mono); text-align: center; }
 
 /* ---------- Quién eres + lo que le toca a cada quien ---------- */
-.whoami-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--line); background: var(--card); }
-.whoami-bar.unset { background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
-.whoami-bar .hint { font-size: 14px; color: var(--ink-2); }
-.whoami-bar.unset .hint { color: var(--accent-ink); font-weight: 600; }
-.duo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.duo { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
 .duo > div { border: 1px solid var(--line-2); border-radius: 12px; padding: 10px 12px; display: grid; gap: 6px; align-content: start; min-width: 0; }
 .duo > div.is-me { border-color: var(--accent); background: var(--accent-soft); }
 .duo .who { font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-3); }
 .duo > div.is-me .who { color: var(--accent-ink); }
-.duo > div.is-me .who::after { content: " · tú"; }
 .duo .how { font-size: 14px; }
+.send-preview { white-space: pre-wrap; font-family: var(--f-body); font-size: 13.5px; line-height: 1.5; background: var(--paper); border: 1px solid var(--line-2); border-radius: 10px; padding: 12px; max-height: 340px; overflow: auto; margin: 0; }
 .prep-list li.prep-who { margin-top: 6px; }
 .prep-list li.prep-who:first-child { margin-top: 0; }
 
@@ -431,13 +427,8 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
   <div class="title-row">
     <div>
       <h1><span class="nm-m">Valeria</span><span class="x">×</span><span class="nm-f">Fernando</span></h1>
-      <p class="lede">Un mismo lugar para preparar cada sesión, ver la ruta y la parte de cada quien. Lo que escribas aquí se guarda en tu navegador; el seguimiento entre los dos vive en la <a href="https://drive.google.com/drive/folders/1RVpCitcToSeo-Ku5Xr7gEFNtCKx_OSZA" target="_blank" rel="noopener">carpeta compartida de Drive</a>.</p>
+      <p class="lede">Tu espacio para la mentoría con <span class="nm-m">Valeria</span>: lo que te toca en cada sesión, tu preparación, tus metas y tu Radar IA. Lo que escribes se guarda en tu navegador, y cuando quieras se lo mandas a <span class="nm-m">Valeria</span> con un toque.</p>
     </div>
-  </div>
-  <div class="whoami-bar unset" id="whoami-bar">
-    <span class="lbl">¿Quién eres?</span>
-    <div class="seg who-seg" role="group" aria-label="¿Quién eres?"><button type="button" data-me="m" aria-pressed="false"><span class="nm-m">Valeria</span></button><button type="button" data-me="f" aria-pressed="false"><span class="nm-f">Fernando</span></button></div>
-    <span class="hint" id="whoami-hint">Elige tu nombre y la página te muestra tu parte.</span>
   </div>
   <div class="status" id="status" aria-label="Resumen de la mentoría">
     <div class="stat"><span class="lbl">Etapa actual</span><span class="v" id="st-stage">1 · Construir confianza</span><span class="s" id="st-stage-s">Sesión 1 en puerta</span></div>
@@ -458,7 +449,7 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
 <div class="tabbar">
   <nav class="wrap tabs" role="tablist" aria-label="Secciones">
     <button class="tab" role="tab" id="tab-sesion1" aria-controls="sesion1" aria-selected="true">Sesión 1</button>
-    <button class="tab" role="tab" id="tab-cadaquien" aria-controls="cadaquien" aria-selected="false">Cada quien</button>
+    <button class="tab" role="tab" id="tab-cadaquien" aria-controls="cadaquien" aria-selected="false">Tu parte</button>
     <button class="tab" role="tab" id="tab-ruta" aria-controls="ruta" aria-selected="false">Ruta</button>
     <button class="tab" role="tab" id="tab-acuerdo" aria-controls="acuerdo" aria-selected="false">Acuerdo <span class="count" id="cnt-acuerdo"></span></button>
     <button class="tab" role="tab" id="tab-metas" aria-controls="metas" aria-selected="false">Metas <span class="count" id="cnt-metas"></span></button>
@@ -476,7 +467,7 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
     <div class="panel-head">
       <div>
         <h2>Primera sesión: conocerse y definir el rumbo</h2>
-        <p>60 minutos que cubren las etapas 1 y 2 de MentorcliQ. Inicia el reloj al conectarte y la guía te marca en qué bloque van. Cada bloque dice qué le toca a cada quien.</p>
+        <p>60 minutos que cubren las etapas 1 y 2 de MentorcliQ. Inicia el reloj al conectarte y la guía te marca en qué bloque van. En cada bloque está lo que te toca a ti.</p>
       </div>
     </div>
     <div class="s1">
@@ -485,12 +476,9 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
           <div class="blk-time"><span class="mono">00:00</span><span class="mono dim">5 min</span></div>
           <div class="blk-body">
             <div class="blk-head"><span class="chip warm">Etapa 1 · Confianza</span><h3>Bienvenida y propósito</h3><label class="done-lbl"><input type="checkbox" id="chk-b1" data-blk="b1"> Hecho</label></div>
-            <p class="aim">que <span class="nm-f">Fernando</span> sepa para qué es este espacio y cómo va a correr la hora.</p>
+            <p class="aim">saber para qué es este espacio y cómo va a correr la hora.</p>
             <div class="duo">
-              <div class="duo-m"><span class="who">Le toca a <span class="nm-m">Valeria</span></span><ul class="how"><li>Agradece el match y cuenta en una frase por qué te entusiasma esta mentoría.</li>
-              <li>Explica la agenda: conocernos, rumbo, acuerdo, metas y compromisos.</li>
-              <li>Deja claro que la agenda es de <span class="nm-f">Fernando</span>: en MentorcliQ quien recibe la mentoría lleva el volante.</li></ul></div>
-              <div class="duo-f"><span class="who">Le toca a <span class="nm-f">Fernando</span></span><ul class="how"><li>Piensa qué te gustaría llevarte de esta primera hora.</li><li>Cuenta en una frase qué te hizo elegir esta mentoría.</li></ul></div>
+              <div class="duo-f"><span class="who">Lo que te toca</span><ul class="how"><li>Piensa qué te gustaría llevarte de esta primera hora.</li><li>Cuenta en una frase qué te hizo elegir esta mentoría.</li></ul></div>
             </div>
             <div class="qs"><span class="lbl">Pregunta</span><p>“¿Qué te gustaría llevarte de esta primera hora?”</p></div>
             <textarea id="note-b1" data-note="b1" rows="2" placeholder="Notas rápidas de este bloque"></textarea>
@@ -502,8 +490,7 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
             <div class="blk-head"><span class="chip warm">Etapa 1 · Confianza</span><h3>Rompehielos con sabor a IA</h3><label class="done-lbl"><input type="checkbox" id="chk-b2" data-blk="b2"> Hecho</label></div>
             <p class="aim">encontrar puntos en común y quitarle lo formal a la conversación.</p>
             <div class="duo">
-              <div class="duo-m"><span class="who">Le toca a <span class="nm-m">Valeria</span></span><ul class="how"><li>Explica el rompehielos que elegiste y empieza tú: así se rompe el hielo más rápido.</li></ul></div>
-              <div class="duo-f"><span class="who">Le toca a <span class="nm-f">Fernando</span></span><ul class="how"><li>Ten listos tus tres datos (opción A) o tu historia con la IA (opción B).</li><li>Pregúntale a <span class="nm-m">Valeria</span> lo que te dé curiosidad de su camino.</li></ul></div>
+              <div class="duo-f"><span class="who">Lo que te toca</span><ul class="how"><li>Ten listos tus tres datos (opción A) o tu historia con la IA (opción B).</li><li>Pregúntale a <span class="nm-m">Valeria</span> lo que te dé curiosidad de su camino.</li></ul></div>
             </div>
             <div class="options">
               <div class="opt"><span class="lbl">Opción A</span><b>Dos verdades y una alucinación</b><span>Cada quien dice tres datos sobre sí. Uno lo inventó una IA. El otro adivina cuál.</span></div>
@@ -515,18 +502,16 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
               <p>“¿Qué te emociona y qué te preocupa de la IA en tu trabajo?”</p>
               <p>“¿Cómo prefieres recibir feedback: directo, por escrito, con ejemplos?”</p>
             </div>
-            <textarea id="note-b2" data-note="b2" rows="2" placeholder="Lo que descubriste de Fernando (intereses, estilo, puntos en común)"></textarea>
+            <textarea id="note-b2" data-note="b2" rows="2" placeholder="Lo que quieres recordar de esta parte"></textarea>
           </div>
         </li>
         <li class="blk" id="b3" data-from="20" data-to="35">
           <div class="blk-time"><span class="mono">00:20</span><span class="mono dim">15 min</span></div>
           <div class="blk-body">
             <div class="blk-head"><span class="chip warm">Etapa 2 · Dirección</span><h3>Rumbo y diagnóstico</h3><label class="done-lbl"><input type="checkbox" id="chk-b3" data-blk="b3"> Hecho</label></div>
-            <p class="aim">entender dónde está <span class="nm-f">Fernando</span> hoy y a dónde quiere llegar.</p>
+            <p class="aim">ubicar dónde estás hoy y a dónde quieres llegar.</p>
             <div class="duo">
-              <div class="duo-m"><span class="who">Le toca a <span class="nm-m">Valeria</span></span><ul class="how"><li>Abran juntos el <button class="linkbtn" data-goto="radar">Radar IA</button>. Si ya lo llenó, platiquen sus dos áreas más bajas y la más alta.</li>
-              <li>Escucha 70 %, habla 30 %. Antes de aconsejar, pregunta “¿qué has intentado?”.</li></ul></div>
-              <div class="duo-f"><span class="who">Le toca a <span class="nm-f">Fernando</span></span><ul class="how"><li>Llega con tu <button class="linkbtn" data-goto="radar">Radar IA</button> ya lleno.</li><li>Trae una tarea real de tu semana que te gustaría hacer con IA.</li><li>Sé honesto con lo que te frena: no hay respuestas incorrectas.</li></ul></div>
+              <div class="duo-f"><span class="who">Lo que te toca</span><ul class="how"><li>Llega con tu <button class="linkbtn" data-goto="radar">Radar IA</button> ya lleno.</li><li>Trae una tarea real de tu semana que te gustaría hacer con IA.</li><li>Sé honesto con lo que te frena: no hay respuestas incorrectas.</li></ul></div>
             </div>
             <div class="qs"><span class="lbl">Preguntas poderosas</span>
               <p>“Imagina que en seis meses esta mentoría fue un éxito. ¿Qué cambió en tu trabajo?”</p>
@@ -543,10 +528,7 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
             <div class="blk-head"><span class="chip warm">Etapa 2 · Dirección</span><h3>Acuerdo de mentoría</h3><label class="done-lbl"><input type="checkbox" id="chk-b4" data-blk="b4"> Hecho</label></div>
             <p class="aim">reglas del juego claras y aceptadas por las dos partes.</p>
             <div class="duo">
-              <div class="duo-m"><span class="who">Le toca a <span class="nm-m">Valeria</span></span><ul class="how"><li>Llenen el <button class="linkbtn" data-goto="acuerdo">acuerdo</button> en pantalla compartida: frecuencia, canal, confidencialidad y feedback.</li>
-              <li>Platiquen qué pasa si alguien tiene que cancelar y cómo se comunican entre sesiones.</li>
-              <li>Al final, cada quien marca “De acuerdo”.</li></ul></div>
-              <div class="duo-f"><span class="who">Le toca a <span class="nm-f">Fernando</span></span><ul class="how"><li>Di qué esperas de <span class="nm-m">Valeria</span> y cómo te gusta recibir feedback.</li><li>Propón la frecuencia y el horario que de verdad puedas cumplir.</li></ul></div>
+              <div class="duo-f"><span class="who">Lo que te toca</span><ul class="how"><li>Di qué esperas de <span class="nm-m">Valeria</span> y cómo te gusta recibir feedback.</li><li>Propón la frecuencia y el horario que de verdad puedas cumplir.</li></ul></div>
             </div>
             <textarea id="note-b4" data-note="b4" rows="2" placeholder="Algo que valga la pena recordar del acuerdo"></textarea>
           </div>
@@ -555,13 +537,9 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
           <div class="blk-time"><span class="mono">00:45</span><span class="mono dim">10 min</span></div>
           <div class="blk-body">
             <div class="blk-head"><span class="chip warm">Etapa 2 · Dirección</span><h3>Metas SMART</h3><label class="done-lbl"><input type="checkbox" id="chk-b5" data-blk="b5"> Hecho</label></div>
-            <p class="aim">entre una y tres metas que <span class="nm-f">Fernando</span> quiera de verdad.</p>
+            <p class="aim">entre una y tres metas que de verdad quieras lograr.</p>
             <div class="duo">
-              <div class="duo-m"><span class="who">Le toca a <span class="nm-m">Valeria</span></span><ul class="how"><li>Partan de las <button class="linkbtn" data-goto="metas" data-who="mentee">metas sugeridas</button> y adáptenlas a su trabajo. Que <span class="nm-f">Fernando</span> la redacte; tú ayudas a volverla medible.</li>
-              <li>Si quieres, define también una meta tuya para esta mentoría.</li>
-              <li>Al menos una debe dar un resultado visible en 30 días.</li>
-              <li>Liguen cada meta a un área del Radar IA para medir el avance al final del ciclo.</li></ul></div>
-              <div class="duo-f"><span class="who">Le toca a <span class="nm-f">Fernando</span></span><ul class="how"><li>Llega con una idea de meta; revisa antes las <button class="linkbtn" data-goto="metas" data-who="mentee">metas sugeridas</button>.</li><li>Redáctala tú: es tu meta. <span class="nm-m">Valeria</span> te ayuda a volverla medible.</li></ul></div>
+              <div class="duo-f"><span class="who">Lo que te toca</span><ul class="how"><li>Llega con una idea de meta; revisa antes las <button class="linkbtn" data-goto="metas" data-who="mentee">metas sugeridas</button>.</li><li>Redáctala tú: es tu meta. <span class="nm-m">Valeria</span> te ayuda a volverla medible.</li></ul></div>
             </div>
             <div class="qs"><span class="lbl">Pregunta</span><p>“¿Cómo vamos a saber que lo lograste?”</p></div>
             <textarea id="note-b5" data-note="b5" rows="2" placeholder="Ideas de metas que salieron"></textarea>
@@ -573,9 +551,7 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
             <div class="blk-head"><span class="chip warm">Etapa 2 · Dirección</span><h3>Cierre y compromisos</h3><label class="done-lbl"><input type="checkbox" id="chk-b6" data-blk="b6"> Hecho</label></div>
             <p class="aim">salir con acciones concretas y la siguiente fecha en el calendario.</p>
             <div class="duo">
-              <div class="duo-m"><span class="who">Le toca a <span class="nm-m">Valeria</span></span><ul class="how"><li>Un compromiso para cada quien. Anótenlos en <button class="linkbtn" data-goto="compromisos">Compromisos</button>.</li>
-              <li>Pide feedback: ¿qué funcionó hoy y qué cambiamos?</li></ul></div>
-              <div class="duo-f"><span class="who">Le toca a <span class="nm-f">Fernando</span></span><ul class="how"><li>Anota tu primer compromiso con fecha en <button class="linkbtn" data-goto="compromisos">Compromisos</button>.</li><li>Agenda tú la siguiente sesión: llevas el volante.</li></ul></div>
+              <div class="duo-f"><span class="who">Lo que te toca</span><ul class="how"><li>Anota tu primer compromiso con fecha en <button class="linkbtn" data-goto="compromisos">Compromisos</button>.</li><li>Agenda tú la siguiente sesión: llevas el volante.</li></ul></div>
             </div>
             <div class="inline-row">
               <label class="field" style="max-width: 220px"><span>Próxima sesión</span><input type="date" id="cfg-next"></label>
@@ -613,18 +589,8 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
           <ul class="prep-list" id="rail-prep"></ul>
           <p class="other-prog" id="rail-other"></p>
         </div>
-        <div class="box" id="tips-mentor">
-          <h3>Tips para <span class="nm-m">Valeria</span></h3>
-          <ul class="tips">
-            <li>Pregunta más de lo que respondes.</li>
-            <li>Comparte tropiezos, no sólo logros: eso genera confianza.</li>
-            <li>No resuelvas por <span class="nm-f">Fernando</span>; ayúdale a ver opciones.</li>
-            <li>Lo que se platica aquí, aquí se queda.</li>
-            <li>Termina a tiempo. Cumplir el horario también es mentoría.</li>
-          </ul>
-        </div>
         <div class="box" id="tips-mentee">
-          <h3>Tips para <span class="nm-f">Fernando</span></h3>
+          <h3>Tips para ti</h3>
           <ul class="tips">
             <li>Tú llevas el volante: propón los temas que te sirvan.</li>
             <li>Llega con un reto o una pregunta concreta.</li>
@@ -641,11 +607,10 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
   <section id="cadaquien" role="tabpanel" aria-labelledby="tab-cadaquien" hidden>
     <div class="panel-head">
       <div>
-        <h2>La parte de cada quien</h2>
-        <p>En MentorcliQ la mentoría es de dos: quien recibe la mentoría lleva el volante y quien mentorea guía y abre puertas. Cada quien marca su propia preparación, ve sus metas y compromisos y tiene notas que sólo esa persona puede leer.</p>
+        <h2>Tu parte</h2>
+        <p>En MentorcliQ quien recibe la mentoría lleva el volante. Aquí están tu papel, tu preparación, tus metas, tus compromisos y tus notas privadas. Cuando quieras, manda tus avances a <span class="nm-m">Valeria</span>.</p>
       </div>
     </div>
-    <div class="inline-row" style="margin-bottom: 14px"><span class="lbl">¿Quién eres?</span><div class="seg who-seg" id="who-am-i" role="group" aria-label="¿Quién eres?"><button type="button" data-me="m" aria-pressed="false"><span class="nm-m">Valeria</span></button><button type="button" data-me="f" aria-pressed="false"><span class="nm-f">Fernando</span></button></div><span class="dim" style="font-size: 13px">Así se marca tu parte y se activan tus notas privadas en este navegador.</span></div>
     <div class="parts" id="parts"></div>
   </section>
 
@@ -699,15 +664,15 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
   <section id="metas" role="tabpanel" aria-labelledby="tab-metas" hidden>
     <div class="panel-head">
       <div>
-        <h2>Metas SMART</h2>
-        <p>Específicas, medibles, alcanzables, relevantes y con fecha. Las de <span class="nm-f">Fernando</span> son el centro de la mentoría; las de <span class="nm-m">Valeria</span> son lo que quiere ganar al mentorear. Muevan el avance en cada sesión.</p>
+        <h2>Tus metas SMART</h2>
+        <p>Específicas, medibles, alcanzables, relevantes y con fecha. Elige una sugerida o escribe la tuya, y mueve el avance en cada sesión.</p>
       </div>
     </div>
     <div class="box" id="sugg-box">
       <div class="inline-row" style="justify-content: space-between; align-items: flex-start">
         <div style="min-width: 0; flex: 1 1 280px"><h3>Metas sugeridas</h3><p class="dim" style="font-size: 13.5px; margin-top: 2px">Puntos de partida para adaptar al trabajo real. Toca “Usar” y se llena el formulario de abajo.</p></div>
         <div class="inline-row">
-          <div class="seg" id="sugg-who" role="group" aria-label="Sugerencias para"><button type="button" data-who="mentee" aria-pressed="true"><span class="nm-f">Fernando</span></button><button type="button" data-who="mentor" aria-pressed="false"><span class="nm-m">Valeria</span></button></div>
+          <div class="seg" id="sugg-who" hidden role="group" aria-label="Sugerencias para"><button type="button" data-who="mentee" aria-pressed="true"><span class="nm-f">Fernando</span></button><button type="button" data-who="mentor" aria-pressed="false"><span class="nm-m">Valeria</span></button></div>
           <button class="btn small ai ai-only" id="sugg-ai" type="button"><svg class="spark" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0l1.6 4.8L14.4 6.4 9.6 8 8 12.8 6.4 8 1.6 6.4 6.4 4.8zM13 10l.8 2.2L16 13l-2.2.8L13 16l-.8-2.2L10 13l2.2-.8z"/></svg>Sugerir a la medida con IA</button>
         </div>
       </div>
@@ -718,7 +683,7 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
     <form class="box form-box" id="goal-form" autocomplete="off">
       <h3>Nueva meta</h3>
       <div class="grid2">
-        <label class="field span2"><span>¿De quién es la meta?</span><select id="g-duenio"><option value="mentee">Fernando</option><option value="mentor">Valeria</option></select></label>
+        <label class="field span2" hidden><span>¿De quién es la meta?</span><select id="g-duenio"><option value="mentee">Fernando</option><option value="mentor">Valeria</option></select></label>
         <label class="field span2"><span>Meta en una frase</span><input type="text" id="g-titulo" required placeholder="Ej. Crear un asistente de IA que resuma mis correos de clientes"></label>
         <label class="field"><span><span class="letter">S</span>Específica: ¿qué exactamente?</span><input type="text" id="g-s"></label>
         <label class="field"><span><span class="letter">M</span>Medible: ¿cómo sabremos?</span><input type="text" id="g-m" placeholder="Ej. Lo uso 2 semanas seguidas y ahorro 3 h"></label>
@@ -821,8 +786,7 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
 
 <footer class="wrap">
   <span>Etapas: Building Rapport, Setting Direction, Relationship Progression, Winding Down y Moving On (MentorcliQ).</span>
-  <span><a href="https://docs.google.com/document/d/1qQFHhi3AJ9PLyGjB-Qydgmt5ep9E0zhGGArhazAQLQY/edit" target="_blank" rel="noopener">Guía en Drive</a> · <a href="https://drive.google.com/drive/folders/1RVpCitcToSeo-Ku5Xr7gEFNtCKx_OSZA" target="_blank" rel="noopener">Carpeta compartida</a></span>
-  <span>Roles: <b class="nm-m">Valeria</b> mentorea a <b class="nm-f">Fernando</b> · <button class="linkbtn" id="swap" type="button">Intercambiar roles</button></span>
+  <span><a href="https://drive.google.com/drive/folders/1RVpCitcToSeo-Ku5Xr7gEFNtCKx_OSZA" target="_blank" rel="noopener">Seguimiento en Drive</a></span>
 </footer>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
@@ -863,26 +827,16 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
   const ROLE = {
     mentee: {
       tag: "Recibe la mentoría", motto: "Lleva el volante",
-      does: ["Propone los temas y agenda las sesiones.", "Llega con un reto o una pregunta concreta.", "Cumple sus compromisos entre sesiones.", "Pide feedback y dice qué le sirve y qué no.", "Actualiza sus metas y el Radar IA."],
+      does: ["Propones los temas y agendas las sesiones.", "Llegas con un reto o una pregunta concreta.", "Cumples tus compromisos entre sesiones.", "Pides feedback y dices qué te sirve y qué no.", "Actualizas tus metas y tu Radar IA."],
       prep: [
-        { id: "e1", t: "Llenar el Radar IA: calificarse del 1 al 5 en seis áreas.", goto: "radar" },
-        { id: "e2", t: "Pensar en dos o tres temas o retos de IA que quiera trabajar." },
-        { id: "e3", t: "Traer un ejemplo real: una tarea de su semana que le gustaría hacer con IA." },
+        { id: "e1", t: "Llenar mi Radar IA: calificarme del 1 al 5 en seis áreas.", goto: "radar" },
+        { id: "e2", t: "Pensar en dos o tres temas o retos de IA que quiero trabajar." },
+        { id: "e3", t: "Traer un ejemplo real: una tarea de mi semana que me gustaría hacer con IA." },
         { id: "e4", t: "Revisar las metas sugeridas y llegar con una idea de meta.", goto: "metas" },
-        { id: "e5", t: "Preparar su historia en dos minutos: qué hace y qué le trajo a la mentoría." },
+        { id: "e5", t: "Preparar mi historia en dos minutos: qué hago y qué me trajo a la mentoría." },
       ],
     },
-    mentor: {
-      tag: "Mentorea", motto: "Guía y abre puertas",
-      does: ["Escucha y pregunta antes de aconsejar.", "Comparte su experiencia, tropiezos incluidos.", "Da feedback honesto y a tiempo.", "Conecta a {F} con personas y recursos.", "Cuida el acuerdo y la confidencialidad."],
-      prep: [
-        { id: "m1", t: "Revisar el perfil de {F} en MentorcliQ y anotar dos cosas que den curiosidad." },
-        { id: "m2", t: "Preparar su historia en dos minutos: de dónde viene y cómo llegó a la IA." },
-        { id: "m3", t: "Elegir el rompehielos (A, B o C)." },
-        { id: "m4", t: "Compartir con {F} el link de esta página y la carpeta de Drive." },
-        { id: "m5", t: "Bloquear 60 minutos sin notificaciones y probar cámara y audio." },
-      ],
-    },
+    mentor: { tag: "Mentorea", motto: "Guía y abre puertas", does: [], prep: [] },
   };
 
   // Suggested SMART goals (starting points to adapt). plazo = días.
@@ -896,12 +850,7 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
       { area: "etica", plazo: 45, titulo: "Escribir las reglas de uso responsable de IA para mi equipo", s: "Definir qué datos sí y cuáles no se comparten con herramientas de IA", m: "Documento de una página revisado por mi jefe o por el área de riesgos", a: "Partiendo de las políticas que ya existen en la empresa", r: "Evita riesgos y da confianza para usar IA" },
       { area: "auto", plazo: 90, titulo: "Construir un asistente o agente que resuelva un flujo completo de mi área", s: "Elegir un flujo de punta a punta (por ejemplo, preparar un reporte) y armar un asistente que lo haga", m: "Demo funcionando y usada por al menos un compañero", a: "Se construye por etapas, una por sesión, con revisión de {M}", r: "Es de las habilidades de IA con más demanda" },
     ],
-    mentor: [
-      { area: "mentoria", plazo: 120, titulo: "Mentorear con preguntas: que {F} hable al menos el 70 % de cada sesión", s: "Preguntar antes de aconsejar en cada sesión", m: "Lo logro en 5 de 6 sesiones (autoevaluación al cierre de cada una)", a: "Llevo una lista de preguntas poderosas a cada sesión", r: "Desarrollo mi liderazgo y mi forma de dar feedback" },
-      { area: "mentoria", plazo: 90, titulo: "Conectar a {F} con 3 personas clave en IA de mi red", s: "Identificar 3 personas que le aporten según sus metas y presentárselas", m: "3 presentaciones hechas antes de la etapa 4 (cerrar el ciclo)", a: "Personas de mi red que ya conozco", r: "Es la acción clave de la etapa 4 de MentorcliQ" },
-      { area: "negocio", plazo: 60, titulo: "Aprender cómo usa la IA alguien de otra área (mentoría en reversa)", s: "Pedirle a {F} que me muestre cómo resuelve problemas en su trabajo", m: "3 ideas anotadas que aplico en mi propio trabajo", a: "5 minutos al final de cada sesión", r: "La mentoría también enseña a quien mentorea" },
-      { area: "mentoria", plazo: 120, titulo: "Documentar mi forma de mentorear en IA para repetirla con otra persona", s: "Juntar lo que funcionó: preguntas, ejercicios y recursos", m: "Guía de una página lista al cerrar el ciclo", a: "Con lo que ya quedó en esta página y en la bitácora", r: "Me permite mentorear a más personas con menos esfuerzo" },
-    ],
+    mentor: [],
   };
 
   // ---------- State ----------
@@ -1038,30 +987,17 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
   }
   const prepDone = (role) => ROLE[role].prep.filter((p) => ((S.parts[role] || {}).checks || {})[p.id]).length;
   function renderRailPrep() {
-    const vr = viewerRole();
     guarded($("#rail-prep"), () => {
-      if (!vr) {
-        $("#rail-prep-h").textContent = "Antes de conectarse";
-        $("#rail-prep").innerHTML = ["mentor", "mentee"].map((r) => `<li class="prep-who"><span class="lbl">${esc(nameOf(r))} · ${prepDone(r)} de ${ROLE[r].prep.length}</span></li>` + prepList(r, "rp")).join("");
-        $("#rail-other").textContent = "Elige arriba quién eres y aquí verás solo tu lista.";
-      } else {
-        const other = otherRole(vr);
-        $("#rail-prep-h").textContent = "Tu preparación";
-        $("#rail-prep").innerHTML = prepList(vr, "rp");
-        $("#rail-other").innerHTML = `${esc(nameOf(other))}: ${prepDone(other)} de ${ROLE[other].prep.length} listos · <button type="button" class="linkbtn" data-goto="cadaquien">Ver las dos partes</button>`;
-      }
+      $("#rail-prep-h").textContent = "Tu preparación";
+      $("#rail-prep").innerHTML = prepList("mentee", "rp");
+      $("#rail-other").innerHTML = `${prepDone("mentee")} de ${ROLE.mentee.prep.length} listos · <button type="button" class="linkbtn" data-goto="cadaquien">Mandar mis avances a ${esc(M())}</button>`;
     });
-    $("#tips-mentor").hidden = vr === "mentee";
-    $("#tips-mentee").hidden = vr === "mentor";
-    $$(".duo-m").forEach((d) => d.classList.toggle("is-me", vr === "mentor"));
-    $$(".duo-f").forEach((d) => d.classList.toggle("is-me", vr === "mentee"));
-    $("#whoami-bar").classList.toggle("unset", !vr);
-    $("#whoami-hint").textContent = vr ? "Hola, " + nameOf(vr) + ". Lo que te toca aparece resaltado en cada sección." : "Elige tu nombre y la página te muestra tu parte.";
+    $$(".duo-f").forEach((d) => d.classList.add("is-me"));
   }
   function renderParts() {
     guarded($("#parts"), () => {
       const vr = viewerRole();
-      const order = vr ? [vr, otherRole(vr)] : ["mentor", "mentee"];
+      const order = ["mentee"];
       $("#parts").innerHTML = order.map((role) => {
         const me = vr === role, R = ROLE[role], who = nameOf(role), pos = me ? "Tu" : "Su", posP = me ? "Tus" : "Sus";
         const goals = S.goals.filter((g) => (g.duenio || "mentee") === role).sort((a, b) => (a.fecha || "9").localeCompare(b.fecha || "9"));
@@ -1078,7 +1014,17 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
             ${acts.length ? `<ul class="mini">${acts.map((a) => `<li><span>${esc(a.texto)}</span><span class="mono">${a.fecha ? esc(fmtD(a.fecha, { day: "numeric", month: "short" })) : ""}</span></li>`).join("")}</ul>` : `<span class="dim" style="font-size:14px">Nada pendiente.</span>`}</div>
           ${privOk ? `<div class="sub"><span class="lbl">Mis notas privadas</span><textarea id="priv-notas" rows="4" placeholder="Lo que quieras recordar para ti: impresiones, ideas, temas delicados."></textarea><span class="lock">Sólo tú puedes leerlas. ${esc(nameOf(otherRole(role)))} no las ve.</span></div>` : ""}
         </article>`;
-      }).join("");
+      }).join("") + `<article class="part send-card">
+          <div class="part-hd"><h3>Mandar mis avances a ${esc(M())}</h3></div>
+          <p class="dim" style="font-size:14px">Arma un resumen de lo que has guardado aquí: preparación, Radar IA, notas de la sesión, metas y compromisos. Tus notas privadas no se incluyen.</p>
+          <pre class="send-preview" id="send-preview"></pre>
+          <div class="card-actions" style="justify-content:flex-start">
+            <button class="btn" type="button" id="send-wa">Enviar por WhatsApp</button>
+            <button class="btn ghost" type="button" id="send-mail">Enviar por correo</button>
+            <button class="btn ghost" type="button" id="send-copy">Copiar</button>
+          </div>
+        </article>`;
+      $("#send-preview").textContent = buildSummary();
       const pn = $("#priv-notas"); if (pn) pn.value = S.priv || "";
       applyRO();
     });
@@ -1251,12 +1197,12 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
             <div class="card-actions"><button class="x" type="button" data-del-goal="${esc(g.id)}">Borrar</button></div>
           </article>`;
       };
-      $("#goals-wrap").innerHTML = ["mentee", "mentor"].map((role) => {
+      $("#goals-wrap").innerHTML = ["mentee"].map((role) => {
         const list = goals.filter((g) => (g.duenio || "mentee") === role);
         const none = role === "mentee"
           ? `Aún sin metas. Elijan una sugerencia de arriba o escríbanla en el formulario; lo ideal son entre 1 y 3.`
           : `Opcional: lo que ${esc(M())} quiere ganar al mentorear. Cambia las sugerencias a “${esc(M())}” para ver ideas.`;
-        return `<div class="goal-group"><div class="group-h"><h3>Metas de ${esc(nameOf(role))}</h3><span class="dim mono">${list.length}</span></div>${list.length ? `<div class="goals">${list.map(card).join("")}</div>` : `<div class="empty"><span>${none}</span></div>`}</div>`;
+        return `<div class="goal-group"><div class="group-h"><h3>Tus metas</h3><span class="dim mono">${list.length}</span></div>${list.length ? `<div class="goals">${list.map(card).join("")}</div>` : `<div class="empty"><span>${none}</span></div>`}</div>`;
       }).join("");
       applyRO();
     });
@@ -1622,6 +1568,7 @@ ${JSON.stringify(data, null, 1).slice(0, 14000)}`, { modelTier: "default" });
     TABS.forEach((k) => { $("#" + k).hidden = k !== t; $("#tab-" + k).setAttribute("aria-selected", String(k === t)); $("#tab-" + k).tabIndex = k === t ? 0 : -1; });
     ls.set("m1-tab", t);
     renderBanner();
+    if (t === "cadaquien") renderParts();
   }
   $$(".tab").forEach((b) => b.addEventListener("click", () => { showTab(b.id.slice(4)); }));
   $(".tabs").addEventListener("keydown", (e) => {
@@ -1636,7 +1583,7 @@ ${JSON.stringify(data, null, 1).slice(0, 14000)}`, { modelTier: "default" });
     if (sb) { showTab("ruta"); setTimeout(() => { const c = $("#stage-" + sb.dataset.stage); if (c) c.scrollIntoView({ behavior: "smooth", block: "center" }); }, 40); return; }
     const ss = e.target.closest(".stage-set"); if (ss) setStage(+ss.dataset.stage);
   });
-  $("#swap").addEventListener("click", () => {
+  $("#swap")?.addEventListener("click", () => {
     if (readOnly) return;
     const m = M(), f = F(); S.cfg.mentor = f; S.cfg.mentee = m; applyNames(); renderAll();
     upsert("prog/config", { mentor: f, mentee: m }); toast("Ahora " + f + " mentorea a " + m);
@@ -1682,6 +1629,39 @@ ${JSON.stringify(data, null, 1).slice(0, 14000)}`, { modelTier: "default" });
     renderWho(); renderStatus(); toast("Listo, " + localMeName + ": lo tuyo aparece resaltado");
   });
 
+  // ---------- Mandar avances a Valeria ----------
+  function buildSummary() {
+    const L = [], sm = { day: "numeric", month: "short" };
+    L.push(`Avances de ${F()} · Mentoría en IA (${fmtD(todayStr(), { weekday: "long", day: "numeric", month: "long" })})`, "");
+    const pc = (S.parts.mentee && S.parts.mentee.checks) || {};
+    L.push(`Preparación para la sesión 1: ${prepDone("mentee")} de ${ROLE.mentee.prep.length}`);
+    ROLE.mentee.prep.forEach((p) => L.push(`${pc[p.id] ? "✅" : "⬜"} ${txt(p.t)}`));
+    const ev = [...S.evals].sort((a, b) => (a.fecha || "").localeCompare(b.fecha || "") || (a.creada || "").localeCompare(b.creada || "")).pop();
+    if (ev) {
+      L.push("", `Radar IA (${ev.etiqueta || "evaluación"}, ${fmtD(ev.fecha, sm)}):`);
+      AREAS.forEach((a) => { const v = +((ev.valores || {})[a.id]) || 0; if (v) L.push(`• ${a.name}: ${v} · ${LEVELS[v]}`); });
+    }
+    const notes = S.run.notes || {}, nb = BLOCKS.filter((b) => (notes[b.id] || "").trim());
+    if (nb.length) { L.push("", "Mis notas de la sesión 1:"); nb.forEach((b) => L.push(`• ${b.title}: ${notes[b.id].trim()}`)); }
+    const goals = S.goals.filter((g) => (g.duenio || "mentee") === "mentee");
+    if (goals.length) { L.push("", "Mis metas:"); goals.forEach((g) => L.push(`• ${g.titulo} · ${+g.avance || 0} %${g.fecha ? " · para el " + fmtD(g.fecha, sm) : ""}`)); }
+    const acts = S.actions.filter((a) => a.owner === "mentee");
+    if (acts.length) { L.push("", "Mis compromisos:"); acts.forEach((a) => L.push(`${a.hecho ? "✅" : "⬜"} ${a.texto}${a.fecha ? " · " + fmtD(a.fecha, sm) : ""}`)); }
+    const last = [...S.sessions].sort((a, b) => (b.n || 0) - (a.n || 0))[0];
+    if (last && (last.aprendizajes || last.acuerdos)) { L.push("", `Sesión ${last.n}:`); if (last.aprendizajes) L.push(`Aprendí: ${last.aprendizajes}`); if (last.acuerdos) L.push(`Acordamos: ${last.acuerdos}`); }
+    return L.join("\n");
+  }
+  document.addEventListener("click", async (e) => {
+    const id = e.target && e.target.id; if (!["send-wa", "send-mail", "send-copy"].includes(id)) return;
+    const text = buildSummary(); const pre = $("#send-preview"); if (pre) pre.textContent = text;
+    if (id === "send-wa") window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank", "noopener");
+    else if (id === "send-mail") location.href = "mailto:?subject=" + encodeURIComponent("Avances de " + F() + " · mentoría en IA") + "&body=" + encodeURIComponent(text);
+    else {
+      try { await navigator.clipboard.writeText(text); toast("Copiado. Pégalo en el chat con " + M()); }
+      catch { const r = document.createRange(); r.selectNodeContents(pre); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); toast("Texto seleccionado: cópialo y pégalo en el chat con " + M()); }
+    }
+  });
+
   // ---------- Boot ----------
   const initial = (location.hash || "").slice(1);
   showTab(TABS.includes(initial) ? initial : ls.get("m1-tab", "sesion1"));
@@ -1690,7 +1670,7 @@ ${JSON.stringify(data, null, 1).slice(0, 14000)}`, { modelTier: "default" });
   (async () => {
     const dbNs = localDb(), userNs = null, sampleNs = null;
     myId = "local";
-    localMeName = ls.get("m1-me", null); renderWho();
+    localMeName = F(); renderWho();
     sample = sampleNs;
     $$(".ai-only").forEach((el) => (el.hidden = !sample));
     if (!dbNs) { offline = true; renderBanner(); return; }
