@@ -337,6 +337,21 @@ th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--lin
 th { font-size: 11.5px; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-3); font-weight: 600; }
 td.num { font-family: var(--f-mono); text-align: center; }
 
+/* ---------- Quién eres + lo que le toca a cada quien ---------- */
+.whoami-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--line); background: var(--card); }
+.whoami-bar.unset { background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
+.whoami-bar .hint { font-size: 14px; color: var(--ink-2); }
+.whoami-bar.unset .hint { color: var(--accent-ink); font-weight: 600; }
+.duo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.duo > div { border: 1px solid var(--line-2); border-radius: 12px; padding: 10px 12px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+.duo > div.is-me { border-color: var(--accent); background: var(--accent-soft); }
+.duo .who { font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-3); }
+.duo > div.is-me .who { color: var(--accent-ink); }
+.duo > div.is-me .who::after { content: " · tú"; }
+.duo .how { font-size: 14px; }
+.prep-list li.prep-who { margin-top: 6px; }
+.prep-list li.prep-who:first-child { margin-top: 0; }
+
 /* ---------- Cada quien ---------- */
 .parts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; align-items: start; }
 .part { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px; display: grid; gap: 14px; min-width: 0; }
@@ -392,7 +407,7 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
   .track li { justify-content: flex-start; }
   .stage-btn { grid-template-columns: 36px minmax(0, 1fr); justify-items: start; text-align: left; column-gap: 12px; row-gap: 0; align-items: center; padding: 3px 4px; }
   .stage-btn .node { grid-row: span 2; }
-  .options, .grid2, .grid3, .signs, .stage-card .meta, .parts { grid-template-columns: minmax(0, 1fr); }
+  .options, .grid2, .grid3, .signs, .stage-card .meta, .parts, .duo { grid-template-columns: minmax(0, 1fr); }
   .add-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
   .add-row .field:first-child, .add-row .btn { grid-column: 1 / -1; }
   .blk { grid-template-columns: 52px minmax(0, 1fr); gap: 10px; }
@@ -418,6 +433,11 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
       <h1><span class="nm-m">Valeria</span><span class="x">×</span><span class="nm-f">Fernando</span></h1>
       <p class="lede">Un mismo lugar para preparar cada sesión, ver la ruta y la parte de cada quien. Lo que escribas aquí se guarda en tu navegador; el seguimiento entre los dos vive en la <a href="https://drive.google.com/drive/folders/1RVpCitcToSeo-Ku5Xr7gEFNtCKx_OSZA" target="_blank" rel="noopener">carpeta compartida de Drive</a>.</p>
     </div>
+  </div>
+  <div class="whoami-bar unset" id="whoami-bar">
+    <span class="lbl">¿Quién eres?</span>
+    <div class="seg who-seg" role="group" aria-label="¿Quién eres?"><button type="button" data-me="m" aria-pressed="false"><span class="nm-m">Valeria</span></button><button type="button" data-me="f" aria-pressed="false"><span class="nm-f">Fernando</span></button></div>
+    <span class="hint" id="whoami-hint">Elige tu nombre y la página te muestra tu parte.</span>
   </div>
   <div class="status" id="status" aria-label="Resumen de la mentoría">
     <div class="stat"><span class="lbl">Etapa actual</span><span class="v" id="st-stage">1 · Construir confianza</span><span class="s" id="st-stage-s">Sesión 1 en puerta</span></div>
@@ -456,7 +476,7 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
     <div class="panel-head">
       <div>
         <h2>Primera sesión: conocerse y definir el rumbo</h2>
-        <p>60 minutos que cubren las etapas 1 y 2 de MentorcliQ. Inicia el reloj al conectarte y la guía te marca en qué bloque van. Las notas rápidas se guardan solas.</p>
+        <p>60 minutos que cubren las etapas 1 y 2 de MentorcliQ. Inicia el reloj al conectarte y la guía te marca en qué bloque van. Cada bloque dice qué le toca a cada quien.</p>
       </div>
     </div>
     <div class="s1">
@@ -466,11 +486,12 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
           <div class="blk-body">
             <div class="blk-head"><span class="chip warm">Etapa 1 · Confianza</span><h3>Bienvenida y propósito</h3><label class="done-lbl"><input type="checkbox" id="chk-b1" data-blk="b1"> Hecho</label></div>
             <p class="aim">que <span class="nm-f">Fernando</span> sepa para qué es este espacio y cómo va a correr la hora.</p>
-            <ul class="how">
-              <li>Agradece el match y cuenta en una frase por qué te entusiasma esta mentoría.</li>
+            <div class="duo">
+              <div class="duo-m"><span class="who">Le toca a <span class="nm-m">Valeria</span></span><ul class="how"><li>Agradece el match y cuenta en una frase por qué te entusiasma esta mentoría.</li>
               <li>Explica la agenda: conocernos, rumbo, acuerdo, metas y compromisos.</li>
-              <li>Deja claro que la agenda es de <span class="nm-f">Fernando</span>: en MentorcliQ quien recibe la mentoría lleva el volante.</li>
-            </ul>
+              <li>Deja claro que la agenda es de <span class="nm-f">Fernando</span>: en MentorcliQ quien recibe la mentoría lleva el volante.</li></ul></div>
+              <div class="duo-f"><span class="who">Le toca a <span class="nm-f">Fernando</span></span><ul class="how"><li>Piensa qué te gustaría llevarte de esta primera hora.</li><li>Cuenta en una frase qué te hizo elegir esta mentoría.</li></ul></div>
+            </div>
             <div class="qs"><span class="lbl">Pregunta</span><p>“¿Qué te gustaría llevarte de esta primera hora?”</p></div>
             <textarea id="note-b1" data-note="b1" rows="2" placeholder="Notas rápidas de este bloque"></textarea>
           </div>
@@ -480,6 +501,10 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
           <div class="blk-body">
             <div class="blk-head"><span class="chip warm">Etapa 1 · Confianza</span><h3>Rompehielos con sabor a IA</h3><label class="done-lbl"><input type="checkbox" id="chk-b2" data-blk="b2"> Hecho</label></div>
             <p class="aim">encontrar puntos en común y quitarle lo formal a la conversación.</p>
+            <div class="duo">
+              <div class="duo-m"><span class="who">Le toca a <span class="nm-m">Valeria</span></span><ul class="how"><li>Explica el rompehielos que elegiste y empieza tú: así se rompe el hielo más rápido.</li></ul></div>
+              <div class="duo-f"><span class="who">Le toca a <span class="nm-f">Fernando</span></span><ul class="how"><li>Ten listos tus tres datos (opción A) o tu historia con la IA (opción B).</li><li>Pregúntale a <span class="nm-m">Valeria</span> lo que te dé curiosidad de su camino.</li></ul></div>
+            </div>
             <div class="options">
               <div class="opt"><span class="lbl">Opción A</span><b>Dos verdades y una alucinación</b><span>Cada quien dice tres datos sobre sí. Uno lo inventó una IA. El otro adivina cuál.</span></div>
               <div class="opt"><span class="lbl">Opción B</span><b>Mi línea de tiempo con la IA</b><span>Tu primer momento “wow”, un tropiezo que te enseñó algo y cómo la usas hoy.</span></div>
@@ -498,10 +523,11 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
           <div class="blk-body">
             <div class="blk-head"><span class="chip warm">Etapa 2 · Dirección</span><h3>Rumbo y diagnóstico</h3><label class="done-lbl"><input type="checkbox" id="chk-b3" data-blk="b3"> Hecho</label></div>
             <p class="aim">entender dónde está <span class="nm-f">Fernando</span> hoy y a dónde quiere llegar.</p>
-            <ul class="how">
-              <li>Abran juntos el <button class="linkbtn" data-goto="radar">Radar IA</button>. Si ya lo llenó, platiquen sus dos áreas más bajas y la más alta.</li>
-              <li>Escucha 70 %, habla 30 %. Antes de aconsejar, pregunta “¿qué has intentado?”.</li>
-            </ul>
+            <div class="duo">
+              <div class="duo-m"><span class="who">Le toca a <span class="nm-m">Valeria</span></span><ul class="how"><li>Abran juntos el <button class="linkbtn" data-goto="radar">Radar IA</button>. Si ya lo llenó, platiquen sus dos áreas más bajas y la más alta.</li>
+              <li>Escucha 70 %, habla 30 %. Antes de aconsejar, pregunta “¿qué has intentado?”.</li></ul></div>
+              <div class="duo-f"><span class="who">Le toca a <span class="nm-f">Fernando</span></span><ul class="how"><li>Llega con tu <button class="linkbtn" data-goto="radar">Radar IA</button> ya lleno.</li><li>Trae una tarea real de tu semana que te gustaría hacer con IA.</li><li>Sé honesto con lo que te frena: no hay respuestas incorrectas.</li></ul></div>
+            </div>
             <div class="qs"><span class="lbl">Preguntas poderosas</span>
               <p>“Imagina que en seis meses esta mentoría fue un éxito. ¿Qué cambió en tu trabajo?”</p>
               <p>“¿Qué tarea de tu semana te encantaría que hiciera la IA?”</p>
@@ -516,11 +542,12 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
           <div class="blk-body">
             <div class="blk-head"><span class="chip warm">Etapa 2 · Dirección</span><h3>Acuerdo de mentoría</h3><label class="done-lbl"><input type="checkbox" id="chk-b4" data-blk="b4"> Hecho</label></div>
             <p class="aim">reglas del juego claras y aceptadas por las dos partes.</p>
-            <ul class="how">
-              <li>Llenen el <button class="linkbtn" data-goto="acuerdo">acuerdo</button> en pantalla compartida: frecuencia, canal, confidencialidad y feedback.</li>
+            <div class="duo">
+              <div class="duo-m"><span class="who">Le toca a <span class="nm-m">Valeria</span></span><ul class="how"><li>Llenen el <button class="linkbtn" data-goto="acuerdo">acuerdo</button> en pantalla compartida: frecuencia, canal, confidencialidad y feedback.</li>
               <li>Platiquen qué pasa si alguien tiene que cancelar y cómo se comunican entre sesiones.</li>
-              <li>Al final, cada quien marca “De acuerdo”.</li>
-            </ul>
+              <li>Al final, cada quien marca “De acuerdo”.</li></ul></div>
+              <div class="duo-f"><span class="who">Le toca a <span class="nm-f">Fernando</span></span><ul class="how"><li>Di qué esperas de <span class="nm-m">Valeria</span> y cómo te gusta recibir feedback.</li><li>Propón la frecuencia y el horario que de verdad puedas cumplir.</li></ul></div>
+            </div>
             <textarea id="note-b4" data-note="b4" rows="2" placeholder="Algo que valga la pena recordar del acuerdo"></textarea>
           </div>
         </li>
@@ -529,12 +556,13 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
           <div class="blk-body">
             <div class="blk-head"><span class="chip warm">Etapa 2 · Dirección</span><h3>Metas SMART</h3><label class="done-lbl"><input type="checkbox" id="chk-b5" data-blk="b5"> Hecho</label></div>
             <p class="aim">entre una y tres metas que <span class="nm-f">Fernando</span> quiera de verdad.</p>
-            <ul class="how">
-              <li>Partan de las <button class="linkbtn" data-goto="metas" data-who="mentee">metas sugeridas</button> y adáptenlas a su trabajo. Que <span class="nm-f">Fernando</span> la redacte; tú ayudas a volverla medible.</li>
+            <div class="duo">
+              <div class="duo-m"><span class="who">Le toca a <span class="nm-m">Valeria</span></span><ul class="how"><li>Partan de las <button class="linkbtn" data-goto="metas" data-who="mentee">metas sugeridas</button> y adáptenlas a su trabajo. Que <span class="nm-f">Fernando</span> la redacte; tú ayudas a volverla medible.</li>
               <li>Si quieres, define también una meta tuya para esta mentoría.</li>
               <li>Al menos una debe dar un resultado visible en 30 días.</li>
-              <li>Liguen cada meta a un área del Radar IA para medir el avance al final del ciclo.</li>
-            </ul>
+              <li>Liguen cada meta a un área del Radar IA para medir el avance al final del ciclo.</li></ul></div>
+              <div class="duo-f"><span class="who">Le toca a <span class="nm-f">Fernando</span></span><ul class="how"><li>Llega con una idea de meta; revisa antes las <button class="linkbtn" data-goto="metas" data-who="mentee">metas sugeridas</button>.</li><li>Redáctala tú: es tu meta. <span class="nm-m">Valeria</span> te ayuda a volverla medible.</li></ul></div>
+            </div>
             <div class="qs"><span class="lbl">Pregunta</span><p>“¿Cómo vamos a saber que lo lograste?”</p></div>
             <textarea id="note-b5" data-note="b5" rows="2" placeholder="Ideas de metas que salieron"></textarea>
           </div>
@@ -544,9 +572,11 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
           <div class="blk-body">
             <div class="blk-head"><span class="chip warm">Etapa 2 · Dirección</span><h3>Cierre y compromisos</h3><label class="done-lbl"><input type="checkbox" id="chk-b6" data-blk="b6"> Hecho</label></div>
             <p class="aim">salir con acciones concretas y la siguiente fecha en el calendario.</p>
-            <ul class="how">
-              <li>Un compromiso para cada quien. Anótenlos en <button class="linkbtn" data-goto="compromisos">Compromisos</button>.</li>
-            </ul>
+            <div class="duo">
+              <div class="duo-m"><span class="who">Le toca a <span class="nm-m">Valeria</span></span><ul class="how"><li>Un compromiso para cada quien. Anótenlos en <button class="linkbtn" data-goto="compromisos">Compromisos</button>.</li>
+              <li>Pide feedback: ¿qué funcionó hoy y qué cambiamos?</li></ul></div>
+              <div class="duo-f"><span class="who">Le toca a <span class="nm-f">Fernando</span></span><ul class="how"><li>Anota tu primer compromiso con fecha en <button class="linkbtn" data-goto="compromisos">Compromisos</button>.</li><li>Agenda tú la siguiente sesión: llevas el volante.</li></ul></div>
+            </div>
             <div class="inline-row">
               <label class="field" style="max-width: 220px"><span>Próxima sesión</span><input type="date" id="cfg-next"></label>
               <div class="field"><span>Termómetro: ¿qué tan útil fue hoy?</span>
@@ -583,14 +613,24 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
           <ul class="prep-list" id="rail-prep"></ul>
           <p class="other-prog" id="rail-other"></p>
         </div>
-        <div class="box">
-          <h3>Para quien mentorea</h3>
+        <div class="box" id="tips-mentor">
+          <h3>Tips para <span class="nm-m">Valeria</span></h3>
           <ul class="tips">
             <li>Pregunta más de lo que respondes.</li>
             <li>Comparte tropiezos, no sólo logros: eso genera confianza.</li>
             <li>No resuelvas por <span class="nm-f">Fernando</span>; ayúdale a ver opciones.</li>
             <li>Lo que se platica aquí, aquí se queda.</li>
             <li>Termina a tiempo. Cumplir el horario también es mentoría.</li>
+          </ul>
+        </div>
+        <div class="box" id="tips-mentee">
+          <h3>Tips para <span class="nm-f">Fernando</span></h3>
+          <ul class="tips">
+            <li>Tú llevas el volante: propón los temas que te sirvan.</li>
+            <li>Llega con un reto o una pregunta concreta.</li>
+            <li>Pregunta todo: aquí no hay preguntas tontas.</li>
+            <li>Di qué te sirve y qué no; el feedback va en los dos sentidos.</li>
+            <li>Cumple tus compromisos antes de la siguiente sesión.</li>
           </ul>
         </div>
       </aside>
@@ -605,7 +645,7 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
         <p>En MentorcliQ la mentoría es de dos: quien recibe la mentoría lleva el volante y quien mentorea guía y abre puertas. Cada quien marca su propia preparación, ve sus metas y compromisos y tiene notas que sólo esa persona puede leer.</p>
       </div>
     </div>
-    <div class="inline-row" style="margin-bottom: 14px"><span class="lbl">¿Quién eres?</span><div class="seg" id="who-am-i" role="group" aria-label="¿Quién eres?"><button type="button" data-me="m" aria-pressed="false"><span class="nm-m">Valeria</span></button><button type="button" data-me="f" aria-pressed="false"><span class="nm-f">Fernando</span></button></div><span class="dim" style="font-size: 13px">Así se marca tu parte y se activan tus notas privadas en este navegador.</span></div>
+    <div class="inline-row" style="margin-bottom: 14px"><span class="lbl">¿Quién eres?</span><div class="seg who-seg" id="who-am-i" role="group" aria-label="¿Quién eres?"><button type="button" data-me="m" aria-pressed="false"><span class="nm-m">Valeria</span></button><button type="button" data-me="f" aria-pressed="false"><span class="nm-f">Fernando</span></button></div><span class="dim" style="font-size: 13px">Así se marca tu parte y se activan tus notas privadas en este navegador.</span></div>
     <div class="parts" id="parts"></div>
   </section>
 
@@ -998,12 +1038,25 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
   }
   const prepDone = (role) => ROLE[role].prep.filter((p) => ((S.parts[role] || {}).checks || {})[p.id]).length;
   function renderRailPrep() {
+    const vr = viewerRole();
     guarded($("#rail-prep"), () => {
-      const vr = viewerRole(), role = vr || "mentor", other = otherRole(role);
-      $("#rail-prep-h").textContent = vr ? "Tu preparación" : "Preparación de " + nameOf(role);
-      $("#rail-prep").innerHTML = prepList(role, "rp");
-      $("#rail-other").innerHTML = `${esc(nameOf(other))}: ${prepDone(other)} de ${ROLE[other].prep.length} listos · <button type="button" class="linkbtn" data-goto="cadaquien">Ver las dos partes</button>`;
+      if (!vr) {
+        $("#rail-prep-h").textContent = "Antes de conectarse";
+        $("#rail-prep").innerHTML = ["mentor", "mentee"].map((r) => `<li class="prep-who"><span class="lbl">${esc(nameOf(r))} · ${prepDone(r)} de ${ROLE[r].prep.length}</span></li>` + prepList(r, "rp")).join("");
+        $("#rail-other").textContent = "Elige arriba quién eres y aquí verás solo tu lista.";
+      } else {
+        const other = otherRole(vr);
+        $("#rail-prep-h").textContent = "Tu preparación";
+        $("#rail-prep").innerHTML = prepList(vr, "rp");
+        $("#rail-other").innerHTML = `${esc(nameOf(other))}: ${prepDone(other)} de ${ROLE[other].prep.length} listos · <button type="button" class="linkbtn" data-goto="cadaquien">Ver las dos partes</button>`;
+      }
     });
+    $("#tips-mentor").hidden = vr === "mentee";
+    $("#tips-mentee").hidden = vr === "mentor";
+    $$(".duo-m").forEach((d) => d.classList.toggle("is-me", vr === "mentor"));
+    $$(".duo-f").forEach((d) => d.classList.toggle("is-me", vr === "mentee"));
+    $("#whoami-bar").classList.toggle("unset", !vr);
+    $("#whoami-hint").textContent = vr ? "Hola, " + nameOf(vr) + ". Lo que te toca aparece resaltado en cada sección." : "Elige tu nombre y la página te muestra tu parte.";
   }
   function renderParts() {
     guarded($("#parts"), () => {
@@ -1622,11 +1675,11 @@ ${JSON.stringify(data, null, 1).slice(0, 14000)}`, { modelTier: "default" });
   }
 
   // "¿Quién eres?" decides whose part is "yours" in this browser
-  function renderWho() { $$("#who-am-i button").forEach((b) => b.setAttribute("aria-pressed", String(!!localMeName && localMeName === (b.dataset.me === "m" ? M() : F())))); }
-  $("#who-am-i").addEventListener("click", (e) => {
-    const b = e.target.closest("[data-me]"); if (!b) return;
+  function renderWho() { $$(".who-seg button").forEach((b) => b.setAttribute("aria-pressed", String(!!localMeName && localMeName === (b.dataset.me === "m" ? M() : F())))); }
+  document.addEventListener("click", (e) => {
+    const b = e.target.closest(".who-seg [data-me]"); if (!b) return;
     localMeName = b.dataset.me === "m" ? M() : F(); ls.set("m1-me", localMeName);
-    renderWho(); renderStatus(); toast("Listo: esta es la parte de " + localMeName);
+    renderWho(); renderStatus(); toast("Listo, " + localMeName + ": lo tuyo aparece resaltado");
   });
 
   // ---------- Boot ----------
