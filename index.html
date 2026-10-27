@@ -4,50 +4,49 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex">
-<title>Mentoría Valeria × Fernando</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<title>Mentoría</title>
 <style>
-/* Layout: "bitácora de ruta" — the 5 MentorcliQ stages as a track across the top, then a tabbed workbook; session 1 is a minute-marked run-of-show with a side rail. */
+/* Layout: "bitácora de ruta" — the 5 MentorcliQ stages as a track across the top, then a tabbed workbook; session 1 is a minute-marked run-of-show with a side rail.
+   Azules de IA: azul noche #0A1A3F, azul eléctrico #2563EB, cian #06B6D4; Calibri (sin fuentes de internet). */
 :root {
-  --paper: #f3f6f5;
+  --paper: #f5f8ff;
   --card: #ffffff;
-  --ink: #10282c;
-  --ink-2: #46595c;
-  --ink-3: #6f8183;
-  --line: #d6dfdd;
-  --line-2: #e6ecea;
-  --accent: #d98200;      /* cempasúchil */
-  --accent-ink: #8a4f00;
-  --accent-soft: #fdefd6;
-  --jade: #1d7a6d;
-  --jade-soft: #dcefea;
-  --rose: #b8324f;
-  --rose-soft: #f8e1e6;
-  --viz-base: #93c4bb;
-  --viz-now: #1d6b62;
-  --on-ink: #f3f6f5;
-  --shadow: 0 1px 2px rgba(16, 40, 44, .06), 0 6px 18px rgba(16, 40, 44, .06);
-  --f-display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
-  --f-body: "Figtree", "Segoe UI", system-ui, -apple-system, sans-serif;
-  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --ink: #0a1a3f;
+  --ink-2: #3d4f75;
+  --ink-3: #64748b;
+  --line: #d6e2f5;
+  --line-2: #e8effb;
+  --accent: #2563eb;      /* azul eléctrico */
+  --accent-ink: #1d4ed8;
+  --accent-soft: #e0ecff;
+  --cyan: #0891b2;
+  --jade: #047857;
+  --jade-soft: #d1fae5;
+  --rose: #be123c;
+  --rose-soft: #fde2e7;
+  --viz-base: #93c5fd;
+  --viz-now: #1e40af;
+  --on-ink: #f5f8ff;
+  --shadow: 0 1px 2px rgba(10, 26, 63, .06), 0 6px 18px rgba(37, 99, 235, .08);
+  --f-display: "Calibri", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --f-body: "Calibri", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --f-mono: "Consolas", ui-monospace, "SFMono-Regular", Menlo, monospace;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper: #0d191b; --card: #142326; --ink: #e6efed; --ink-2: #a7b8b6; --ink-3: #7d9190;
-    --line: #26393c; --line-2: #1c2e31; --accent: #f2a51e; --accent-ink: #f6bf5c; --accent-soft: #33270f;
-    --jade: #52c2ae; --jade-soft: #163632; --rose: #f07893; --rose-soft: #3a1c24;
-    --viz-base: #3e6f68; --viz-now: #74d6c4; --on-ink: #0d191b;
+    --paper: #060b1e; --card: #0e1a3a; --ink: #ffffff; --ink-2: #cbd5e1; --ink-3: #8ea0c2;
+    --line: #1f2f57; --line-2: #172447; --accent: #3b82f6; --accent-ink: #60a5fa; --accent-soft: #102a5c; --cyan: #22d3ee;
+    --jade: #34d399; --jade-soft: #0f3a33; --rose: #fb7185; --rose-soft: #3b1626;
+    --viz-base: #3b5b9a; --viz-now: #22d3ee; --on-ink: #060b1e;
     --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 18px rgba(0,0,0,.25);
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --paper: #0d191b; --card: #142326; --ink: #e6efed; --ink-2: #a7b8b6; --ink-3: #7d9190;
-  --line: #26393c; --line-2: #1c2e31; --accent: #f2a51e; --accent-ink: #f6bf5c; --accent-soft: #33270f;
-  --jade: #52c2ae; --jade-soft: #163632; --rose: #f07893; --rose-soft: #3a1c24;
-  --viz-base: #3e6f68; --viz-now: #74d6c4; --on-ink: #0d191b;
+  --paper: #060b1e; --card: #0e1a3a; --ink: #ffffff; --ink-2: #cbd5e1; --ink-3: #8ea0c2;
+  --line: #1f2f57; --line-2: #172447; --accent: #3b82f6; --accent-ink: #60a5fa; --accent-soft: #102a5c; --cyan: #22d3ee;
+  --jade: #34d399; --jade-soft: #0f3a33; --rose: #fb7185; --rose-soft: #3b1626;
+  --viz-base: #3b5b9a; --viz-now: #22d3ee; --on-ink: #060b1e;
   --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 18px rgba(0,0,0,.25);
   color-scheme: dark;
 }
@@ -57,7 +56,6 @@ html { -webkit-text-size-adjust: 100%; }
 body { margin: 0; }
 img { max-width: 100%; }
 [hidden] { display: none !important; }
-.ai-only { display: none !important; }
 * { box-sizing: border-box; }
 body {
   background: var(--paper); color: var(--ink);
@@ -338,13 +336,16 @@ th { font-size: 11.5px; text-transform: uppercase; letter-spacing: .07em; color:
 td.num { font-family: var(--f-mono); text-align: center; }
 
 /* ---------- Quién eres + lo que le toca a cada quien ---------- */
-.duo { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+.whoami-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--line); background: var(--card); }
+.whoami-bar.unset { background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
+.whoami-bar .hint { font-size: 14px; color: var(--ink-2); }
+.whoami-bar.unset .hint { color: var(--accent-ink); font-weight: 600; }
+.duo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 .duo > div { border: 1px solid var(--line-2); border-radius: 12px; padding: 10px 12px; display: grid; gap: 6px; align-content: start; min-width: 0; }
 .duo > div.is-me { border-color: var(--accent); background: var(--accent-soft); }
 .duo .who { font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-3); }
 .duo > div.is-me .who { color: var(--accent-ink); }
 .duo .how { font-size: 14px; }
-.send-preview { white-space: pre-wrap; font-family: var(--f-body); font-size: 13.5px; line-height: 1.5; background: var(--paper); border: 1px solid var(--line-2); border-radius: 10px; padding: 12px; max-height: 340px; overflow: auto; margin: 0; }
 .prep-list li.prep-who { margin-top: 6px; }
 .prep-list li.prep-who:first-child { margin-top: 0; }
 
@@ -416,158 +417,293 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
 }
+
+/* Ciclo con proyecto ancla */
+.ciclo-wrap { display: grid; gap: 4px; margin-bottom: 8px; }
+.ciclo-anchor { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; padding: 14px 16px; border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent); background: var(--accent-soft); border-radius: 14px; }
+.ciclo-anchor .lbl { color: var(--accent-ink); }
+.ciclo-anchor b { font-family: var(--f-display); font-size: 1.08rem; }
+.ciclo { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.ciclo li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 12px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--card); }
+.ciclo .n { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; border: 2px solid var(--line); font-size: 13px; color: var(--ink-2); }
+.ciclo li.ok .n { border-color: var(--jade); color: var(--jade); }
+.ciclo .hd { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; }
+.ciclo p { color: var(--ink-2); margin-top: 4px; font-size: 14.5px; }
+.ciclo p .lbl { margin-right: 8px; }
+/* Escala del Radar */
+.levels { list-style: none; padding: 0; margin: 10px 0 0; display: grid; gap: 10px; }
+.levels li { display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 10px; align-items: start; }
+.levels .n { width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent-ink); font-size: 12.5px; font-weight: 600; }
+.levels .sub { display: block; color: var(--ink-2); font-size: 13.5px; }
+.radar-0 { display: grid; gap: 16px; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); margin-top: 16px; align-items: start; }
+.radar-1 + .box { margin-top: 16px; }
+@media (max-width: 760px) { .radar-0 { grid-template-columns: minmax(0, 1fr); } }
+/* Listas de preparación y tablas con texto largo */
+.ro-list { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 8px; }
+.ro-list li { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 8px; align-items: start; font-size: 14px; }
+.ro-list li.ok .tick { background: var(--jade); border-color: var(--jade); color: var(--card); }
+.ro-list li.ok > span:last-child { color: var(--ink-3); }
+table.wrap td, .agr-table td { white-space: normal; vertical-align: top; }
+.agr-table td:first-child { width: 36%; }
+/* Mi demo y Prueba B (solo en la vista de Valeria) */
+.stack { display: grid; gap: 18px; }
+.stack > .group-h { margin: 6px 0 -8px; flex-wrap: wrap; }
+.paste { margin: 12px 0 0; padding: 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--paper); font-family: var(--f-mono); font-size: 12.5px; line-height: 1.55; white-space: pre-wrap; overflow-wrap: anywhere; max-height: 380px; overflow: auto; color: var(--ink-2); }
+.q-next { font-family: var(--f-display); font-size: 1.15rem; font-weight: 600; margin: 8px 0 4px; }
+table.guion td:first-child { white-space: nowrap; color: var(--ink-3); }
+table.guion td:nth-child(2) { width: 52%; color: var(--ink); }
+tfoot td { border-bottom: 0; border-top: 1.5px solid var(--line); }
+
+/* ---------- Láminas de la sesión 1 (siempre oscuras, en azules de IA) ---------- */
+html.lam-html, body.lam { height: 100%; overflow: hidden; }
+body.lam {
+  --lb: #060b1e; --lb2: #0e1a3a; --la: #3b82f6; --la2: #22d3ee; --li: #ffffff; --li2: #cbd5e1; --li3: #8ea0c2;
+  --ll: rgba(148, 197, 255, .14); --lok: #34d399; --lobj: #fbbf24; --lreal: #6366f1;
+  background: radial-gradient(1200px 700px at 85% -10%, rgba(34, 211, 238, .16), transparent 60%), radial-gradient(1000px 600px at -5% 110%, rgba(59, 130, 246, .2), transparent 60%), var(--lb);
+  color: var(--li); font-family: "Calibri", "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 22px; line-height: 1.4;
+}
+body.lam::before { display: none; }
+body.lam h1, body.lam h2, body.lam h3 { font-family: inherit; }
+#l-stage { position: fixed; inset: 0; overflow: hidden; }
+#l-canvas { position: absolute; top: 0; left: 0; transform-origin: 0 0; transition: transform 1100ms cubic-bezier(.22, .61, .36, 1); }
+.l-frame { position: absolute; padding: 48px 56px; border-radius: 22px; background: var(--lb2); border: 1px solid var(--ll); box-shadow: 0 24px 70px rgba(0, 0, 0, .45); cursor: pointer; opacity: .5; transition: opacity .6s; }
+.l-frame.l-on { opacity: 1; cursor: default; }
+.l-kick { font-size: 17px; letter-spacing: .22em; text-transform: uppercase; color: var(--la2); font-weight: 700; margin-bottom: 14px; }
+.l-h1 { font-size: 96px; line-height: 1.02; font-weight: 700; letter-spacing: -.02em; }
+.l-h1 em { font-style: normal; background: linear-gradient(90deg, var(--la), var(--la2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.l-h2 { font-size: 48px; line-height: 1.14; font-weight: 700; letter-spacing: -.01em; }
+.l-sub { font-size: 26px; color: var(--li2); margin-top: 14px; line-height: 1.45; }
+.l-rule { height: 3px; width: 82px; background: var(--la); border-radius: 2px; margin: 22px 0 30px; }
+.l-g4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.l-g3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.l-tile { border: 1px solid var(--ll); border-radius: 16px; padding: 24px 26px; background: rgba(255, 255, 255, .04); }
+.l-tile.hl { border-top: 4px solid var(--la); }
+.l-lab { font-size: 15px; letter-spacing: .13em; text-transform: uppercase; color: var(--li3); margin-bottom: 12px; line-height: 1.3; font-weight: 600; }
+.l-val { font-size: 64px; font-weight: 700; letter-spacing: -.025em; line-height: 1; font-variant-numeric: tabular-nums; }
+.l-val.acc { color: var(--la2); }
+.l-val.ok { color: var(--lok); }
+.l-tile p { font-size: 19px; color: var(--li2); margin-top: 12px; line-height: 1.4; }
+.l-tile h3 { font-size: 25px; font-weight: 700; line-height: 1.22; }
+.l-agenda { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; margin-top: 30px; }
+.l-agenda div { border-left: 3px solid var(--la); padding: 4px 12px; display: grid; gap: 2px; align-content: start; }
+.l-agenda b { color: var(--la2); font-size: 18px; }
+.l-agenda span { font-size: 18px; line-height: 1.25; }
+.l-agenda small { font-size: 15px; color: var(--li3); }
+.l-duo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.l-pane { border: 1px solid var(--ll); border-radius: 16px; padding: 22px 26px; background: rgba(255, 255, 255, .035); }
+.l-pane.me { border-left: 4px solid var(--la); }
+.l-pane h3 { font-size: 15px; letter-spacing: .13em; text-transform: uppercase; color: var(--li3); font-weight: 600; margin-bottom: 12px; }
+.l-pane ul { margin: 0; padding-left: 22px; display: grid; gap: 8px; font-size: 22px; }
+.l-pane p { font-size: 20px; color: var(--li2); white-space: pre-line; }
+.l-qs { display: grid; gap: 12px; }
+.l-qs p { font-size: 25px; color: var(--li); font-weight: 600; line-height: 1.3; white-space: normal; }
+.l-scale { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+.l-scale div { border: 1px solid var(--ll); border-radius: 12px; padding: 14px 16px; display: flex; gap: 12px; align-items: center; }
+.l-scale b { font-size: 34px; color: var(--li3); }
+.l-scale span { font-size: 17px; color: var(--li2); line-height: 1.2; }
+.l-scale .hi { border-color: var(--la); background: rgba(59, 130, 246, .12); }
+.l-scale .hi b { color: var(--la2); }
+.l-areas { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px 18px; }
+.l-areas div { border-top: 3px solid var(--lreal); padding: 10px 2px 0; display: grid; gap: 4px; align-content: start; }
+.l-areas b { font-size: 21px; }
+.l-areas span { font-size: 16px; color: var(--li3); line-height: 1.3; }
+.l-bars { display: grid; gap: 12px; }
+.l-hb { display: grid; grid-template-columns: 300px 1fr 60px; gap: 18px; align-items: center; }
+.l-hb .t { font-size: 22px; font-weight: 600; }
+.l-hb .n { font-size: 26px; font-weight: 700; text-align: right; }
+.l-hb .w { height: 22px; border-radius: 11px; background: rgba(255, 255, 255, .07); overflow: hidden; display: block; }
+.l-hb .w i, .l-meter i { display: block; height: 100%; width: 0; border-radius: inherit; background: var(--la); transition: width 1.1s cubic-bezier(.22, .61, .36, 1); }
+.l-frame.l-on .l-hb .w i, .l-frame.l-on .l-meter i { width: var(--to); }
+.l-meter { height: 12px; border-radius: 6px; background: rgba(255, 255, 255, .08); margin-top: 16px; overflow: hidden; }
+.l-agr { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px 24px; }
+.l-agr div { border-left: 3px solid var(--la); padding: 4px 0 4px 16px; display: grid; gap: 4px; align-content: start; }
+.l-agr b { font-size: 21px; }
+.l-agr span { font-size: 18px; color: var(--li2); line-height: 1.3; }
+.l-agr span.dim { color: var(--li3); font-style: italic; }
+.l-ancla { display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: baseline; border: 1px solid var(--la); background: rgba(59, 130, 246, .12); border-radius: 14px; padding: 16px 22px; margin-bottom: 18px; }
+.l-ancla span { font-size: 15px; letter-spacing: .13em; text-transform: uppercase; color: var(--la2); font-weight: 700; }
+.l-ancla b { font-size: 26px; }
+.l-thermo { display: flex; gap: 10px; }
+.l-thermo span { width: 52px; height: 52px; border-radius: 12px; border: 1px solid var(--ll); display: grid; place-items: center; font-size: 26px; font-weight: 700; }
+.l-ciclo { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; }
+.l-ciclo div { border: 1px solid var(--ll); border-top: 4px solid var(--lreal); border-radius: 14px; padding: 18px; background: rgba(255, 255, 255, .035); display: grid; gap: 6px; align-content: start; }
+.l-ciclo div.now { border-top-color: var(--la); background: rgba(59, 130, 246, .1); }
+.l-ciclo div.ok { border-top-color: var(--lok); }
+.l-ciclo .n { font-size: 40px; font-weight: 700; color: var(--li3); line-height: 1; }
+.l-ciclo .now .n { color: var(--la2); }
+.l-ciclo small { font-size: 15px; color: var(--li3); }
+.l-ciclo b { font-size: 20px; line-height: 1.25; }
+.l-ciclo p { font-size: 16px; color: var(--li2); line-height: 1.3; }
+.l-notes { margin-top: 26px; border: 1px dashed var(--lobj); border-radius: 16px; padding: 18px 22px; background: rgba(251, 191, 36, .06); }
+.l-notes > .l-lab { color: var(--lobj); }
+.l-guion { display: grid; gap: 12px; }
+.l-guion div { display: grid; grid-template-columns: 150px minmax(0, 1fr) 420px; gap: 20px; align-items: start; border-bottom: 1px solid var(--ll); padding-bottom: 12px; }
+.l-guion b { color: var(--la2); font-size: 20px; }
+.l-guion p { font-size: 21px; }
+.l-guion span { font-size: 17px; color: var(--li3); }
+.l-key { display: grid; gap: 10px; }
+.l-key div { display: grid; grid-template-columns: 50px minmax(0, 1fr) minmax(0, 1fr) 110px; gap: 18px; align-items: start; border-bottom: 1px solid var(--ll); padding-bottom: 10px; }
+.l-key .n { font-size: 26px; font-weight: 700; color: var(--la2); }
+.l-key p { font-size: 20px; }
+.l-key b { font-size: 19px; color: var(--lok); }
+.l-key small { font-size: 17px; color: var(--li3); text-align: right; }
+.l-actions { display: flex; gap: 12px; margin-top: 22px; }
+.l-btn { all: unset; cursor: pointer; padding: 12px 22px; border-radius: 12px; background: var(--la); color: #fff; font-size: 19px; font-weight: 700; }
+.l-btn.ghost { background: transparent; border: 1px solid var(--ll); color: var(--li); }
+.l-btn:focus-visible { outline: 2px solid var(--la2); outline-offset: 2px; }
+#l-nav { position: fixed; left: 0; right: 0; bottom: 26px; display: flex; gap: 10px; justify-content: center; z-index: 20; }
+#l-nav button { width: 11px; height: 11px; border-radius: 999px; border: none; cursor: pointer; padding: 0; background: rgba(255, 255, 255, .22); transition: all .25s; }
+#l-nav button.on { background: var(--la); width: 30px; }
+#l-hud { position: fixed; top: 22px; right: 28px; font-size: 13px; color: var(--li3); letter-spacing: .1em; text-transform: uppercase; z-index: 20; text-align: right; line-height: 1.8; }
+#l-hud b { color: var(--li2); font-weight: 600; }
+#l-hud .l-warn { color: var(--lobj); }
+#l-hint { position: fixed; left: 28px; bottom: 24px; font-size: 13px; color: var(--li3); z-index: 20; }
+#l-hint kbd { border: 1px solid var(--ll); border-radius: 5px; padding: 2px 7px; font-family: inherit; font-size: 12px; color: var(--li2); }
+@media print { #l-nav, #l-hint, #l-hud { display: none; } }
+@media (max-width: 700px) { #l-hint { display: none; } }
 </style>
 </head>
 <body>
 <header class="wrap top">
-  <div class="eyebrow">
-    <span class="lbl">Programa de mentoría · Metodología <b>MentorcliQ</b></span>
-    <span class="chip">Tema: Inteligencia artificial</span>
-  </div>
-  <div class="title-row">
-    <div>
-      <h1><span class="nm-m">Valeria</span><span class="x">×</span><span class="nm-f">Fernando</span></h1>
-      <p class="lede">Tu espacio para la mentoría con <span class="nm-m">Valeria</span>: lo que te toca en cada sesión, tu preparación, tus metas y tu Radar IA. Lo que escribes se guarda en tu navegador, y cuando quieras se lo mandas a <span class="nm-m">Valeria</span> con un toque.</p>
-    </div>
-  </div>
-  <div class="status" id="status" aria-label="Resumen de la mentoría">
-    <div class="stat"><span class="lbl">Etapa actual</span><span class="v" id="st-stage">1 · Construir confianza</span><span class="s" id="st-stage-s">Sesión 1 en puerta</span></div>
-    <div class="stat"><span class="lbl">Próxima sesión</span><span class="v" id="st-next">Sin fecha</span><span class="s" id="st-next-s">Defínanla al cierre</span></div>
-    <div class="stat"><span class="lbl">Metas SMART</span><span class="v" id="st-goals">0</span><span class="s" id="st-goals-s">Entre 1 y 3 es ideal</span></div>
-    <div class="stat"><span class="lbl">Compromisos</span><span class="v" id="st-acts">0 pendientes</span><span class="s" id="st-acts-s">Ninguno vencido</span></div>
-    <div class="stat"><span class="lbl">Bitácora</span><span class="v" id="st-ses">0 sesiones</span><span class="s" id="st-ses-s">Aún sin registros</span></div>
-  </div>
-  <ol class="track" id="track" aria-label="Las 5 etapas MentorcliQ">
-    <li data-n="1"><button class="stage-btn" data-stage="1"><span class="node">1</span><span class="stage-name">Construir confianza</span><span class="stage-en">Building rapport</span></button></li>
-    <li data-n="2"><button class="stage-btn" data-stage="2"><span class="node">2</span><span class="stage-name">Definir dirección</span><span class="stage-en">Setting direction</span></button></li>
-    <li data-n="3"><button class="stage-btn" data-stage="3"><span class="node">3</span><span class="stage-name">Avanzar</span><span class="stage-en">Progression</span></button></li>
-    <li data-n="4"><button class="stage-btn" data-stage="4"><span class="node">4</span><span class="stage-name">Cerrar el ciclo</span><span class="stage-en">Winding down</span></button></li>
-    <li data-n="5"><button class="stage-btn" data-stage="5"><span class="node">5</span><span class="stage-name">Siguiente paso</span><span class="stage-en">Moving on</span></button></li>
-  </ol>
+  <div class="eyebrow" id="eyebrow"></div>
+  <div class="title-row"><div><h1 id="names"></h1><p class="lede" id="lede"></p></div></div>
+  <div class="status" id="status" aria-label="Resumen de la mentoría"></div>
+  <ol class="track" id="track" aria-label="Las 5 etapas MentorcliQ"></ol>
 </header>
+<div class="tabbar"><nav class="wrap tabs" id="tabs" role="tablist" aria-label="Secciones"></nav></div>
+<main class="wrap" id="main"></main>
+<footer class="wrap" id="footer"></footer>
+<script>
+(() => {
+  "use strict";
+  const VISTA = "fernando";
+  const DATA = {"tblConfig":[{"Clave":"mentor","Campo":"Quien mentorea","Valor":"Valeria"},{"Clave":"mentee","Campo":"Recibe la mentoría","Valor":"Fernando"},{"Clave":"programa","Campo":"Programa","Valor":"MentorcliQ"},{"Clave":"tema","Campo":"Tema","Valor":"Inteligencia artificial"},{"Clave":"etapa","Campo":"Etapa actual (1 a 5)","Valor":1},{"Clave":"proxima","Campo":"Próxima sesión","Valor":"2026-10-28"},{"Clave":"proyecto_ancla","Campo":"Proyecto ancla del ciclo","Valor":""},{"Clave":"pagina_fernando","Campo":"Página de Fernando","Valor":"https://valeria3320-hue.github.io"},{"Clave":"carpeta","Campo":"Seguimiento compartido (link)","Valor":""},{"Clave":"radar_base","Campo":"Radar IA: fecha de línea base","Valor":"2026-10-28"},{"Clave":"radar_mitad","Campo":"Radar IA: fecha de mitad del ciclo","Valor":""},{"Clave":"radar_cierre","Campo":"Radar IA: fecha de cierre","Valor":""},{"Clave":"promesa","Campo":"La promesa (portada de las láminas)","Valor":"En cuatro meses, algo construido por ti, medido y presentado."},{"Clave":"excel_fernando","Campo":"Excel de Fernando (se descarga desde su página)","Valor":"Mentoria_Fernando.xlsx"}],"tblPreparacion":[{"Persona":"Fernando","Tarea":"Llenar mi Radar IA con la escala nueva: siete áreas, del 1 al 5.","Estado":"Pendiente"},{"Persona":"Fernando","Tarea":"Tener listo para mostrar mi mejor GPT, prompt o automatización (3 minutos).","Estado":"Pendiente"},{"Persona":"Fernando","Tarea":"Traer mi peor alucinación: cuándo me engañó la IA y cómo lo detecté.","Estado":"Pendiente"},{"Persona":"Fernando","Tarea":"Traer un problema real de mi área que cueste horas o dinero: candidato a proyecto ancla.","Estado":"Pendiente"},{"Persona":"Fernando","Tarea":"Anotar qué me dio la liga de IA y qué me faltó.","Estado":"Pendiente"}],"tblPapel":[{"Persona":"Fernando","Tipo":"Lema","Texto":"Lleva el volante"},{"Persona":"Fernando","Tipo":"Papel","Texto":"Propones los temas y agendas las sesiones."},{"Persona":"Fernando","Tipo":"Papel","Texto":"Traes problemas reales de tu área, no ejercicios."},{"Persona":"Fernando","Tipo":"Papel","Texto":"Construyes entre sesiones y muestras avances."},{"Persona":"Fernando","Tipo":"Papel","Texto":"Pides feedback y dices qué te sirve y qué no."},{"Persona":"Fernando","Tipo":"Papel","Texto":"Actualizas tus metas y tu Radar IA."},{"Persona":"Fernando","Tipo":"Tip","Texto":"Ya sabes usar ChatGPT: aquí el reto es construir algo que otros usen."},{"Persona":"Fernando","Tipo":"Tip","Texto":"Trae siempre algo funcionando, aunque esté feo."},{"Persona":"Fernando","Tipo":"Tip","Texto":"Mide antes de mejorar: cuánto tarda y cuánto falla hoy."},{"Persona":"Fernando","Tipo":"Tip","Texto":"Prueba al menos otra herramienta además de ChatGPT."},{"Persona":"Fernando","Tipo":"Tip","Texto":"Di qué te sirve y qué no; el feedback va en los dos sentidos."}],"tblAgenda":[{"Bloque":1,"Hora":"00:00","Minutos":5,"Etapa":1,"Título":"Bienvenida y propósito","Para lograr":"Que Fernando vea que esto no es otra clase de ChatGPT: aquí se trabaja su caso real, su carrera y su red.","Le toca a Fernando":"Cuenta en una frase qué te dio la liga de IA y qué te faltó.\nPiensa qué te gustaría llevarte de esta primera hora.","Preguntas":"¿Qué te dio la liga y qué no te dio?","Hecho":""},{"Bloque":2,"Hora":"00:05","Minutos":15,"Etapa":1,"Título":"Rompehielos: muéstrame lo que ya haces","Para lograr":"Conocerse por lo que cada quien ya construyó y ver su nivel real, sin examen.","Le toca a Fernando":"Ten abierto tu mejor GPT, prompt o automatización para mostrarlo en 3 minutos.\nTrae tu peor alucinación: cuándo te engañó la IA y cómo lo detectaste.","Preguntas":"¿Qué le cambiarías hoy a eso que construiste?\n¿Cómo sabes que lo que te da la IA está bien?\n¿Cómo prefieres recibir feedback: directo, por escrito, con ejemplos?","Hecho":""},{"Bloque":3,"Hora":"00:20","Minutos":15,"Etapa":2,"Título":"Diagnóstico: ¿dónde está tu techo?","Para lograr":"Ver dónde ya es fuerte y cuál es el siguiente salto: de usar la IA a construir y medir.","Le toca a Fernando":"Llega con tu Radar IA lleno y sé duro contigo.\nTrae un problema de tu área que nadie ha resuelto con IA, o que se resolvió a medias.\nPiensa qué te frena para pasar de usar ChatGPT a construir algo que otros usen.","Preguntas":"Imagina que en cuatro meses esta mentoría fue un éxito. ¿Qué existe que hoy no existe?\n¿Qué has construido con IA que otras personas usan sin ti?\nSi mañana no tuvieras ChatGPT, ¿qué se te cae?\n¿Qué problema de tu área cuesta más horas o más dinero?","Hecho":""},{"Bloque":4,"Hora":"00:35","Minutos":10,"Etapa":2,"Título":"Acuerdo de mentoría","Para lograr":"Reglas del juego claras y aceptadas por las dos partes.","Le toca a Fernando":"Di qué esperas de Valeria y qué no quieres repetir de la liga.\nPropón la frecuencia y el horario que de verdad puedas cumplir.","Preguntas":"","Hecho":""},{"Bloque":5,"Hora":"00:45","Minutos":10,"Etapa":2,"Título":"Metas SMART y proyecto ancla","Para lograr":"Una meta grande (el proyecto ancla) y una o dos de apoyo, todas con número.","Le toca a Fernando":"Llega con una idea de proyecto ancla; revisa antes las metas sugeridas.\nRedacta tus metas y ponles un número.","Preguntas":"¿Cómo vamos a saber que funcionó?\n¿Quién va a usar lo que construyas?","Hecho":""},{"Bloque":6,"Hora":"00:55","Minutos":5,"Etapa":2,"Título":"Cierre y compromisos","Para lograr":"Salir con acciones concretas y la siguiente fecha en el calendario.","Le toca a Fernando":"Anota tu primer compromiso con fecha: medir cuánto tarda hoy el proceso de tu proyecto ancla.\nAgenda tú la siguiente sesión: llevas el volante.","Preguntas":"¿Qué te llevas de hoy?","Hecho":""}],"tblRompehielos":[{"Opción":"A","Nombre":"Muéstrame lo que ya haces","Cómo funciona":"Cada quien muestra en 3 minutos lo mejor que ha construido con IA y qué le cambiaría hoy."},{"Opción":"B","Nombre":"Mismo reto, dos modelos","Cómo funciona":"Un reto real de Fernando con el mismo prompt en ChatGPT y en Claude (o Gemini). Se comparan en vivo: ¿cuál gana y por qué?"},{"Opción":"C","Nombre":"Mi peor alucinación","Cómo funciona":"Cuándo te engañó la IA, cuánto te costó y qué haces ahora para que no vuelva a pasar."}],"tblRadar":[{"Área":"Criterio multi-modelo","Qué incluye":"Elegir ChatGPT, Claude, Gemini o Copilot según la tarea, con pruebas y no por costumbre","Línea base":"","Mitad del ciclo":"","Cierre":""},{"Área":"Contexto y conocimiento","Qué incluye":"GPTs, Projects e instrucciones con documentos propios: que la IA conozca tu trabajo","Línea base":"","Mitad del ciclo":"","Cierre":""},{"Área":"Agentes y automatización","Qué incluye":"Flujos de punta a punta con herramientas conectadas: acciones, conectores, Power Automate, API","Línea base":"","Mitad del ciclo":"","Cierre":""},{"Área":"Evaluación y calidad","Qué incluye":"Saber si la IA lo hace bien: casos de prueba, rúbricas, tasa de error y fuentes verificadas","Línea base":"","Mitad del ciclo":"","Cierre":""},{"Área":"Datos y análisis","Qué incluye":"Análisis con código (Python, Excel) y hallazgos verificados contra la fuente","Línea base":"","Mitad del ciclo":"","Cierre":""},{"Área":"Impacto de negocio","Qué incluye":"Casos con ROI medido, antes y después, y una historia que convenza a tu jefe","Línea base":"","Mitad del ciclo":"","Cierre":""},{"Área":"Adopción y riesgo","Qué incluye":"Llevar la IA a tu equipo con reglas claras: datos sensibles, sesgos y uso responsable","Línea base":"","Mitad del ciclo":"","Cierre":""}],"tblNiveles":[{"Nombre":"Lo conozco","Qué significa":"Sé qué es y para qué sirve, pero no lo uso.","Nivel":1},{"Nombre":"Lo uso en el chat","Qué significa":"Lo uso de vez en cuando, caso por caso.","Nivel":2},{"Nombre":"Lo uso con método","Qué significa":"Es parte de mi semana y tengo una forma repetible de hacerlo.","Nivel":3},{"Nombre":"Construyo para otros","Qué significa":"Hice algo que otras personas usan sin mí.","Nivel":4},{"Nombre":"Lo mido y lo escalo","Qué significa":"Tengo números del impacto y lo enseño o lo llevo a más áreas.","Nivel":5}],"tblAcuerdo":[{"Tema":"Frecuencia","Lo que acordamos":"","Ejemplo":"Cada 2 semanas"},{"Tema":"Duración de cada sesión","Lo que acordamos":"","Ejemplo":"60 min"},{"Tema":"Canal","Lo que acordamos":"","Ejemplo":"Teams, con cámara encendida"},{"Tema":"Duración del ciclo","Lo que acordamos":"","Ejemplo":"6 sesiones, de noviembre a febrero"},{"Tema":"Quién agenda y cómo se cancela","Lo que acordamos":"","Ejemplo":"Fernando agenda; si alguien cancela, avisa con 24 h"},{"Tema":"Comunicación entre sesiones","Lo que acordamos":"","Ejemplo":"WhatsApp para dudas rápidas; respuesta en 48 h"},{"Tema":"Confidencialidad","Lo que acordamos":"","Ejemplo":"Lo que platicamos queda entre nosotros, salvo que acordemos compartir algo"},{"Tema":"Cómo nos damos feedback","Lo que acordamos":"","Ejemplo":"Directo y con ejemplos; 2 minutos al cierre de cada sesión"},{"Tema":"Lo que no repetimos de la liga","Lo que acordamos":"","Ejemplo":"Lo básico de ChatGPT. Aquí: casos reales, otras herramientas y cómo medir"},{"Tema":"Lo que Fernando espera de Valeria","Lo que acordamos":"","Ejemplo":"Que me rete a construir algo real, me dé otra mirada además de ChatGPT y me conecte con gente"},{"Tema":"Lo que Valeria espera de Fernando","Lo que acordamos":"","Ejemplo":"Que llegue con algo funcionando a cada sesión y cumpla sus compromisos"},{"Tema":"Fecha de revisión del acuerdo","Lo que acordamos":"","Ejemplo":"En el check-in de mitad de ciclo (sesión 3)"}],"tblAceptacion":[{"Persona":"Fernando","De acuerdo":"","Fecha":""}],"tblMetas":[],"tblSugeridas":[{"Persona":"Fernando","Meta":"Proyecto ancla: construir un asistente o agente que resuelva un flujo completo de mi área","S · Específica":"Elegir un flujo de punta a punta (preparar un reporte, responder solicitudes) y automatizarlo con IA y herramientas conectadas","M · Medible":"Demo funcionando en la sesión 6, usada por al menos 2 compañeros y con horas ahorradas medidas","A · Alcanzable":"Se construye por etapas, una por sesión, y Valeria revisa cada avance","R · Relevante":"Pasa de usuario avanzado a quien construye soluciones","Plazo (días)":120,"Área":"Agentes y automatización"},{"Persona":"Fernando","Meta":"Medir la calidad de mi mejor GPT con 20 casos de prueba","S · Específica":"Juntar 20 ejemplos reales con su respuesta correcta y una rúbrica simple","M · Medible":"Tasa de acierto medida antes y después de mejorarlo (meta: +20 puntos)","A · Alcanzable":"Con un GPT o prompt que ya uso todas las semanas","R · Relevante":"Saber, no suponer, que la IA lo hace bien","Plazo (días)":45,"Área":"Evaluación y calidad"},{"Persona":"Fernando","Meta":"Comparar ChatGPT, Claude y Gemini en mis 5 tareas más importantes","S · Específica":"Mismo prompt y mismas entradas en cada herramienta, con una tabla de resultados","M · Medible":"Tabla con ganador por tarea y por qué, y un cambio de herramienta en al menos una tarea","A · Alcanzable":"Con las versiones gratuitas o las que da la empresa","R · Relevante":"Criterio propio en vez de depender de una sola herramienta","Plazo (días)":30,"Área":"Criterio multi-modelo"},{"Persona":"Fernando","Meta":"Armar un GPT o Project con el conocimiento de mi área que responda citando la fuente","S · Específica":"Cargar políticas, manuales o procesos y configurar instrucciones para que diga de dónde sale cada respuesta","M · Medible":"Responde bien 8 de 10 preguntas reales y siempre cita la fuente","A · Alcanzable":"Sólo con documentos que se pueden compartir","R · Relevante":"Que el equipo deje de preguntar lo mismo","Plazo (días)":45,"Área":"Contexto y conocimiento"},{"Persona":"Fernando","Meta":"Presentar a mi jefe un caso de negocio de IA con el ROI medido","S · Específica":"Medir el proceso antes y después (tiempo, errores, costo) y resumirlo en una página","M · Medible":"Presentado con números reales y con una decisión: escalar, ajustar o parar","A · Alcanzable":"Valeria revisa los números y el guion","R · Relevante":"Me posiciona como referente de IA en mi área","Plazo (días)":90,"Área":"Impacto de negocio"},{"Persona":"Fernando","Meta":"Analizar con IA y código un archivo real y sacar 3 hallazgos verificados","S · Específica":"Usar análisis de datos con código (Python) o Copilot en Excel sobre un archivo real","M · Medible":"3 hallazgos verificados contra la fuente y una gráfica que se entienda sola","A · Alcanzable":"Con datos sin información sensible","R · Relevante":"Usar la IA con criterio, no a ciegas","Plazo (días)":45,"Área":"Datos y análisis"},{"Persona":"Fernando","Meta":"Llevar la IA a mi equipo: taller de 30 minutos y reglas de uso","S · Específica":"Enseñar un caso que ya funciona y acordar qué datos sí y cuáles no se comparten","M · Medible":"Taller dado, reglas de una página aprobadas y 3 compañeros usándolo","A · Alcanzable":"Partiendo de las políticas que ya existen en la empresa","R · Relevante":"Enseñar es la mejor forma de aprender, y da visibilidad","Plazo (días)":60,"Área":"Adopción y riesgo"}],"tblCompromisos":[],"tblBitacora":[],"tblCiclo":[{"Sesión":1,"Fecha":"2026-10-28","Etapa":1,"Enfoque":"Conocerse, acuerdo, metas y elegir el proyecto ancla","Entregable":"Proyecto ancla elegido y Radar IA de línea base","Hecho":""},{"Sesión":2,"Fecha":"","Etapa":2,"Enfoque":"Medir el punto de partida y diseñar la solución","Entregable":"Cuánto tarda y cuánto falla hoy el proceso; diseño en una página","Hecho":""},{"Sesión":3,"Fecha":"","Etapa":3,"Enfoque":"Prototipo y check-in de mitad de ciclo","Entregable":"Algo funcionando, aunque sea feo; Radar IA de mitad de ciclo","Hecho":""},{"Sesión":4,"Fecha":"","Etapa":3,"Enfoque":"Probar en serio: casos de prueba y comparar modelos","Entregable":"20 casos de prueba con su tasa de acierto y la mejor herramienta para cada paso","Hecho":""},{"Sesión":5,"Fecha":"","Etapa":3,"Enfoque":"Piloto con usuarios reales","Entregable":"Dos compañeros usándolo y horas ahorradas medidas","Hecho":""},{"Sesión":6,"Fecha":"","Etapa":4,"Enfoque":"Demo day y red","Entregable":"Presentación a su jefe o equipo con números, 2 o 3 presentaciones con gente de la red de Valeria y Radar IA final","Hecho":""}],"tblEtapas":[{"N":1,"Etapa":"Construir confianza","En inglés":"Building rapport","De qué se trata":"Conocerse por lo que cada quien ya construyó con IA y crear un espacio seguro para hablar con franqueza.","Acción clave":"Rompehielos: muéstrame lo que ya haces","Cuándo":"Sesión 1","Preguntas guía":"¿Qué te trajo a esta mentoría si ya estás en la liga de IA?\n¿Cómo prefieres recibir feedback?\n¿Qué no sabe la gente de ti en el trabajo?"},{"N":2,"Etapa":"Definir dirección","En inglés":"Setting direction","De qué se trata":"Aterrizar metas, reglas del juego y el proyecto ancla: lo que Fernando va a construir, medir y presentar.","Acción clave":"Acuerdo, metas SMART y proyecto ancla","Cuándo":"Sesiones 1 y 2","Preguntas guía":"¿Cómo se ve el éxito en cuatro meses?\n¿Qué vas a construir y quién lo va a usar?\n¿Con qué número vamos a medirlo?"},{"N":3,"Etapa":"Avanzar","En inglés":"Relationship progression","De qué se trata":"Construir el proyecto ancla por etapas: prototipo, casos de prueba y piloto con usuarios reales.","Acción clave":"Check-in a mitad del ciclo con prototipo funcionando","Cuándo":"Sesiones 3 a 5","Preguntas guía":"¿Seguimos rumbo a las metas o alguna ya no aplica?\n¿El prototipo ya lo usa alguien?\n¿Qué está funcionando y qué ajustamos (frecuencia, formato, temas)?\nRepitan el Radar IA: ¿qué área se movió?"},{"N":4,"Etapa":"Cerrar el ciclo","En inglés":"Winding down","De qué se trata":"Presentar el proyecto con números, consolidar aprendizajes y ampliar la red de Fernando.","Acción clave":"Demo day y presentar a Fernando con 2 o 3 personas clave en IA","Cuándo":"Sesión 6","Preguntas guía":"¿Qué aprendiste que no esperabas?\n¿A quién le tienes que presentar tu proyecto?\n¿A quién más deberías conocer?"},{"N":5,"Etapa":"Siguiente paso","En inglés":"Moving on","De qué se trata":"Decidir qué sigue: escalar el proyecto, pasar a un patrocinio o volver a conectar más adelante.","Acción clave":"Patrocinio formal o reconexión","Cuándo":"Después del ciclo","Preguntas guía":"¿Qué sigue para tu proyecto?\n¿Cómo seguimos en contacto?\n¿Te gustaría mentorear a alguien de la liga?"}],"_meta":{"generado":"2026-10-26 18:32"}};
 
-<div class="tabbar">
-  <nav class="wrap tabs" role="tablist" aria-label="Secciones">
-    <button class="tab" role="tab" id="tab-sesion1" aria-controls="sesion1" aria-selected="true">Sesión 1</button>
-    <button class="tab" role="tab" id="tab-cadaquien" aria-controls="cadaquien" aria-selected="false">Tu parte</button>
-    <button class="tab" role="tab" id="tab-ruta" aria-controls="ruta" aria-selected="false">Ruta</button>
-    <button class="tab" role="tab" id="tab-acuerdo" aria-controls="acuerdo" aria-selected="false">Acuerdo <span class="count" id="cnt-acuerdo"></span></button>
-    <button class="tab" role="tab" id="tab-metas" aria-controls="metas" aria-selected="false">Metas <span class="count" id="cnt-metas"></span></button>
-    <button class="tab" role="tab" id="tab-compromisos" aria-controls="compromisos" aria-selected="false">Compromisos <span class="count" id="cnt-compromisos"></span></button>
-    <button class="tab" role="tab" id="tab-bitacora" aria-controls="bitacora" aria-selected="false">Bitácora <span class="count" id="cnt-bitacora"></span></button>
-    <button class="tab" role="tab" id="tab-radar" aria-controls="radar" aria-selected="false">Radar IA</button>
-  </nav>
-</div>
+  // ---------- Helpers ----------
+  const isV = VISTA.indexOf("valeria") === 0;
+  const LAM = /-laminas$/.test(VISTA);              // «valeria-laminas» / «fernando-laminas»: la sesión 1 en láminas
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const T = (name) => (DATA && Array.isArray(DATA[name]) ? DATA[name] : []);
+  const cfg = (k) => { const r = T("tblConfig").find((x) => x.Clave === k); return r ? r.Valor : ""; };
+  const M = String(cfg("mentor") || "Valeria").trim(), F = String(cfg("mentee") || "Fernando").trim();
+  const DEMO = !!(DATA && DATA._meta && DATA._meta.demo);
+  const lines = (s) => String(s ?? "").split(/\r?\n/).map((x) => x.replace(/^\s*[•·*-]\s*/, "").trim()).filter(Boolean);
+  const num = (v) => { if (typeof v === "number") return v; const s = String(v ?? "").trim(); if (!s) return NaN; const n = parseFloat(s.replace(",", ".").replace("%", "")); return s.includes("%") ? n / 100 : n; };
+  const pad = (n) => String(n).padStart(2, "0");
+  const todayStr = () => { const d = new Date(); return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()); };
+  const parseD = (s) => { const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(s || "")); return m ? new Date(+m[1], +m[2] - 1, +m[3]) : null; };
+  const fmtD = (s, o = { weekday: "short", day: "numeric", month: "short" }) => { const d = parseD(s); return d ? d.toLocaleDateString("es-MX", o).replace(/\./g, "") : String(s || ""); };
+  const daysTo = (s) => { const d = parseD(s); return d ? Math.round((d - parseD(todayStr())) / 86400000) : null; };
+  const yes = (v) => /^(s[ií]|yes|x|listo|hecho|ok|✓)$/i.test(String(v ?? "").trim());
+  const same = (a, b) => String(a ?? "").trim().toLowerCase() === String(b ?? "").trim().toLowerCase();
+  const li = (t) => `<li>${esc(t)}</li>`;
+  const empty = (title, text) => `<div class="empty"><b>${esc(title)}</b><span>${esc(text)}</span></div>`;
+  const hint = (hoja) => (isV ? `Captúralo en la hoja «${hoja}» del Excel y vuelve a generar las páginas.` : `Aquí aparecerá cuando ${M} lo registre.`);
+  const ls = {
+    get(k, d) { try { const v = localStorage.getItem(VISTA + "-gen:" + k); return v == null ? d : JSON.parse(v); } catch { return d; } },
+    set(k, v) { try { localStorage.setItem(VISTA + "-gen:" + k, JSON.stringify(v)); } catch {} },
+  };
+  const horaMin = (v) => {
+    if (typeof v === "number" && v < 1) return Math.round(v * 24 * 60);
+    const m = /^(\d{1,2}):(\d{2})/.exec(String(v ?? "").trim());
+    return m ? +m[1] * 60 + +m[2] : null;
+  };
+  const fmtHora = (v) => { const m = horaMin(v); return m == null ? String(v ?? "") : pad(Math.floor(m / 60)) + ":" + pad(m % 60); };
 
-<main class="wrap">
-  <div id="banner" class="banner" hidden></div>
+  // ---------- Data ----------
+  const ETAPAS = T("tblEtapas").map((r) => ({ n: parseInt(r.N, 10) || 0, name: r.Etapa, en: r["En inglés"], what: r["De qué se trata"], key: r["Acción clave"], when: r["Cuándo"], qs: lines(r["Preguntas guía"]) }))
+    .filter((e) => e.n && e.name).sort((a, b) => a.n - b.n);
+  const stageNow = Math.min(Math.max(parseInt(cfg("etapa"), 10) || 1, 1), Math.max(ETAPAS.length, 1));
+  const stageName = (n) => (ETAPAS.find((e) => e.n === parseInt(n, 10)) || {}).name || "";
+  const AG = T("tblAgenda").filter((r) => r["Título"]).sort((a, b) => (num(a.Bloque) || 0) - (num(b.Bloque) || 0));
+  const PAPEL = (p, tipo) => T("tblPapel").filter((r) => same(r.Persona, p) && new RegExp("^" + tipo, "i").test(String(r.Tipo || "")) && r.Texto).map((r) => r.Texto);
+  const PREP = (p) => T("tblPreparacion").filter((r) => same(r.Persona, p) && r.Tarea);
+  const prepDone = (p) => PREP(p).filter((r) => yes(r.Estado)).length;
+  const GOALS = (p) => T("tblMetas").filter((r) => same(r.Persona, p) && r.Meta);
+  const SUGG = (p) => T("tblSugeridas").filter((r) => same(r.Persona, p) && r.Meta);
+  const ACTS = T("tblCompromisos").filter((r) => r.Compromiso);
+  const SES = T("tblBitacora").filter((r) => r.Fecha || r.Temas || r.Aprendizajes || r.Acuerdos).sort((a, b) => (num(b["Sesión"]) || 0) - (num(a["Sesión"]) || 0) || String(b.Fecha).localeCompare(String(a.Fecha)));
+  const ACEPT = T("tblAceptacion").filter((r) => r.Persona);
+  const CICLO = T("tblCiclo").filter((r) => r.Enfoque || r.Entregable).sort((a, b) => (num(a["Sesión"]) || 0) - (num(b["Sesión"]) || 0));
+  const ancla = String(cfg("proyecto_ancla") || "").trim();
+  const agreed = ACEPT.length >= 2 && ACEPT.every((r) => yes(r["De acuerdo"]));
+  const pctOf = (g) => { const p = num(g.Avance); return isNaN(p) ? 0 : Math.max(0, Math.min(1, p)); };
+  const goalStatus = (g) => {
+    const p = pctOf(g), d = daysTo(g["Fecha límite"]);
+    if (p >= 1) return ["Lograda", "good"];
+    if (d != null && d < 0) return ["Vencida", "bad"];
+    if (d != null && d <= 14) return ["Vence en " + d + (d === 1 ? " día" : " días"), "warn"];
+    return ["En curso", ""];
+  };
 
-  <!-- ================= SESIÓN 1 ================= -->
-  <section id="sesion1" role="tabpanel" aria-labelledby="tab-sesion1">
-    <div class="panel-head">
-      <div>
-        <h2>Primera sesión: conocerse y definir el rumbo</h2>
-        <p>60 minutos que cubren las etapas 1 y 2 de MentorcliQ. Inicia el reloj al conectarte y la guía te marca en qué bloque van. En cada bloque está lo que te toca a ti.</p>
-      </div>
-    </div>
-    <div class="s1">
-      <ol class="runsheet" id="runsheet">
-        <li class="blk" id="b1" data-from="0" data-to="5">
-          <div class="blk-time"><span class="mono">00:00</span><span class="mono dim">5 min</span></div>
-          <div class="blk-body">
-            <div class="blk-head"><span class="chip warm">Etapa 1 · Confianza</span><h3>Bienvenida y propósito</h3><label class="done-lbl"><input type="checkbox" id="chk-b1" data-blk="b1"> Hecho</label></div>
-            <p class="aim">saber para qué es este espacio y cómo va a correr la hora.</p>
-            <div class="duo">
-              <div class="duo-f"><span class="who">Lo que te toca</span><ul class="how"><li>Piensa qué te gustaría llevarte de esta primera hora.</li><li>Cuenta en una frase qué te hizo elegir esta mentoría.</li></ul></div>
-            </div>
-            <div class="qs"><span class="lbl">Pregunta</span><p>“¿Qué te gustaría llevarte de esta primera hora?”</p></div>
-            <textarea id="note-b1" data-note="b1" rows="2" placeholder="Notas rápidas de este bloque"></textarea>
-          </div>
-        </li>
-        <li class="blk" id="b2" data-from="5" data-to="20">
-          <div class="blk-time"><span class="mono">00:05</span><span class="mono dim">15 min</span></div>
-          <div class="blk-body">
-            <div class="blk-head"><span class="chip warm">Etapa 1 · Confianza</span><h3>Rompehielos con sabor a IA</h3><label class="done-lbl"><input type="checkbox" id="chk-b2" data-blk="b2"> Hecho</label></div>
-            <p class="aim">encontrar puntos en común y quitarle lo formal a la conversación.</p>
-            <div class="duo">
-              <div class="duo-f"><span class="who">Lo que te toca</span><ul class="how"><li>Ten listos tus tres datos (opción A) o tu historia con la IA (opción B).</li><li>Pregúntale a <span class="nm-m">Valeria</span> lo que te dé curiosidad de su camino.</li></ul></div>
-            </div>
-            <div class="options">
-              <div class="opt"><span class="lbl">Opción A</span><b>Dos verdades y una alucinación</b><span>Cada quien dice tres datos sobre sí. Uno lo inventó una IA. El otro adivina cuál.</span></div>
-              <div class="opt"><span class="lbl">Opción B</span><b>Mi línea de tiempo con la IA</b><span>Tu primer momento “wow”, un tropiezo que te enseñó algo y cómo la usas hoy.</span></div>
-              <div class="opt"><span class="lbl">Opción C</span><b>Mi stack en tres</b><span>Tres herramientas, de IA o no, sin las que no trabajas, y para qué usas cada una.</span></div>
-            </div>
-            <div class="qs"><span class="lbl">Preguntas para profundizar</span>
-              <p>“¿Qué te trajo a esta mentoría?”</p>
-              <p>“¿Qué te emociona y qué te preocupa de la IA en tu trabajo?”</p>
-              <p>“¿Cómo prefieres recibir feedback: directo, por escrito, con ejemplos?”</p>
-            </div>
-            <textarea id="note-b2" data-note="b2" rows="2" placeholder="Lo que quieres recordar de esta parte"></textarea>
-          </div>
-        </li>
-        <li class="blk" id="b3" data-from="20" data-to="35">
-          <div class="blk-time"><span class="mono">00:20</span><span class="mono dim">15 min</span></div>
-          <div class="blk-body">
-            <div class="blk-head"><span class="chip warm">Etapa 2 · Dirección</span><h3>Rumbo y diagnóstico</h3><label class="done-lbl"><input type="checkbox" id="chk-b3" data-blk="b3"> Hecho</label></div>
-            <p class="aim">ubicar dónde estás hoy y a dónde quieres llegar.</p>
-            <div class="duo">
-              <div class="duo-f"><span class="who">Lo que te toca</span><ul class="how"><li>Llega con tu <button class="linkbtn" data-goto="radar">Radar IA</button> ya lleno.</li><li>Trae una tarea real de tu semana que te gustaría hacer con IA.</li><li>Sé honesto con lo que te frena: no hay respuestas incorrectas.</li></ul></div>
-            </div>
-            <div class="qs"><span class="lbl">Preguntas poderosas</span>
-              <p>“Imagina que en seis meses esta mentoría fue un éxito. ¿Qué cambió en tu trabajo?”</p>
-              <p>“¿Qué tarea de tu semana te encantaría que hiciera la IA?”</p>
-              <p>“¿Qué habilidad de IA te daría más ventaja en tu rol, o en el rol que quieres?”</p>
-              <p>“¿Qué te frena hoy: tiempo, conocimiento, permiso o miedo?”</p>
-            </div>
-            <textarea id="note-b3" data-note="b3" rows="2" placeholder="Aspiraciones, frenos y áreas de interés"></textarea>
-          </div>
-        </li>
-        <li class="blk" id="b4" data-from="35" data-to="45">
-          <div class="blk-time"><span class="mono">00:35</span><span class="mono dim">10 min</span></div>
-          <div class="blk-body">
-            <div class="blk-head"><span class="chip warm">Etapa 2 · Dirección</span><h3>Acuerdo de mentoría</h3><label class="done-lbl"><input type="checkbox" id="chk-b4" data-blk="b4"> Hecho</label></div>
-            <p class="aim">reglas del juego claras y aceptadas por las dos partes.</p>
-            <div class="duo">
-              <div class="duo-f"><span class="who">Lo que te toca</span><ul class="how"><li>Di qué esperas de <span class="nm-m">Valeria</span> y cómo te gusta recibir feedback.</li><li>Propón la frecuencia y el horario que de verdad puedas cumplir.</li></ul></div>
-            </div>
-            <textarea id="note-b4" data-note="b4" rows="2" placeholder="Algo que valga la pena recordar del acuerdo"></textarea>
-          </div>
-        </li>
-        <li class="blk" id="b5" data-from="45" data-to="55">
-          <div class="blk-time"><span class="mono">00:45</span><span class="mono dim">10 min</span></div>
-          <div class="blk-body">
-            <div class="blk-head"><span class="chip warm">Etapa 2 · Dirección</span><h3>Metas SMART</h3><label class="done-lbl"><input type="checkbox" id="chk-b5" data-blk="b5"> Hecho</label></div>
-            <p class="aim">entre una y tres metas que de verdad quieras lograr.</p>
-            <div class="duo">
-              <div class="duo-f"><span class="who">Lo que te toca</span><ul class="how"><li>Llega con una idea de meta; revisa antes las <button class="linkbtn" data-goto="metas" data-who="mentee">metas sugeridas</button>.</li><li>Redáctala tú: es tu meta. <span class="nm-m">Valeria</span> te ayuda a volverla medible.</li></ul></div>
-            </div>
-            <div class="qs"><span class="lbl">Pregunta</span><p>“¿Cómo vamos a saber que lo lograste?”</p></div>
-            <textarea id="note-b5" data-note="b5" rows="2" placeholder="Ideas de metas que salieron"></textarea>
-          </div>
-        </li>
-        <li class="blk" id="b6" data-from="55" data-to="60">
-          <div class="blk-time"><span class="mono">00:55</span><span class="mono dim">5 min</span></div>
-          <div class="blk-body">
-            <div class="blk-head"><span class="chip warm">Etapa 2 · Dirección</span><h3>Cierre y compromisos</h3><label class="done-lbl"><input type="checkbox" id="chk-b6" data-blk="b6"> Hecho</label></div>
-            <p class="aim">salir con acciones concretas y la siguiente fecha en el calendario.</p>
-            <div class="duo">
-              <div class="duo-f"><span class="who">Lo que te toca</span><ul class="how"><li>Anota tu primer compromiso con fecha en <button class="linkbtn" data-goto="compromisos">Compromisos</button>.</li><li>Agenda tú la siguiente sesión: llevas el volante.</li></ul></div>
-            </div>
-            <div class="inline-row">
-              <label class="field" style="max-width: 220px"><span>Próxima sesión</span><input type="date" id="cfg-next"></label>
-              <div class="field"><span>Termómetro: ¿qué tan útil fue hoy?</span>
-                <div class="termo" id="termo" role="group" aria-label="Termómetro del 1 al 5">
-                  <button type="button" data-v="1" aria-pressed="false">1</button><button type="button" data-v="2" aria-pressed="false">2</button><button type="button" data-v="3" aria-pressed="false">3</button><button type="button" data-v="4" aria-pressed="false">4</button><button type="button" data-v="5" aria-pressed="false">5</button>
-                </div>
-              </div>
-            </div>
-            <div class="qs"><span class="lbl">Pregunta de cierre</span><p>“¿Qué te llevas de hoy?”</p></div>
-            <textarea id="note-b6" data-note="b6" rows="2" placeholder="Lo que cada quien se lleva y los acuerdos finales"></textarea>
-            <div><button class="btn" id="to-log" type="button">Pasar notas a la bitácora</button></div>
-          </div>
-        </li>
-      </ol>
+  // ---------- Header, status, track ----------
+  function renderHeader() {
+    document.title = isV ? `Mentoría · vista de ${M}` : `Mentoría ${M} × ${F}`;
+    $("#eyebrow").innerHTML = `<span class="lbl">Programa de mentoría · Metodología <b>${esc(cfg("programa") || "MentorcliQ")}</b></span>${cfg("tema") ? `<span class="chip">Tema: ${esc(cfg("tema"))}</span>` : ""}`;
+    $("#names").innerHTML = `${esc(M)}<span class="x">×</span>${esc(F)}`;
+    $("#lede").textContent = isV
+      ? `Mi vista completa de la mentoría: lo mío y lo de ${F}. Esta página se genera desde el Excel de seguimiento.`
+      : `Tu espacio para la mentoría con ${M}: lo que te toca en cada sesión, tu preparación, tus metas y tu avance.`;
+    const demoTxt =  "Versión de demostración.";
+    if (DEMO && !$("#demo-banner")) $("#lede").insertAdjacentHTML("afterend", `<div class="banner" id="demo-banner" style="margin: 14px 0 0">${esc(demoTxt)}</div>`);
+    if (!isV && !DEMO && cfg("excel_fernando") && !$("#xl-link")) $("#lede").insertAdjacentHTML("afterend", `<div class="card-actions" id="xl-link" style="justify-content: flex-start; margin-top: 14px"><a class="btn small" href="${esc(cfg("excel_fernando"))}" download>Descarga tu Excel</a><span class="dim" style="font-size: 13.5px">Llénalo y mándaselo a ${esc(M)} por correo o WhatsApp.</span></div>`);
+    
+    const goals = GOALS(F), pend = ACTS.filter((a) => !yes(a.Estado)), over = pend.filter((a) => (daysTo(a["Para el"]) ?? 1) < 0);
+    const st = ETAPAS.find((e) => e.n === stageNow) || { n: stageNow, name: "", key: "" };
+    const nx = cfg("proxima"), dn = daysTo(nx);
+    const stat = (lbl, v, s, warn) => `<div class="stat"><span class="lbl">${esc(lbl)}</span><span class="v">${esc(v)}</span><span class="s${warn ? " warn" : ""}">${esc(s)}</span></div>`;
+    $("#status").innerHTML =
+      stat("Etapa actual", `${st.n} · ${st.name}`, st.key ? "Acción clave: " + st.key : "") +
+      stat("Próxima sesión", nx ? fmtD(nx) : "Sin fecha", nx ? (dn === 0 ? "Es hoy" : dn === 1 ? "Es mañana" : dn > 1 ? `En ${dn} días` : "Ya pasó") : "Se define al cierre", dn != null && dn < 0) +
+      stat(isV ? `Metas de ${F}` : "Tus metas", String(goals.length), goals.length ? Math.round((goals.reduce((a, g) => a + pctOf(g), 0) / goals.length) * 100) + " % de avance promedio" : "Entre 1 y 3 es ideal") +
+      stat("Compromisos", `${pend.length} pendiente${pend.length === 1 ? "" : "s"}`, over.length ? `${over.length} vencido${over.length === 1 ? "" : "s"}` : "Ninguno vencido", over.length > 0) +
+      stat("Bitácora", `${SES.length} sesi${SES.length === 1 ? "ón" : "ones"}`, SES[0] && SES[0].Fecha ? "Última: " + fmtD(SES[0].Fecha, { day: "numeric", month: "short" }) : "Aún sin registros");
+    $("#track").innerHTML = ETAPAS.map((e) => `<li class="${e.n === stageNow ? "now" : e.n < stageNow ? "past" : ""}"><button class="stage-btn" type="button" data-stage="${e.n}"><span class="node">${e.n}</span><span class="stage-name">${esc(e.name)}</span><span class="stage-en">${esc(e.en || "")}</span></button></li>`).join("");
+  }
 
+  // ---------- Panels ----------
+  const TABS = [["sesion1", "Sesión 1"], ["cadaquien", isV ? "Cada quien" : "Tu parte"], ["ruta", "Ruta"], ["acuerdo", "Acuerdo"], ["metas", "Metas"], ["compromisos", "Compromisos"], ["bitacora", "Bitácora"], ["radar", "Radar IA"]];
+  
+  const head = (h2, p) => `<div class="panel-head"><div><h2>${esc(h2)}</h2>${p ? `<p>${esc(p)}</p>` : ""}</div></div>`;
+  const roList = (rows) => `<ul class="ro-list">${rows.map((r) => `<li class="${yes(r.Estado) ? "ok" : ""}"><span class="tick" aria-hidden="true">✓</span><span>${esc(r.Tarea)}</span></li>`).join("")}</ul>`;
+  const tipsBox = (p, title) => { const t = PAPEL(p, "tip"); return t.length ? `<div class="box"><h3>${esc(title)}</h3><ul class="tips">${t.map(li).join("")}</ul></div>` : ""; };
+
+  function panelSesion() {
+    const opts = T("tblRompehielos").filter((r) => r.Nombre);
+    const blocks = AG.map((r) => {
+      const from = horaMin(r.Hora), mins = num(r.Minutos) || 0, done = yes(r.Hecho);
+      const mine =  [], his = lines(r["Le toca a Fernando"]), qs = lines(r.Preguntas);
+      const et = parseInt(r.Etapa, 10);
+      const duo =  (his.length ? `<div class="duo"><div class="duo-f is-me"><span class="who">Lo que te toca</span><ul class="how">${his.map(li).join("")}</ul></div></div>` : "");
+      const options = /rompehielos/i.test(r["Título"]) && opts.length
+        ? `<div class="options">${opts.map((o) => `<div class="opt"><span class="lbl">Opción ${esc(o["Opción"])}</span><b>${esc(o.Nombre)}</b><span>${esc(o["Cómo funciona"])}</span></div>`).join("")}</div>` : "";
+      const notes =  "";
+      return `<li class="blk${done ? " done" : ""}" data-from="${from ?? ""}" data-to="${from != null ? from + mins : ""}">
+        <div class="blk-time"><span class="mono">${esc(fmtHora(r.Hora))}</span>${mins ? `<span class="mono dim">${mins} min</span>` : ""}</div>
+        <div class="blk-body">
+          <div class="blk-head">${et ? `<span class="chip warm">Etapa ${et}${stageName(et) ? " · " + esc(stageName(et)) : ""}</span>` : ""}<h3>${esc(r["Título"])}</h3>${done ? `<span class="chip good">Hecho</span>` : ""}</div>
+          ${r["Para lograr"] ? `<p class="aim">${esc(r["Para lograr"])}</p>` : ""}
+          ${duo}${options}
+          ${qs.length ? `<div class="qs"><span class="lbl">${qs.length > 1 ? "Preguntas" : "Pregunta"}</span>${qs.map((q) => `<p>“${esc(q.replace(/^[“"«]+|[”"»]+$/g, ""))}”</p>`).join("")}</div>` : ""}
+          ${notes}
+        </div></li>`;
+    }).join("");
+    const rapport = AG.find((r) => /rompehielos/i.test(r["Título"]));
+    const oc = (ok, t, s) => `<li class="${ok ? "ok" : ""}"><span class="tick">✓</span><span>${esc(t)}<span class="sub">${esc(s)}</span></span></li>`;
+    const goalsF = GOALS(F);
+    const outcomes = `<div class="box"><h3>Al terminar la hora</h3><ul class="outcomes">
+      ${oc(rapport && yes(rapport.Hecho), "Se conocen más allá del perfil", "Rompehielos hecho")}
+      ${oc(agreed, "Acuerdo aceptado por ambos", agreed ? "Aceptado" : "Falta marcar «De acuerdo»")}
+      ${oc(goalsF.length >= 1, `De 1 a 3 metas SMART${isV ? " de " + F : ""}`, `${goalsF.length} capturada${goalsF.length === 1 ? "" : "s"}`)}
+      ${oc(!!ancla, "Proyecto ancla elegido", ancla || "Por definir")}
+      ${oc(!!cfg("proxima"), "Próxima sesión agendada", cfg("proxima") ? fmtD(cfg("proxima"), { weekday: "long", day: "numeric", month: "long" }) : "Sin fecha")}
+    </ul></div>`;
+    const me = isV ? M : F;
+    const prep = PREP(me).length ? `<div class="box"><h3>${isV ? "Mi preparación" : "Tu preparación"}</h3>${roList(PREP(me))}${isV && PREP(F).length ? `<p class="other-prog">${esc(F)}: ${prepDone(F)} de ${PREP(F).length} listos</p>` : ""}</div>` : "";
+    return head("Primera sesión: conocerse y definir el rumbo", isV ? "60 minutos que cubren las etapas 1 y 2. En cada bloque está lo que me toca y lo que le toca a " + F + "." : "60 minutos que cubren las etapas 1 y 2. En cada bloque está lo que te toca a ti.") +
+      `<div class="s1"><ol class="runsheet">${blocks || `<li>${empty("La agenda está vacía", hint("Sesión 1"))}</li>`}</ol>
       <aside class="rail">
         <div class="clock" id="clock">
           <div class="row"><span class="lbl" style="color: inherit; opacity: .7">Reloj de la sesión</span><span class="now-lbl" id="clock-now">Listo para empezar</span></div>
@@ -575,1125 +711,299 @@ footer { border-top: 1px solid var(--line); padding-block: 18px 36px; color: var
           <div class="bar"><i id="clock-bar"></i></div>
           <div class="btns"><button class="btn small" id="clock-go" type="button">Iniciar</button><button class="btn small ghost" id="clock-reset" type="button">Reiniciar</button></div>
         </div>
-        <div class="box">
-          <h3>Al terminar la hora</h3>
-          <ul class="outcomes" id="outcomes">
-            <li id="oc-rapport"><span class="tick">✓</span><span>Se conocen más allá del perfil<span class="sub">Rompehielos hecho</span></span></li>
-            <li id="oc-agr"><span class="tick">✓</span><span>Acuerdo aceptado por ambos<span class="sub" id="oc-agr-s">Falta marcar “De acuerdo”</span></span></li>
-            <li id="oc-goals"><span class="tick">✓</span><span>De 1 a 3 metas SMART<span class="sub" id="oc-goals-s">0 capturadas</span></span></li>
-            <li id="oc-next"><span class="tick">✓</span><span>Próxima sesión agendada<span class="sub" id="oc-next-s">Sin fecha</span></span></li>
-          </ul>
-        </div>
-        <div class="box">
-          <h3 id="rail-prep-h">Antes de conectarte</h3>
-          <ul class="prep-list" id="rail-prep"></ul>
-          <p class="other-prog" id="rail-other"></p>
-        </div>
-        <div class="box" id="tips-mentee">
-          <h3>Tips para ti</h3>
-          <ul class="tips">
-            <li>Tú llevas el volante: propón los temas que te sirvan.</li>
-            <li>Llega con un reto o una pregunta concreta.</li>
-            <li>Pregunta todo: aquí no hay preguntas tontas.</li>
-            <li>Di qué te sirve y qué no; el feedback va en los dos sentidos.</li>
-            <li>Cumple tus compromisos antes de la siguiente sesión.</li>
-          </ul>
-        </div>
-      </aside>
-    </div>
-  </section>
-
-  <!-- ================= CADA QUIEN ================= -->
-  <section id="cadaquien" role="tabpanel" aria-labelledby="tab-cadaquien" hidden>
-    <div class="panel-head">
-      <div>
-        <h2>Tu parte</h2>
-        <p>En MentorcliQ quien recibe la mentoría lleva el volante. Aquí están tu papel, tu preparación, tus metas, tus compromisos y tus notas privadas. Cuando quieras, manda tus avances a <span class="nm-m">Valeria</span>.</p>
-      </div>
-    </div>
-    <div class="parts" id="parts"></div>
-  </section>
-
-  <!-- ================= RUTA ================= -->
-  <section id="ruta" role="tabpanel" aria-labelledby="tab-ruta" hidden>
-    <div class="panel-head">
-      <div>
-        <h2>La ruta MentorcliQ en 5 etapas</h2>
-        <p>Cada etapa tiene una acción clave. Las etapas pueden repetirse: si cambian las metas, se regresa a “Definir dirección”. Marca en cuál van para que el resumen de arriba se mantenga al día.</p>
-      </div>
-      <div class="cadence" aria-label="Cadencia sugerida"><span>Sugerencia: 6 sesiones</span><span>60 min</span><span>cada 2–3 semanas</span><span>≈ 4 meses</span></div>
-    </div>
-    <div class="stages" id="stages"></div>
-  </section>
-
-  <!-- ================= ACUERDO ================= -->
-  <section id="acuerdo" role="tabpanel" aria-labelledby="tab-acuerdo" hidden>
-    <div class="panel-head">
-      <div>
-        <h2>Acuerdo de mentoría</h2>
-        <p>Es el documento que formaliza límites, metas y expectativas. Llénenlo juntos en la primera sesión; se guarda mientras escriben y lo pueden revisar a mitad del ciclo.</p>
-      </div>
-      <span class="saved-note" id="agr-saved"></span>
-    </div>
-    <div class="agr">
-      <div class="grid3">
-        <label class="field"><span>Frecuencia</span>
-          <select id="ag-frecuencia" data-ag="frecuencia"><option value="">Elige…</option><option>Cada semana</option><option>Cada 2 semanas</option><option>Cada 3 semanas</option><option>Una vez al mes</option></select></label>
-        <label class="field"><span>Duración de cada sesión</span>
-          <select id="ag-duracion" data-ag="duracion"><option value="">Elige…</option><option>45 min</option><option>60 min</option><option>90 min</option></select></label>
-        <label class="field"><span>Canal</span><input type="text" id="ag-canal" data-ag="canal" placeholder="Teams, Zoom, presencial…"></label>
-        <label class="field"><span>Duración del ciclo</span><input type="text" id="ag-ciclo" data-ag="ciclo" placeholder="Ej. 6 sesiones, de noviembre a febrero"></label>
-        <label class="field"><span>Quién agenda y cómo se cancela</span><input type="text" id="ag-agenda" data-ag="agenda" placeholder="Ej. Fernando agenda; avisar con 24 h"></label>
-        <label class="field"><span>Entre sesiones</span><input type="text" id="ag-entre" data-ag="entre" placeholder="Ej. WhatsApp para dudas rápidas, respuesta en 48 h"></label>
-      </div>
-      <div class="grid2">
-        <label class="field"><span>Confidencialidad</span><textarea id="ag-confidencialidad" data-ag="confidencialidad" rows="3" placeholder="Ej. Lo que platicamos queda entre nosotros, salvo que acordemos compartir algo."></textarea></label>
-        <label class="field"><span>Cómo nos damos feedback</span><textarea id="ag-feedback" data-ag="feedback" rows="3" placeholder="Ej. Directo y con ejemplos; al cierre de cada sesión, 2 minutos de qué funcionó y qué cambiamos."></textarea></label>
-        <label class="field"><span>Lo que <span class="nm-f">Fernando</span> espera de <span class="nm-m">Valeria</span></span><textarea id="ag-espMentee" data-ag="espMentee" rows="3"></textarea></label>
-        <label class="field"><span>Lo que <span class="nm-m">Valeria</span> espera de <span class="nm-f">Fernando</span></span><textarea id="ag-espMentor" data-ag="espMentor" rows="3"></textarea></label>
-        <label class="field"><span>Revisamos este acuerdo el</span><input type="date" id="ag-revision" data-ag="revision"><small>Buen momento: el check-in de mitad de ciclo (etapa 3).</small></label>
-      </div>
-      <div class="signs">
-        <label class="sign" id="sign-m"><input type="checkbox" id="ag-okM"><span><b><span class="nm-m">Valeria</span> está de acuerdo</b><small id="ag-okM-s">Pendiente</small></span></label>
-        <label class="sign" id="sign-f"><input type="checkbox" id="ag-okF"><span><b><span class="nm-f">Fernando</span> está de acuerdo</b><small id="ag-okF-s">Pendiente</small></span></label>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= METAS ================= -->
-  <section id="metas" role="tabpanel" aria-labelledby="tab-metas" hidden>
-    <div class="panel-head">
-      <div>
-        <h2>Tus metas SMART</h2>
-        <p>Específicas, medibles, alcanzables, relevantes y con fecha. Elige una sugerida o escribe la tuya, y mueve el avance en cada sesión.</p>
-      </div>
-    </div>
-    <div class="box" id="sugg-box">
-      <div class="inline-row" style="justify-content: space-between; align-items: flex-start">
-        <div style="min-width: 0; flex: 1 1 280px"><h3>Metas sugeridas</h3><p class="dim" style="font-size: 13.5px; margin-top: 2px">Puntos de partida para adaptar al trabajo real. Toca “Usar” y se llena el formulario de abajo.</p></div>
-        <div class="inline-row">
-          <div class="seg" id="sugg-who" hidden role="group" aria-label="Sugerencias para"><button type="button" data-who="mentee" aria-pressed="true"><span class="nm-f">Fernando</span></button><button type="button" data-who="mentor" aria-pressed="false"><span class="nm-m">Valeria</span></button></div>
-          <button class="btn small ai ai-only" id="sugg-ai" type="button"><svg class="spark" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0l1.6 4.8L14.4 6.4 9.6 8 8 12.8 6.4 8 1.6 6.4 6.4 4.8zM13 10l.8 2.2L16 13l-2.2.8L13 16l-.8-2.2L10 13l2.2-.8z"/></svg>Sugerir a la medida con IA</button>
-        </div>
-      </div>
-      <div class="ai-status" id="sugg-status"></div>
-      <div class="sugg" id="sugg"></div>
-    </div>
-    <div id="goals-wrap"></div>
-    <form class="box form-box" id="goal-form" autocomplete="off">
-      <h3>Nueva meta</h3>
-      <div class="grid2">
-        <label class="field span2" hidden><span>¿De quién es la meta?</span><select id="g-duenio"><option value="mentee">Fernando</option><option value="mentor">Valeria</option></select></label>
-        <label class="field span2"><span>Meta en una frase</span><input type="text" id="g-titulo" required placeholder="Ej. Crear un asistente de IA que resuma mis correos de clientes"></label>
-        <label class="field"><span><span class="letter">S</span>Específica: ¿qué exactamente?</span><input type="text" id="g-s"></label>
-        <label class="field"><span><span class="letter">M</span>Medible: ¿cómo sabremos?</span><input type="text" id="g-m" placeholder="Ej. Lo uso 2 semanas seguidas y ahorro 3 h"></label>
-        <label class="field"><span><span class="letter">A</span>Alcanzable: ¿con qué apoyo?</span><input type="text" id="g-a"></label>
-        <label class="field"><span><span class="letter">R</span>Relevante: ¿por qué importa?</span><input type="text" id="g-r"></label>
-        <label class="field"><span><span class="letter">T</span>Fecha límite</span><input type="date" id="g-fecha" required></label>
-        <label class="field"><span>Área del Radar IA</span><select id="g-area"></select></label>
-      </div>
-      <div class="card-actions" style="margin-top: 14px"><button class="btn" type="submit" data-w>Guardar meta</button></div>
-    </form>
-  </section>
-
-  <!-- ================= COMPROMISOS ================= -->
-  <section id="compromisos" role="tabpanel" aria-labelledby="tab-compromisos" hidden>
-    <div class="panel-head">
-      <div>
-        <h2>Compromisos entre sesiones</h2>
-        <p>Acciones pequeñas con dueño y fecha. Al inicio de cada sesión, revisen esta lista primero.</p>
-      </div>
-    </div>
-    <form class="add-row" id="act-form" autocomplete="off">
-      <label class="field"><span>Compromiso</span><input type="text" id="a-texto" required placeholder="Ej. Probar 3 prompts para resumir el reporte semanal"></label>
-      <label class="field"><span>Responsable</span><select id="a-owner"><option value="mentee">Fernando</option><option value="mentor">Valeria</option></select></label>
-      <label class="field"><span>Para el</span><input type="date" id="a-fecha"></label>
-      <button class="btn" type="submit" data-w>Agregar</button>
-    </form>
-    <div id="acts-wrap"></div>
-  </section>
-
-  <!-- ================= BITÁCORA ================= -->
-  <section id="bitacora" role="tabpanel" aria-labelledby="tab-bitacora" hidden>
-    <div class="panel-head">
-      <div>
-        <h2>Bitácora de sesiones</h2>
-        <p>Qué se platicó, qué aprendieron y qué acordaron. Es la memoria de la mentoría y la base para el check-in de mitad de ciclo.</p>
-      </div>
-    </div>
-    <div class="log-grid">
-      <div class="sessions" id="sessions-wrap"></div>
-      <div style="display: grid; gap: 16px">
-        <div class="box ai-only" id="prep-box">
-          <div class="inline-row" style="justify-content: space-between">
-            <h3>Preparar la siguiente sesión</h3>
-            <button class="btn small ai" id="prep-go" type="button"><svg class="spark" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0l1.6 4.8L14.4 6.4 9.6 8 8 12.8 6.4 8 1.6 6.4 6.4 4.8zM13 10l.8 2.2L16 13l-2.2.8L13 16l-.8-2.2L10 13l2.2-.8z"/></svg>Proponer agenda con IA</button>
-          </div>
-          <p class="dim" style="font-size: 13.5px; margin-top: 6px">La IA lee la etapa, las metas, los compromisos pendientes y las últimas sesiones, y propone una agenda de 60 minutos con preguntas.</p>
-          <div class="ai-status" id="prep-status"></div>
-          <div class="prep-out" id="prep-out"></div>
-        </div>
-        <form class="box" id="ses-form" autocomplete="off">
-          <div class="inline-row" style="justify-content: space-between"><h3 id="ses-form-h">Registrar sesión</h3><button type="button" class="linkbtn" id="ses-cancel" hidden>Cancelar edición</button></div>
-          <div class="grid2" style="margin-top: 12px">
-            <label class="field"><span>Fecha</span><input type="date" id="ses-fecha" required></label>
-            <label class="field"><span>Etapa</span><select id="ses-etapa"></select></label>
-            <label class="field span2"><span>Notas en bruto</span><textarea id="ses-notas" rows="4" placeholder="Pega aquí tus apuntes tal cual. Con IA se ordenan en temas, aprendizajes y acuerdos."></textarea></label>
-          </div>
-          <div class="inline-row ai-only" style="margin-top: 10px"><button class="btn small ai" type="button" id="ses-ai"><svg class="spark" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0l1.6 4.8L14.4 6.4 9.6 8 8 12.8 6.4 8 1.6 6.4 6.4 4.8zM13 10l.8 2.2L16 13l-2.2.8L13 16l-.8-2.2L10 13l2.2-.8z"/></svg>Ordenar notas con IA</button><span class="ai-status" id="ses-ai-status"></span></div>
-          <div class="suggested" id="ses-suggested" hidden></div>
-          <div class="grid2" style="margin-top: 12px">
-            <label class="field span2"><span>Temas</span><textarea id="ses-temas" rows="2"></textarea></label>
-            <label class="field span2"><span>Aprendizajes</span><textarea id="ses-aprend" rows="2"></textarea></label>
-            <label class="field span2"><span>Acuerdos</span><textarea id="ses-acuerdos" rows="2"></textarea></label>
-            <div class="field span2"><span>Termómetro de la sesión</span>
-              <div class="termo" id="ses-termo" role="group" aria-label="Termómetro del 1 al 5">
-                <button type="button" data-v="1" aria-pressed="false">1</button><button type="button" data-v="2" aria-pressed="false">2</button><button type="button" data-v="3" aria-pressed="false">3</button><button type="button" data-v="4" aria-pressed="false">4</button><button type="button" data-v="5" aria-pressed="false">5</button>
-              </div>
-            </div>
-          </div>
-          <div class="card-actions" style="margin-top: 14px"><button class="btn" type="submit" id="ses-save" data-w>Guardar en la bitácora</button></div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= RADAR ================= -->
-  <section id="radar" role="tabpanel" aria-labelledby="tab-radar" hidden>
-    <div class="panel-head">
-      <div>
-        <h2>Radar IA de <span class="nm-f">Fernando</span></h2>
-        <p>Autoevaluación del 1 al 5 en seis áreas. La primera es la línea base; repítanla a mitad y al final del ciclo para ver cuánto se movió cada área.</p>
-      </div>
-    </div>
-    <div class="radar-grid">
-      <div>
-        <div class="chart" id="chart"></div>
-        <div class="tbl-wrap" id="rad-table"></div>
-      </div>
-      <form class="box" id="rad-form" autocomplete="off">
-        <h3>Nueva evaluación</h3>
-        <div class="grid2" style="margin: 12px 0 16px">
-          <label class="field"><span>Momento</span><select id="rad-label"><option>Línea base</option><option>Mitad del ciclo</option><option>Cierre</option><option>Seguimiento</option></select></label>
-          <label class="field"><span>Fecha</span><input type="date" id="rad-fecha" required></label>
-        </div>
-        <div class="rad-fields" id="rad-fields"></div>
-        <div class="card-actions" style="margin-top: 16px"><button class="btn" type="submit" data-w>Guardar evaluación</button></div>
-      </form>
-    </div>
-  </section>
-</main>
-
-<footer class="wrap">
-  <span>Etapas: Building Rapport, Setting Direction, Relationship Progression, Winding Down y Moving On (MentorcliQ).</span>
-  <span><a href="https://drive.google.com/drive/folders/1RVpCitcToSeo-Ku5Xr7gEFNtCKx_OSZA" target="_blank" rel="noopener">Seguimiento en Drive</a></span>
-</footer>
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-<script>
-(() => {
-  "use strict";
-
-  // ---------- Static model ----------
-  const AREAS = [
-    { id: "fund", name: "Fundamentos de IA", hint: "Cómo funcionan los modelos, sus límites y las alucinaciones" },
-    { id: "prompt", name: "Prompting", hint: "Pedirle bien las cosas a la IA y refinar respuestas" },
-    { id: "auto", name: "Automatización y agentes", hint: "Flujos, herramientas conectadas y agentes" },
-    { id: "datos", name: "Datos y análisis", hint: "Explorar, limpiar y explicar datos con IA" },
-    { id: "etica", name: "Ética y riesgos", hint: "Privacidad, sesgos y uso responsable" },
-    { id: "negocio", name: "Casos de negocio", hint: "Detectar dónde la IA genera valor y medirlo" },
-  ];
-  const LEVELS = ["", "Curiosidad", "Exploro", "Lo uso seguido", "Lo aplico con impacto", "Lo enseño a otros"];
-  const STAGES = [
-    { n: 1, name: "Construir confianza", en: "Building rapport", what: "Conocerse, encontrar puntos en común y crear un espacio seguro para hablar con franqueza.", key: "Rompehielos", when: "Sesión 1", qs: ["¿Qué te trajo a esta mentoría?", "¿Cómo prefieres recibir feedback?", "¿Qué no sabe la gente de ti en el trabajo?"] },
-    { n: 2, name: "Definir dirección", en: "Setting direction", what: "Aterrizar metas y reglas del juego. Sin dirección, las sesiones se vuelven pláticas agradables sin avance.", key: "Acuerdo de mentoría y metas SMART", when: "Sesiones 1 y 2", qs: ["¿Cómo se ve el éxito en seis meses?", "¿Qué no queremos que pase?", "¿Qué meta da un resultado visible en 30 días?"] },
-    { n: 3, name: "Avanzar", en: "Relationship progression", what: "Trabajar sobre las metas con retos reales, práctica y revisión de compromisos en cada sesión.", key: "Check-in a mitad del ciclo", when: "Sesiones 3 a 5", qs: ["¿Seguimos rumbo a las metas o alguna ya no aplica?", "¿Qué está funcionando y qué ajustamos (frecuencia, formato, temas)?", "¿Qué compromiso se atoró y por qué?", "Repitan el Radar IA: ¿qué área se movió?"] },
-    { n: 4, name: "Cerrar el ciclo", en: "Winding down", what: "Revisar logros, consolidar aprendizajes y ampliar la red de quien recibe la mentoría.", key: "Networking: presentar a {F} con 2 o 3 personas clave en IA", when: "Sesión 6", qs: ["¿Qué aprendiste que no esperabas?", "¿A quién más deberías conocer?", "¿Qué meta sigue abierta y quién te puede ayudar?"] },
-    { n: 5, name: "Siguiente paso", en: "Moving on", what: "Decidir qué sigue: cerrar formalmente, pasar a un patrocinio o volver a conectar más adelante.", key: "Patrocinio formal o reconexión", when: "Después del ciclo", qs: ["¿Qué sigue para ti?", "¿Cómo seguimos en contacto?", "¿Te gustaría mentorear a alguien más?"] },
-  ];
-  const BLOCKS = [
-    { id: "b1", from: 0, to: 5, title: "Bienvenida y propósito" },
-    { id: "b2", from: 5, to: 20, title: "Rompehielos" },
-    { id: "b3", from: 20, to: 35, title: "Rumbo y diagnóstico" },
-    { id: "b4", from: 35, to: 45, title: "Acuerdo de mentoría" },
-    { id: "b5", from: 45, to: 55, title: "Metas SMART" },
-    { id: "b6", from: 55, to: 60, title: "Cierre y compromisos" },
-  ];
-  const TABS = ["sesion1", "cadaquien", "ruta", "acuerdo", "metas", "compromisos", "bitacora", "radar"];
-  const DEFAULT_CFG = { mentor: "Valeria", mentee: "Fernando", ownerName: "Valeria", stage: 1, nextSession: "" };
-  const MENTOR_AREA = { id: "mentoria", name: "Habilidades de mentoría" };
-
-  // Each person's part. {M} = quien mentorea, {F} = quien recibe la mentoría.
-  const ROLE = {
-    mentee: {
-      tag: "Recibe la mentoría", motto: "Lleva el volante",
-      does: ["Propones los temas y agendas las sesiones.", "Llegas con un reto o una pregunta concreta.", "Cumples tus compromisos entre sesiones.", "Pides feedback y dices qué te sirve y qué no.", "Actualizas tus metas y tu Radar IA."],
-      prep: [
-        { id: "e1", t: "Llenar mi Radar IA: calificarme del 1 al 5 en seis áreas.", goto: "radar" },
-        { id: "e2", t: "Pensar en dos o tres temas o retos de IA que quiero trabajar." },
-        { id: "e3", t: "Traer un ejemplo real: una tarea de mi semana que me gustaría hacer con IA." },
-        { id: "e4", t: "Revisar las metas sugeridas y llegar con una idea de meta.", goto: "metas" },
-        { id: "e5", t: "Preparar mi historia en dos minutos: qué hago y qué me trajo a la mentoría." },
-      ],
-    },
-    mentor: { tag: "Mentorea", motto: "Guía y abre puertas", does: [], prep: [] },
-  };
-
-  // Suggested SMART goals (starting points to adapt). plazo = días.
-  const SUGG = {
-    mentee: [
-      { area: "prompt", plazo: 30, titulo: "Armar mi biblioteca de 10 prompts probados para mis tareas más repetitivas", s: "Elegir mis 5 tareas que más se repiten y crear 2 prompts para cada una", m: "10 prompts documentados y cada uno usado al menos 2 veces", a: "30 minutos al día durante 2 semanas; {M} revisa la biblioteca", r: "Gano tiempo desde el primer mes" },
-      { area: "auto", plazo: 60, titulo: "Automatizar con IA una tarea que hoy hago a mano cada semana", s: "Elegir una tarea semanal (reporte, resumen, captura) y automatizarla", m: "Corre 4 semanas seguidas y me ahorra al menos 2 horas por semana", a: "Con las herramientas que ya tengo en el trabajo y una revisión con {M}", r: "Libera tiempo para trabajo de más valor" },
-      { area: "negocio", plazo: 60, titulo: "Proponer un caso de uso de IA para mi área con su beneficio estimado", s: "Detectar un proceso donde la IA ahorre tiempo o dinero y documentarlo en una página", m: "Caso presentado a mi jefe o equipo con horas o pesos ahorrados estimados", a: "{M} me ayuda a afinar el cálculo y la presentación", r: "Me posiciona como referente de IA en mi área" },
-      { area: "datos", plazo: 45, titulo: "Analizar con IA un conjunto de datos real de mi trabajo y sacar 3 hallazgos", s: "Tomar un archivo real (ventas, tickets, gastos) y explorarlo con IA", m: "3 hallazgos verificados contra la fuente original", a: "Con datos que puedo compartir y sin información sensible", r: "Aprendo a usar la IA con criterio, no a ciegas" },
-      { area: "fund", plazo: 30, titulo: "Explicar a mi equipo en 10 minutos cómo funciona la IA generativa y cuándo no confiar en ella", s: "Preparar una explicación corta con 2 ejemplos de alucinaciones", m: "Presentación dada y al menos 3 preguntas del equipo respondidas", a: "{M} me recomienda lecturas y revisa el borrador", r: "Enseñar es la mejor forma de aprender" },
-      { area: "etica", plazo: 45, titulo: "Escribir las reglas de uso responsable de IA para mi equipo", s: "Definir qué datos sí y cuáles no se comparten con herramientas de IA", m: "Documento de una página revisado por mi jefe o por el área de riesgos", a: "Partiendo de las políticas que ya existen en la empresa", r: "Evita riesgos y da confianza para usar IA" },
-      { area: "auto", plazo: 90, titulo: "Construir un asistente o agente que resuelva un flujo completo de mi área", s: "Elegir un flujo de punta a punta (por ejemplo, preparar un reporte) y armar un asistente que lo haga", m: "Demo funcionando y usada por al menos un compañero", a: "Se construye por etapas, una por sesión, con revisión de {M}", r: "Es de las habilidades de IA con más demanda" },
-    ],
-    mentor: [],
-  };
-
-  // ---------- State ----------
-  const S = { cfg: { ...DEFAULT_CFG }, agr: {}, run: { checks: {}, notes: {}, termo: 0 }, prep: null, goals: [], actions: [], sessions: [], evals: [], parts: { mentor: { checks: {} }, mentee: { checks: {} } }, priv: "" };
-  let db = null, sample = null, readOnly = false, offline = false;
-  let isOwnerV = null, myId = null, localMeName = null; // who is viewing: owner = S.cfg.ownerName, anyone else = the other person
-  const $ = (s, r = document) => r.querySelector(s);
-  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
-  const M = () => S.cfg.mentor || "Valeria";
-  const F = () => S.cfg.mentee || "Fernando";
-  const nameOf = (role) => (role === "mentor" ? M() : F());
-  const otherRole = (role) => (role === "mentor" ? "mentee" : "mentor");
-  const viewerRole = () => {
-    if (localMeName) return localMeName === M() ? "mentor" : localMeName === F() ? "mentee" : null;
-    if (isOwnerV == null) return null;
-    const owner = S.cfg.ownerName || "Valeria";
-    const me = isOwnerV ? owner : owner === M() ? F() : M();
-    return me === M() ? "mentor" : "mentee";
-  };
-  const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-  const txt = (t) => String(t || "").replace(/\{M\}/g, M()).replace(/\{F\}/g, F());
-  const fill = (t) => esc(txt(t));
-  const uid = () => "x" + Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
-  const pad = (n) => String(n).padStart(2, "0");
-  const todayStr = () => { const d = new Date(); return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()); };
-  const addDays = (n) => { const d = new Date(); d.setDate(d.getDate() + n); return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()); };
-  const parseD = (s) => { if (!s || !/^\d{4}-\d{2}-\d{2}$/.test(s)) return null; const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); };
-  const fmtD = (s, opts = { weekday: "short", day: "numeric", month: "short" }) => { const d = parseD(s); return d ? d.toLocaleDateString("es-MX", opts).replace(/\./g, "") : ""; };
-  const daysTo = (s) => { const d = parseD(s); if (!d) return null; const t = parseD(todayStr()); return Math.round((d - t) / 86400000); };
-  const ls = {
-    get(k, def) { try { const v = localStorage.getItem(k); return v == null ? def : JSON.parse(v); } catch { return def; } },
-    set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
-  };
-
-  // ---------- Toast & banner ----------
-  let toastT = null;
-  function toast(msg) { const t = $("#toast"); t.textContent = msg; t.classList.add("show"); clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove("show"), 2600); }
-  function renderBanner() {
-    const b = $("#banner");
-    if (readOnly) { b.hidden = false; b.textContent = "Puedes ver todo, pero no editar. Pide a " + M() + " que te comparta la página con permiso de edición."; }
-    else if (["acuerdo", "metas", "compromisos", "bitacora", "radar"].includes(TABS.find((k) => !$("#" + k).hidden))) { b.hidden = false; b.innerHTML = 'Lo que escribas aquí se guarda solo en este navegador. Para llevarlo entre los dos, usen la <a href="https://drive.google.com/drive/folders/1RVpCitcToSeo-Ku5Xr7gEFNtCKx_OSZA" target="_blank" rel="noopener">hoja de seguimiento en la carpeta compartida de Drive</a>.'; }
-    else b.hidden = true;
+        ${outcomes}${prep}${ tipsBox(F, "Tips para ti")}
+      </aside></div>`;
   }
-  function applyRO() {
-    if (!readOnly) return;
-    $$("main input, main textarea, main select, main button[data-w], #termo button, #ses-termo button, #swap, .stage-set, .x, .act input, .goal input, #to-log, #ses-ai, #prep-go").forEach((el) => { el.disabled = true; });
-  }
-  function setReadOnly(v) { if (readOnly === v) return; readOnly = v; renderBanner(); applyRO(); }
 
-  // ---------- Writes (one at a time per document) ----------
-  const chains = new Map();
-  function onWriteError(e) {
-    const code = e && e.code;
-    if (code === "invalid_argument") setReadOnly(true);
-    else if (code === "quota_exceeded") toast("Se llenó el espacio de esta página. Borra registros viejos para guardar más.");
-    else toast("No se pudo guardar. Revisa tu conexión e intenta de nuevo.");
+  function personCard(p, mine) {
+    const role = same(p, M) ? "Mentorea" : "Recibe la mentoría";
+    const lema = PAPEL(p, "lema")[0], papel = PAPEL(p, "papel"), prep = PREP(p), goals = GOALS(p);
+    const acts = ACTS.filter((a) => same(a.Responsable, p) && !yes(a.Estado));
+    const pos = mine ? (isV ? "Mi" : "Tu") : "Su", posP = mine ? (isV ? "Mis" : "Tus") : "Sus";
+    return `<article class="part ${mine ? "me" : ""}">
+      <div class="part-hd"><h3>${esc(p)}</h3><span class="chip ${role === "Recibe la mentoría" ? "warm" : ""}">${esc(role)}</span>${mine ? '<span class="chip good">Tú</span>' : ""}</div>
+      ${lema ? `<p class="part-motto">${esc(lema)}</p>` : ""}
+      ${papel.length ? `<div class="sub"><span class="lbl">${pos} papel</span><ul class="tips">${papel.map(li).join("")}</ul></div>` : ""}
+      ${prep.length ? `<div class="sub"><div class="sub-h"><span class="lbl">Antes de la sesión 1</span><span class="mono dim">${prepDone(p)}/${prep.length}</span></div>${roList(prep)}</div>` : ""}
+      <div class="sub"><span class="lbl">${posP} metas</span>${goals.length ? `<ul class="mini">${goals.map((g) => `<li><span>${esc(g.Meta)}</span><span class="mono">${Math.round(pctOf(g) * 100)} %</span></li>`).join("")}</ul>` : `<span class="dim" style="font-size:14px">Aún sin metas.</span>`}</div>
+      <div class="sub"><span class="lbl">${posP} compromisos pendientes</span>${acts.length ? `<ul class="mini">${acts.map((a) => `<li><span>${esc(a.Compromiso)}</span><span class="mono">${a["Para el"] ? esc(fmtD(a["Para el"], { day: "numeric", month: "short" })) : ""}</span></li>`).join("")}</ul>` : `<span class="dim" style="font-size:14px">Nada pendiente.</span>`}</div>
+    </article>`;
   }
-  function queue(path, fn) {
-    if (!db || readOnly) return Promise.resolve();
-    const prev = chains.get(path) || Promise.resolve();
-    const next = prev.catch(() => {}).then(fn);
-    chains.set(path, next);
-    return next.catch(onWriteError);
+  function panelCada() {
+    return isV
+      ? head("La parte de cada quien", "Mi papel y el de " + F + ", la preparación de cada uno, sus metas y compromisos pendientes.") + `<div class="parts">${personCard(M, true)}${personCard(F, false)}</div>`
+      : head("Tu parte", "En MentorcliQ quien recibe la mentoría lleva el volante. Aquí están tu papel, tu preparación, tus metas y tus compromisos.") + `<div class="parts parts-1">${personCard(F, true)}</div>`;
   }
-  function upsert(path, partial) {
-    return queue(path, async () => {
-      const ref = db.doc(path);
-      try { await ref.update(partial); }
-      catch (e) { if (e && e.code === "invalid_argument") await ref.set(partial); else throw e; }
+
+  function panelRuta() {
+    const ciclo = CICLO.length ? `<div class="ciclo-wrap"><div class="ciclo-anchor"><span class="lbl">Proyecto ancla</span><b>${ancla ? esc(ancla) : "Por definir en la sesión 1"}</b></div>
+      <div class="group-h"><h3>El ciclo, sesión por sesión</h3></div>
+      <ol class="ciclo">${CICLO.map((c) => `<li class="${yes(c.Hecho) ? "ok" : ""}"><span class="n mono">${esc(c["Sesión"])}</span><div style="min-width:0"><div class="hd"><b>${esc(c.Enfoque)}</b>${c.Fecha ? `<span class="chip">${esc(fmtD(c.Fecha, { day: "numeric", month: "short" }))}</span>` : ""}${yes(c.Hecho) ? '<span class="chip good">Hecho</span>' : ""}</div>${c.Entregable ? `<p><span class="lbl">Entregable</span>${esc(c.Entregable)}</p>` : ""}</div></li>`).join("")}</ol></div>` : "";
+    if (!ETAPAS.length) return head("La ruta", "") + ciclo + empty("Sin etapas", hint("Etapas"));
+    return head("La ruta", "Todo el ciclo gira alrededor de un proyecto ancla que se construye, se mide y se presenta. Debajo, las 5 etapas de MentorcliQ: cada una tiene una acción clave.") + ciclo +
+      `<div class="group-h"><h3>Las 5 etapas de MentorcliQ</h3></div><div class="stages">${ETAPAS.map((s) => `<article class="stage-card ${s.n === stageNow ? "now" : s.n < stageNow ? "past" : ""}" id="stage-${s.n}">
+        <div class="big">${s.n}</div><div class="body">
+        <div class="hd"><h3>${esc(s.name)}</h3><span class="stage-en">${esc(s.en || "")}</span>${s.n === stageNow ? '<span class="chip warn">Etapa actual</span>' : s.n < stageNow ? '<span class="chip good">Recorrida</span>' : ""}</div>
+        ${s.what ? `<p style="color: var(--ink-2)">${esc(s.what)}</p>` : ""}
+        <div class="meta"><div><span class="lbl">Acción clave</span><span>${esc(s.key || "")}</span></div><div><span class="lbl">Cuándo</span><span>${esc(s.when || "")}</span></div></div>
+        ${s.qs.length ? `<div><span class="lbl">Preguntas guía</span><ul>${s.qs.map(li).join("")}</ul></div>` : ""}
+        </div></article>`).join("")}</div>`;
+  }
+
+  function panelAcuerdo() {
+    const rows = T("tblAcuerdo").filter((r) => r.Tema);
+    const tbl = rows.length ? `<div class="tbl-wrap"><table class="agr-table"><thead><tr><th>Tema</th><th>Lo que acordamos</th></tr></thead><tbody>${rows.map((r) => `<tr><td><b>${esc(r.Tema)}</b></td><td>${r["Lo que acordamos"] ? esc(r["Lo que acordamos"]) : `<span class="dim">Por definir${r.Ejemplo ? " · ejemplo: " + esc(r.Ejemplo) : ""}</span>`}</td></tr>`).join("")}</tbody></table></div>` : empty("Sin temas", hint("Acuerdo"));
+    const acc = ACEPT.length ? `<div class="signs">${ACEPT.map((r) => `<div class="sign ${yes(r["De acuerdo"]) ? "ok" : ""}"><span class="tick" aria-hidden="true">✓</span><span><b>${esc(r.Persona)}${yes(r["De acuerdo"]) ? " está de acuerdo" : ""}</b><small>${yes(r["De acuerdo"]) ? (r.Fecha ? "Aceptado el " + esc(fmtD(r.Fecha, { day: "numeric", month: "long" })) : "Aceptado") : "Pendiente"}</small></span></div>`).join("")}</div>` : "";
+    return head("Acuerdo de mentoría", "Límites, metas y expectativas de la mentoría. Se llena juntos en la primera sesión y se revisa a mitad del ciclo.") + `<div class="agr">${tbl}${acc}</div>`;
+  }
+
+  function goalCard(g) {
+    const [st, cls] = goalStatus(g), p = Math.round(pctOf(g) * 100);
+    const row = (l, v) => (v ? `<div><dt>${l}</dt><dd>${esc(v)}</dd></div>` : "");
+    return `<article class="goal"><div class="chips"><span class="chip ${cls}">${esc(st)}</span>${g["Área"] ? `<span class="chip">${esc(g["Área"])}</span>` : ""}${g["Fecha límite"] ? `<span class="chip">Para el ${esc(fmtD(g["Fecha límite"], { day: "numeric", month: "short", year: "numeric" }))}</span>` : ""}</div>
+      <h3>${esc(g.Meta)}</h3><dl class="smart">${row("S", g["S · Específica"])}${row("M", g["M · Medible"])}${row("A", g["A · Alcanzable"])}${row("R", g["R · Relevante"])}</dl>
+      <div class="prog"><div class="row"><span>Avance</span><span class="mono">${p} %</span></div><div class="meter"><i style="width:${p}%"></i></div></div></article>`;
+  }
+  const suggCards = (p) => SUGG(p).map((s) => `<div class="sg"><div class="chips">${s["Área"] ? `<span class="chip">${esc(s["Área"])}</span>` : ""}${s["Plazo (días)"] ? `<span class="chip">${esc(s["Plazo (días)"])} días</span>` : ""}</div><b>${esc(s.Meta)}</b>${s["M · Medible"] ? `<span class="m"><span class="letter">M</span>${esc(s["M · Medible"])}</span>` : ""}</div>`).join("");
+  function panelMetas() {
+    const group = (p, title) => { const g = GOALS(p); return `<div class="goal-group"><div class="group-h"><h3>${esc(title)}</h3><span class="dim mono">${g.length}</span></div>${g.length ? `<div class="goals">${g.map(goalCard).join("")}</div>` : empty("Aún sin metas", hint("Metas"))}</div>`; };
+    const sugg = (p, title) => (SUGG(p).length ? `<div class="goal-group"><div class="group-h"><h3>${esc(title)}</h3></div><div class="sugg">${suggCards(p)}</div></div>` : "");
+    return head(isV ? "Metas SMART" : "Tus metas SMART", "Específicas, medibles, alcanzables, relevantes y con fecha. El estado se calcula con la fecha límite y el avance.") +
+      (isV ? group(F, "Metas de " + F) + group(M, "Mis metas") + sugg(F, "Sugeridas para " + F) + sugg(M, "Sugeridas para mí")
+           : group(F, "Tus metas") + sugg(F, "Metas sugeridas"));
+  }
+
+  function panelCompromisos() {
+    const item = (a) => { const d = daysTo(a["Para el"]), done = yes(a.Estado), over = !done && d != null && d < 0;
+      return `<li class="act ${done ? "done" : ""}"><span class="tick-sm ${done ? "ok" : ""}" aria-hidden="true">✓</span><div style="min-width:0"><span class="t">${esc(a.Compromiso)}</span>
+        <div class="m"><span class="chip">${esc(a.Responsable || "")}</span>${a["Para el"] ? `<span class="${over ? "chip bad" : ""}">${over ? "Venció " : "Para el "}${esc(fmtD(a["Para el"]))}</span>` : ""}${a.Estado && !done ? `<span>${esc(a.Estado)}</span>` : ""}${a["Meta relacionada"] ? `<span>Meta: ${esc(a["Meta relacionada"])}</span>` : ""}${a["Sesión"] ? `<span>Sesión ${esc(a["Sesión"])}</span>` : ""}</div></div><span></span></li>`; };
+    const pend = ACTS.filter((a) => !yes(a.Estado)).sort((a, b) => String(a["Para el"] || "9").localeCompare(String(b["Para el"] || "9")));
+    const done = ACTS.filter((a) => yes(a.Estado));
+    return head("Compromisos entre sesiones", "Acciones pequeñas con dueño y fecha. Al inicio de cada sesión se revisan primero.") +
+      (ACTS.length ? `<div class="group-h"><h3>Pendientes</h3><span class="dim mono">${pend.length}</span></div>${pend.length ? `<ul class="acts">${pend.map(item).join("")}</ul>` : `<p class="dim">Todo al día.</p>`}${done.length ? `<div class="group-h"><h3>Cumplidos</h3><span class="dim mono">${done.length}</span></div><ul class="acts">${done.map(item).join("")}</ul>` : ""}`
+                   : empty("Sin compromisos todavía", hint("Compromisos")));
+  }
+
+  function panelBitacora() {
+    const sec = (l, v) => (v ? `<div class="sec"><span class="lbl">${l}</span><p>${esc(v)}</p></div>` : "");
+    return head("Bitácora de sesiones", "Qué se platicó, qué se aprendió y qué se acordó en cada sesión.") +
+      (SES.length ? `<div class="sessions">${SES.map((s) => { const t = Math.round(num(s["Termómetro"])) || 0;
+        return `<article class="ses"><div class="hd"><h3>Sesión ${esc(s["Sesión"] || "")} <span class="dim" style="font-weight:500">${s.Fecha ? "· " + esc(fmtD(s.Fecha, { weekday: "short", day: "numeric", month: "long" })) : ""}</span></h3>${t ? `<span class="dots" aria-label="Termómetro ${t} de 5">${[1, 2, 3, 4, 5].map((i) => `<i class="${i <= t ? "on" : ""}"></i>`).join("")}</span>` : ""}</div>
+        ${s.Etapa ? `<div><span class="chip warm">Etapa ${esc(s.Etapa)}${stageName(s.Etapa) ? " · " + esc(stageName(s.Etapa)) : ""}</span></div>` : ""}
+        ${sec("Temas", s.Temas)}${sec("Aprendizajes", s.Aprendizajes)}${sec("Acuerdos", s.Acuerdos)}${sec("Próximos pasos", s["Próximos pasos"])}${ ""}</article>`; }).join("")}</div>`
+                  : empty("La bitácora está vacía", hint("Bitácora")));
+  }
+
+  const LEVELS = ["", "Lo conozco", "Lo uso en el chat", "Lo uso con método", "Construyo para otros", "Lo mido y lo escalo"], LEVEL_TXT = [];
+  T("tblNiveles").forEach((r) => { const n = parseInt(r.Nivel, 10); if (n >= 1 && n <= 5 && r.Nombre) { LEVELS[n] = String(r.Nombre); LEVEL_TXT[n] = String(r["Qué significa"] || ""); } });
+  const scaleBox = () => `<div class="box"><h3>La escala</h3><ol class="levels">${[1, 2, 3, 4, 5].map((n) => `<li><span class="n mono">${n}</span><span><b>${esc(LEVELS[n])}</b>${LEVEL_TXT[n] ? `<span class="sub">${esc(LEVEL_TXT[n])}</span>` : ""}</span></li>`).join("")}</ol></div>`;
+  function panelRadar() {
+    const rows = T("tblRadar").filter((r) => r["Área"]);
+    const has = (k) => rows.some((r) => num(r[k]) >= 1);
+    const nowKey = has("Cierre") ? "Cierre" : has("Mitad del ciclo") ? "Mitad del ciclo" : null;
+    const fecha = { "Línea base": cfg("radar_base"), "Mitad del ciclo": cfg("radar_mitad"), "Cierre": cfg("radar_cierre") };
+    const intro = head(isV ? "Radar IA de " + F : "Tu Radar IA", `Autoevaluación del 1 al 5 en ${rows.length} áreas. La primera es la línea base; se repite a mitad y al final del ciclo.`);
+    const areas = rows.length ? `<div class="tbl-wrap"><table class="wrap"><thead><tr><th>Área</th><th>Qué incluye</th></tr></thead><tbody>${rows.map((r) => `<tr><td><b>${esc(r["Área"])}</b></td><td>${esc(r["Qué incluye"] || "")}</td></tr>`).join("")}</tbody></table></div>` : "";
+    if (!has("Línea base")) return intro + empty("Aún no hay evaluación", isV ? `Captura la línea base de ${F} en la hoja «Radar IA» y vuelve a generar las páginas.` : `Califícate del 1 al 5 en cada área con la escala y mándale tus números a ${M}.`) + `<div class="radar-0">${areas}${scaleBox()}</div>`;
+    const x = (v) => ((Math.max(1, Math.min(5, v)) - 1) / 4) * 100;
+    const legendItem = (cls, k) => `<span><i class="${cls}"></i>${esc(k)}${fecha[k] ? " · " + esc(fmtD(fecha[k], { day: "numeric", month: "short" })) : ""}</span>`;
+    const legend = nowKey ? legendItem("sw-base", "Línea base") + legendItem("sw-now", nowKey) : legendItem("sw-now", "Línea base") + `<span class="dim">Al repetir la evaluación verás el avance</span>`;
+    const grid = [1, 2, 3, 4, 5].map((v) => `<span class="g" style="left:${x(v)}%"></span>`).join("");
+    const body = rows.map((r) => {
+      const b = num(r["Línea base"]), n = nowKey ? num(r[nowKey]) : NaN;
+      let marks = "", delta = "", tip = "";
+      if (b >= 1 && n >= 1) {
+        const lo = Math.min(b, n), hi = Math.max(b, n), d = n - b;
+        marks = `<span class="conn" style="left:${x(lo)}%;width:${x(hi) - x(lo)}%"></span><span class="dot base" style="left:${x(b)}%"></span><span class="dot now" style="left:${x(n)}%"></span>`;
+        delta = `<span class="delta ${d === 0 ? "zero" : ""}">${d > 0 ? "+" + d : d === 0 ? "=" : d}</span>`;
+        tip = `${r["Área"]}: ${b} (${LEVELS[b] || ""}) → ${n} (${LEVELS[n] || ""})`;
+      } else if (b >= 1) { marks = `<span class="dot now" style="left:${x(b)}%"></span>`; delta = `<span class="delta zero">${b}</span>`; tip = `${r["Área"]}: ${b} (${LEVELS[b] || ""})`; }
+      return `<div class="db-row" tabindex="0" title="${esc(tip)}" aria-label="${esc(tip)}"><span class="name">${esc(r["Área"])}</span><div class="db-track">${grid}${marks}</div>${delta}</div>`;
+    }).join("");
+    const table = `<div class="tbl-wrap"><table><thead><tr><th>Área</th><th>Línea base</th><th>Mitad del ciclo</th><th>Cierre</th></tr></thead><tbody>${rows.map((r) => `<tr><td>${esc(r["Área"])}</td><td class="num">${esc(r["Línea base"] || "–")}</td><td class="num">${esc(r["Mitad del ciclo"] || "–")}</td><td class="num">${esc(r.Cierre || "–")}</td></tr>`).join("")}</tbody></table></div>`;
+    return intro + `<div class="radar-1"><div class="chart"><div class="legend">${legend}</div><div class="db-axis"><span></span><div class="ticks">${[1, 2, 3, 4, 5].map((v) => `<span style="left:${x(v)}%">${v}</span>`).join("")}</div><span></span></div>${body}<p class="scale-note">${[1, 2, 3, 4, 5].map((n) => n + " " + esc(LEVELS[n])).join(" · ")}</p></div>${table}</div>${scaleBox()}`;
+  }
+
+  
+
+  // ---------- Láminas: la sesión 1 como «El modelo, en 8 láminas» ----------
+  //  Una lámina de portada, una por bloque de la hoja «Sesión 1» y una del ciclo. Todo sale del Excel.
+  //  La versión de Fernando es la que se proyecta; la de Valeria agrega sus notas, su demo y la Prueba B.
+  function laminas() {
+    const nx = cfg("proxima");
+    const kick = (t) => `<div class="l-kick">${esc(t)}</div>`;
+    const numTo = (n) => `<span data-to="${n}">${n}</span>`;
+    const tile = (lab, val, p, cls = "") => `<div class="l-tile hl"><div class="l-lab">${esc(lab)}</div><div class="l-val ${cls}">${val}</div>${p ? `<p>${esc(p)}</p>` : ""}</div>`;
+    const pane = (title, items, cls = "") => (items.length ? `<div class="l-pane ${cls}"><h3>${esc(title)}</h3><ul>${items.map(li).join("")}</ul></div>` : "");
+    const quotes = (qs) => `<div class="l-qs">${qs.map((q) => `<p>“${esc(q.replace(/^[“"«]+|[”"»]+$/g, ""))}”</p>`).join("")}</div>`;
+    const out = [];
+
+    out.push(`${kick(`Mentoría en IA · ${cfg("programa") || "MentorcliQ"} · Sesión 1${nx ? " · " + fmtD(nx, { weekday: "long", day: "numeric", month: "long" }) : ""}`)}
+      <h1 class="l-h1">${esc(M)} <em>×</em> ${esc(F)}</h1>${cfg("promesa") ? `<div class="l-sub">${esc(cfg("promesa"))}</div>` : ""}<div class="l-rule"></div>
+      <div class="l-g4">${tile("Sesiones del ciclo", numTo(CICLO.length), CICLO[0] && CICLO[0].Enfoque ? "Hoy: " + CICLO[0].Enfoque : "")}${tile("Etapas MentorcliQ", numTo(ETAPAS.length), "Hoy: " + stageName(stageNow))}${tile("Áreas del Radar IA", numTo(T("tblRadar").filter((r) => r["Área"]).length), LEVELS[4] ? `Del 1 al 5: el 4 es «${LEVELS[4]}»` : "")}${tile("Proyecto ancla", ancla ? "Elegido" : "Hoy", ancla || "Algo que construyes, mides y presentas en el demo day", ancla ? "ok" : "acc")}</div>
+      ${AG.length ? `<div class="l-agenda">${AG.map((r) => `<div><b>${esc(fmtHora(r.Hora))}</b><span>${esc(r["Título"])}</span><small>${esc(num(r.Minutos) || "")} min</small></div>`).join("")}</div>` : ""}`);
+
+    const radarL = () => {
+      const rows = T("tblRadar").filter((r) => r["Área"]);
+      const escala = `<div class="l-scale">${[1, 2, 3, 4, 5].map((n) => `<div class="${n >= 4 ? "hi" : ""}"><b>${n}</b><span>${esc(LEVELS[n])}</span></div>`).join("")}</div>`;
+      if (!rows.some((r) => num(r["Línea base"]) >= 1)) return `<div class="l-areas">${rows.map((r) => `<div><b>${esc(r["Área"])}</b><span>${esc(r["Qué incluye"] || "")}</span></div>`).join("")}</div>${escala}`;
+      return `<div class="l-bars">${rows.map((r) => { const b = num(r["Línea base"]) || 0; return `<div class="l-hb"><span class="t">${esc(r["Área"])}</span><span class="w"><i style="--to:${(b / 5) * 100}%"></i></span><span class="n">${b || "–"}</span></div>`; }).join("")}</div>${escala}`;
+    };
+    const acuerdoL = () => `<div class="l-agr">${T("tblAcuerdo").filter((r) => r.Tema).map((r) => `<div><b>${esc(r.Tema)}</b><span class="${r["Lo que acordamos"] ? "" : "dim"}">${esc(r["Lo que acordamos"] || (r.Ejemplo ? "Por ejemplo: " + r.Ejemplo : "Por definir"))}</span></div>`).join("")}</div>`;
+    const metasL = () => {
+      const g = GOALS(F), s = SUGG(F).slice(0, 6);
+      const top = `<div class="l-ancla"><span>Proyecto ancla</span><b>${esc(ancla || "Lo elegimos hoy")}</b></div>`;
+      if (g.length) return top + `<div class="l-g3">${g.map((x) => `<div class="l-tile hl"><div class="l-lab">${esc(x["Área"] || "Meta")}</div><h3>${esc(x.Meta)}</h3>${x["M · Medible"] ? `<p>${esc(x["M · Medible"])}</p>` : ""}<div class="l-meter"><i style="--to:${Math.round(pctOf(x) * 100)}%"></i></div></div>`).join("")}</div>`;
+      return top + `<div class="l-g3">${s.map((x) => `<div class="l-tile"><div class="l-lab">${esc(x["Área"] || "")}${x["Plazo (días)"] ? " · " + esc(x["Plazo (días)"]) + " días" : ""}</div><h3>${esc(x.Meta)}</h3>${x["M · Medible"] ? `<p>${esc(x["M · Medible"])}</p>` : ""}</div>`).join("")}</div>`;
+    };
+    const cierreL = () => {
+      const pend = ACTS.filter((a) => !yes(a.Estado));
+      return `<div class="l-g3">${tile("Próxima sesión", nx ? esc(fmtD(nx, { day: "numeric", month: "short" })) : "Por agendar", nx ? fmtD(nx, { weekday: "long" }) : "La agendas tú: llevas el volante", nx ? "" : "acc")}
+        <div class="l-tile hl"><div class="l-lab">Termómetro de hoy</div><div class="l-thermo">${[1, 2, 3, 4, 5].map((n) => `<span>${n}</span>`).join("")}</div><p>¿Qué tan útil fue esta hora?</p></div>
+        ${tile("Compromisos", numTo(pend.length), pend.length ? pend.slice(0, 2).map((a) => a.Compromiso).join(" · ") : "Uno para cada quien, con fecha")}</div>`;
+    };
+    
+
+    const tipo = (t) => (/rompehielos/i.test(t) ? "rompe" : /diagn|techo|radar/i.test(t) ? "radar" : /acuerdo/i.test(t) ? "acuerdo" : /meta|ancla/i.test(t) ? "metas" : /cierre|compromiso/i.test(t) ? "cierre" : "");
+    AG.forEach((r) => {
+      const et = parseInt(r.Etapa, 10), mins = num(r.Minutos) || 0, his = lines(r["Le toca a Fernando"]), qs = lines(r.Preguntas), k = tipo(r["Título"]);
+      let body = "";
+      if (k === "rompe") body = `<div class="l-g3">${T("tblRompehielos").filter((o) => o.Nombre).map((o) => `<div class="l-tile hl"><div class="l-lab">Opción ${esc(o["Opción"])}</div><h3>${esc(o.Nombre)}</h3><p>${esc(o["Cómo funciona"])}</p></div>`).join("")}</div>`;
+      else if (k === "radar") body = radarL();
+      else if (k === "acuerdo") body = acuerdoL();
+      else if (k === "metas") body = metasL();
+      else if (k === "cierre") body = cierreL();
+      const lado = his.length || qs.length ? `<div class="l-duo" style="margin-top: ${body ? 26 : 0}px">${pane("Lo que te toca", his, "me")}${qs.length ? `<div class="l-pane"><h3>${qs.length > 1 ? "Preguntas" : "Pregunta"}</h3>${quotes(qs)}</div>` : ""}</div>` : "";
+      const notas =  "";
+      out.push(`${kick(`${fmtHora(r.Hora)} · ${mins} min · Etapa ${et || "–"}${stageName(et) ? " · " + stageName(et) : ""}`)}<h2 class="l-h2">${esc(r["Título"])}</h2>${r["Para lograr"] ? `<div class="l-sub">${esc(r["Para lograr"])}</div>` : ""}<div class="l-rule"></div>${body}${lado}${notas}`);
+      
     });
-  }
-  const setDoc = (path, data) => queue(path, () => db.doc(path).set(data));
-  const delDoc = (path) => queue(path, () => db.doc(path).delete());
-  const timers = new Map();
-  function debounce(key, fn, ms = 800) { clearTimeout(timers.get(key)); timers.set(key, setTimeout(() => { timers.delete(key); fn(); }, ms)); }
 
-  // Re-render lists only when nobody is typing inside them
-  const pendingRenders = new Map();
-  function guarded(el, fn) {
-    const a = document.activeElement;
-    const typing = a && (a.tagName === "TEXTAREA" || a.tagName === "SELECT" || (a.tagName === "INPUT" && /^(text|date)$/.test(a.type)));
-    if (typing && el.contains(a)) { pendingRenders.set(fn, el); return; }
-    fn();
-  }
-  document.addEventListener("focusout", () => setTimeout(() => { for (const [fn, el] of [...pendingRenders]) { pendingRenders.delete(fn); guarded(el, fn); } }, 0));
-
-  // ---------- Names ----------
-  function applyNames() {
-    $$(".nm-m").forEach((e) => (e.textContent = M()));
-    $$(".nm-f").forEach((e) => (e.textContent = F()));
-    const o = $("#a-owner"); o.options[0].textContent = F(); o.options[1].textContent = M();
-    const gd = $("#g-duenio"); gd.options[0].textContent = F(); gd.options[1].textContent = M();
-    document.title = "Mentoría " + M() + " × " + F();
+    if (CICLO.length) {
+      const cur = Math.max(0, CICLO.findIndex((c) => !yes(c.Hecho)));
+      out.push(`${kick("Después de hoy")}<h2 class="l-h2">${CICLO.length} sesiones alrededor de tu proyecto ancla</h2><div class="l-rule"></div>
+        <div class="l-ciclo">${CICLO.map((c, i) => `<div class="${i === cur ? "now" : ""}${yes(c.Hecho) ? " ok" : ""}"><span class="n">${esc(c["Sesión"])}</span>${c.Fecha ? `<small>${esc(fmtD(c.Fecha, { day: "numeric", month: "short" }))}</small>` : ""}<b>${esc(c.Enfoque)}</b><p>${esc(c.Entregable || "")}</p></div>`).join("")}</div>`);
+    }
+    return out;
   }
 
-  // ---------- Status strip & track ----------
-  function renderStatus() {
-    const st = STAGES[(S.cfg.stage || 1) - 1];
-    $("#st-stage").textContent = st.n + " · " + st.name;
-    $("#st-stage-s").textContent = "Acción clave: " + st.key.replace("{F}", F());
-    const n = S.cfg.nextSession;
-    if (n) {
-      const d = daysTo(n);
-      $("#st-next").textContent = fmtD(n);
-      const s = $("#st-next-s");
-      s.textContent = d === 0 ? "Es hoy" : d === 1 ? "Es mañana" : d > 1 ? "En " + d + " días" : "Ya pasó; agenden la siguiente";
-      s.classList.toggle("warn", d < 0);
-    } else { $("#st-next").textContent = "Sin fecha"; $("#st-next-s").textContent = "Defínanla al cierre"; $("#st-next-s").classList.remove("warn"); }
-    const g = S.goals;
-    const gF = g.filter((x) => (x.duenio || "mentee") === "mentee").length, gM = g.length - gF;
-    $("#st-goals").textContent = g.length ? g.length + (g.length === 1 ? " meta" : " metas") : "0";
-    $("#st-goals-s").textContent = g.length ? F() + " " + gF + " · " + M() + " " + gM + " · " + Math.round(g.reduce((a, x) => a + (+x.avance || 0), 0) / g.length) + " % avance" : "Entre 1 y 3 para " + F();
-    const pend = S.actions.filter((a) => !a.hecho);
-    const over = pend.filter((a) => a.fecha && daysTo(a.fecha) < 0);
-    $("#st-acts").textContent = pend.length + (pend.length === 1 ? " pendiente" : " pendientes");
-    const as = $("#st-acts-s"); as.textContent = over.length ? over.length + (over.length === 1 ? " vencido" : " vencidos") : S.actions.length ? (S.actions.length - pend.length) + " cumplidos" : "Ninguno vencido"; as.classList.toggle("warn", over.length > 0);
-    const ns = S.sessions.length;
-    $("#st-ses").textContent = ns + (ns === 1 ? " sesión" : " sesiones");
-    const last = [...S.sessions].sort((a, b) => (b.fecha || "").localeCompare(a.fecha || ""))[0];
-    $("#st-ses-s").textContent = last ? "Última: " + fmtD(last.fecha, { day: "numeric", month: "short" }) : "Aún sin registros";
-    $("#cnt-metas").textContent = g.length || "";
-    $("#cnt-compromisos").textContent = pend.length || "";
-    $("#cnt-bitacora").textContent = ns || "";
-    $("#cnt-acuerdo").textContent = S.agr.okM && S.agr.okF ? "✓" : "";
-    $$("#track li").forEach((li) => { const k = +li.dataset.n; li.classList.toggle("now", k === S.cfg.stage); li.classList.toggle("past", k < S.cfg.stage); });
-    renderOutcomes(); renderRailPrep(); renderParts();
-  }
-
-  // ---------- Cada quien ----------
-  const canTick = (role) => !readOnly && (viewerRole() == null || viewerRole() === role);
-  function prepList(role, idPrefix) {
-    const checks = (S.parts[role] && S.parts[role].checks) || {};
-    return ROLE[role].prep.map((p) => `<li><label><input type="checkbox" id="${idPrefix}-${role}-${p.id}" data-prep-role="${role}" data-prep-id="${p.id}" ${checks[p.id] ? "checked" : ""} ${canTick(role) ? "" : "disabled"}><span>${fill(p.t)}${p.goto ? ` <button type="button" class="linkbtn" data-goto="${p.goto}">Abrir</button>` : ""}</span></label></li>`).join("");
-  }
-  const prepDone = (role) => ROLE[role].prep.filter((p) => ((S.parts[role] || {}).checks || {})[p.id]).length;
-  function renderRailPrep() {
-    guarded($("#rail-prep"), () => {
-      $("#rail-prep-h").textContent = "Tu preparación";
-      $("#rail-prep").innerHTML = prepList("mentee", "rp");
-      $("#rail-other").innerHTML = `${prepDone("mentee")} de ${ROLE.mentee.prep.length} listos · <button type="button" class="linkbtn" data-goto="cadaquien">Mandar mis avances a ${esc(M())}</button>`;
+  function montarLaminas() {
+    const frames = laminas();
+    document.documentElement.classList.add("lam-html");
+    document.body.className = "lam";
+    document.title = `${isV ? "Mis láminas · " : ""}Sesión 1 · ${M} × ${F}`;
+    document.body.innerHTML = `<div id="l-stage"><div id="l-canvas">${frames.map((h, i) => `<section class="l-frame" id="lf${i}">${h}</section>`).join("")}</div></div>
+      <div id="l-hud"><span id="l-num"></span><br>${isV ? '<b class="l-warn">Tu versión con notas · no la proyectes</b>' : `Mentoría ${esc(M)} × ${esc(F)}`}</div>
+      <div id="l-hint"><kbd>←</kbd> <kbd>→</kbd> avanzar · <kbd>Esc</kbd> vista completa · clic en una lámina para abrirla</div><nav id="l-nav" aria-label="Láminas"></nav>`;
+    const cv = $("#l-canvas"), nav = $("#l-nav"), els = $$(".l-frame"), W = 1600, GAP = 160, COLS = 3, pos = [];
+    els.forEach((el) => (el.style.width = W + "px"));
+    let y = 0;
+    for (let i = 0; i < els.length; i += COLS) {
+      const fila = els.slice(i, i + COLS), h = Math.max(...fila.map((e) => e.offsetHeight));
+      fila.forEach((e, j) => { e.style.left = j * (W + GAP) + "px"; e.style.top = y + "px"; pos.push({ x: j * (W + GAP), y }); });
+      y += h + GAP;
+    }
+    const CW = Math.min(COLS, els.length) * W + (Math.min(COLS, els.length) - 1) * GAP, CH = y - GAP;
+    cv.style.width = CW + "px"; cv.style.height = CH + "px";
+    let cur = 0, over = false;
+    const contar = (fr) => $$("[data-to]", fr).forEach((e) => {
+      const to = parseFloat(e.dataset.to), t0 = performance.now();
+      if (isNaN(to)) return;
+      const tick = (t) => { const u = Math.min(1, (t - t0) / 1100), k = 1 - Math.pow(1 - u, 3); e.textContent = String(Math.round(to * k)); if (u < 1) requestAnimationFrame(tick); };
+      requestAnimationFrame(tick);
     });
-    $$(".duo-f").forEach((d) => d.classList.add("is-me"));
-  }
-  function renderParts() {
-    guarded($("#parts"), () => {
-      const vr = viewerRole();
-      const order = ["mentee"];
-      $("#parts").innerHTML = order.map((role) => {
-        const me = vr === role, R = ROLE[role], who = nameOf(role), pos = me ? "Tu" : "Su", posP = me ? "Tus" : "Sus";
-        const goals = S.goals.filter((g) => (g.duenio || "mentee") === role).sort((a, b) => (a.fecha || "9").localeCompare(b.fecha || "9"));
-        const acts = S.actions.filter((a) => !a.hecho && a.owner === role).sort((a, b) => (a.fecha || "9").localeCompare(b.fecha || "9"));
-        const privOk = me && db && myId;
-        return `<article class="part ${me ? "me" : ""}">
-          <div class="part-hd"><h3>${esc(who)}</h3><span class="chip ${role === "mentee" ? "warm" : ""}">${esc(R.tag)}</span>${me ? '<span class="chip good">Tú</span>' : ""}</div>
-          <p class="part-motto">${esc(R.motto)}</p>
-          <div class="sub"><span class="lbl">${pos} papel</span><ul class="tips">${R.does.map((d) => "<li>" + fill(d) + "</li>").join("")}</ul></div>
-          <div class="sub"><div class="sub-h"><span class="lbl">Antes de la sesión 1</span><span class="mono dim">${prepDone(role)}/${R.prep.length}</span></div><ul class="prep-list">${prepList(role, "pp")}</ul>${!me && vr ? `<span class="lock">Sólo ${esc(who)} marca su lista.</span>` : ""}</div>
-          <div class="sub"><div class="sub-h"><span class="lbl">${posP} metas</span><button type="button" class="linkbtn" data-goto="metas" data-who="${role}">${goals.length ? "Ver metas" : "Ver sugerencias"}</button></div>
-            ${goals.length ? `<ul class="mini">${goals.map((g) => `<li><span>${esc(g.titulo)}</span><span class="mono">${+g.avance || 0} %</span></li>`).join("")}</ul>` : `<span class="dim" style="font-size:14px">Aún sin metas.</span>`}</div>
-          <div class="sub"><div class="sub-h"><span class="lbl">${posP} compromisos pendientes</span><button type="button" class="linkbtn" data-goto="compromisos">Ver todos</button></div>
-            ${acts.length ? `<ul class="mini">${acts.map((a) => `<li><span>${esc(a.texto)}</span><span class="mono">${a.fecha ? esc(fmtD(a.fecha, { day: "numeric", month: "short" })) : ""}</span></li>`).join("")}</ul>` : `<span class="dim" style="font-size:14px">Nada pendiente.</span>`}</div>
-          ${privOk ? `<div class="sub"><span class="lbl">Mis notas privadas</span><textarea id="priv-notas" rows="4" placeholder="Lo que quieras recordar para ti: impresiones, ideas, temas delicados."></textarea><span class="lock">Sólo tú puedes leerlas. ${esc(nameOf(otherRole(role)))} no las ve.</span></div>` : ""}
-        </article>`;
-      }).join("") + `<article class="part send-card">
-          <div class="part-hd"><h3>Mandar mis avances a ${esc(M())}</h3></div>
-          <p class="dim" style="font-size:14px">Arma un resumen de lo que has guardado aquí: preparación, Radar IA, notas de la sesión, metas y compromisos. Tus notas privadas no se incluyen.</p>
-          <pre class="send-preview" id="send-preview"></pre>
-          <div class="card-actions" style="justify-content:flex-start">
-            <button class="btn" type="button" id="send-wa">Enviar por WhatsApp</button>
-            <button class="btn ghost" type="button" id="send-mail">Enviar por correo</button>
-            <button class="btn ghost" type="button" id="send-copy">Copiar</button>
-          </div>
-        </article>`;
-      $("#send-preview").textContent = buildSummary();
-      const pn = $("#priv-notas"); if (pn) pn.value = S.priv || "";
-      applyRO();
+    const apply = () => {
+      const vw = innerWidth, vh = innerHeight;
+      if (vw < 40 || vh < 40) { setTimeout(apply, 120); return; }      // la ventana todavía no tiene tamaño
+      let x, yy, w, h, pad;
+      if (over) { x = 0; yy = 0; w = CW; h = CH; pad = 0.93; } else { x = pos[cur].x; yy = pos[cur].y; w = W; h = els[cur].offsetHeight; pad = 0.9; }
+      const s = Math.min(vw / w, vh / h) * pad;
+      cv.style.transform = `translate(${vw / 2}px, ${vh / 2}px) scale(${s}) translate(${-(x + w / 2)}px, ${-(yy + h / 2)}px)`;
+      els.forEach((el, k) => { const on = over || k === cur, was = el.classList.contains("l-on"); el.classList.toggle("l-on", on); if (on && !was) contar(el); });
+      $$("button", nav).forEach((b, k) => b.classList.toggle("on", !over && k === cur));
+      $("#l-num").innerHTML = over ? "<b>Vista completa</b>" : `Lámina <b>${cur + 1}</b> de ${els.length}`;
+    };
+    const go = (i) => { cur = (i + els.length) % els.length; over = false; apply(); };
+    els.forEach((el, i) => {
+      el.addEventListener("click", (e) => { if (e.target.closest("button, a")) return; if (over || i !== cur) go(i); });
+      const b = document.createElement("button"); b.type = "button"; b.title = "Lámina " + (i + 1); b.addEventListener("click", () => go(i)); nav.appendChild(b);
     });
-  }
-  document.addEventListener("change", (e) => {
-    const role = e.target.dataset && e.target.dataset.prepRole; if (!role) return;
-    if (!canTick(role)) { e.target.checked = !e.target.checked; return; }
-    const id = e.target.dataset.prepId, on = e.target.checked;
-    S.parts[role] = { checks: { ...((S.parts[role] || {}).checks || {}), [id]: on } };
-    renderRailPrep(); renderParts();
-    upsert("partes/" + role, { checks: { [id]: on } });
-  });
-  $("#parts").addEventListener("input", (e) => {
-    if (e.target.id !== "priv-notas" || !db || !myId) return;
-    S.priv = e.target.value; const v = e.target.value;
-    debounce("priv", () => queue("data/users/" + myId + "/notas", () => db.doc("data/users/" + myId + "/notas").set({ texto: v, at: new Date().toISOString() })));
-  });
-  function renderOutcomes() {
-    const set = (id, ok) => $(id).classList.toggle("ok", !!ok);
-    set("#oc-rapport", S.run.checks && S.run.checks.b2);
-    const agrOk = S.agr.okM && S.agr.okF;
-    set("#oc-agr", agrOk);
-    $("#oc-agr-s").textContent = agrOk ? "Aceptado por ambos" : S.agr.okM || S.agr.okF ? "Falta una firma" : "Falta marcar “De acuerdo”";
-    const gF = S.goals.filter((g) => (g.duenio || "mentee") === "mentee").length;
-    set("#oc-goals", gF >= 1);
-    $("#oc-goals-s").textContent = gF + (gF === 1 ? " meta de " : " metas de ") + F();
-    set("#oc-next", !!S.cfg.nextSession);
-    $("#oc-next-s").textContent = S.cfg.nextSession ? fmtD(S.cfg.nextSession, { weekday: "long", day: "numeric", month: "long" }) : "Sin fecha";
-  }
-
-  // ---------- Ruta ----------
-  function renderStages() {
-    const cur = S.cfg.stage || 1;
-    $("#stages").innerHTML = STAGES.map((s) => `
-      <article class="stage-card ${s.n === cur ? "now" : s.n < cur ? "past" : ""}" id="stage-${s.n}">
-        <div class="big">${s.n}</div>
-        <div class="body">
-          <div class="hd"><h3>${esc(s.name)}</h3><span class="stage-en">${esc(s.en)}</span>${s.n === cur ? '<span class="chip warn">Etapa actual</span>' : s.n < cur ? '<span class="chip good">Recorrida</span>' : ""}</div>
-          <p style="color: var(--ink-2)">${esc(s.what)}</p>
-          <div class="meta">
-            <div><span class="lbl">Acción clave</span><span>${esc(s.key.replace("{F}", F()))}</span></div>
-            <div><span class="lbl">Cuándo</span><span>${esc(s.when)}</span></div>
-          </div>
-          <div><span class="lbl">${s.n === 3 ? "Check-in de mitad de ciclo" : "Preguntas guía"}</span><ul>${s.qs.map((q) => "<li>" + esc(q) + "</li>").join("")}</ul></div>
-          ${s.n === cur ? "" : `<div><button class="btn small ghost stage-set" type="button" data-stage="${s.n}">Marcar como etapa actual</button></div>`}
-        </div>
-      </article>`).join("");
-    applyRO();
-  }
-  function setStage(n) {
-    if (readOnly) return;
-    S.cfg.stage = n; renderStatus(); renderStages();
-    upsert("prog/config", { stage: n });
-  }
-
-  // ---------- Sesión 1 ----------
-  function renderRun() {
-    const checks = S.run.checks || {}, notes = S.run.notes || {};
-    BLOCKS.forEach((b) => {
-      const c = $("#chk-" + b.id); c.checked = !!checks[b.id];
-      $("#" + b.id).classList.toggle("done", !!checks[b.id]);
-      const t = $("#note-" + b.id); if (t !== document.activeElement && t.value !== (notes[b.id] || "")) t.value = notes[b.id] || "";
+    addEventListener("keydown", (e) => {
+      const k = e.key;
+      if (k === "ArrowRight" || k === " " || k === "PageDown") { e.preventDefault(); go(cur + 1); }
+      else if (k === "ArrowLeft" || k === "PageUp") { e.preventDefault(); go(cur - 1); }
+      else if (k === "Escape") { over = !over; apply(); }
+      else if (k === "Home") go(0);
+      else if (k === "End") go(els.length - 1);
     });
-    $$("#termo button").forEach((btn) => btn.setAttribute("aria-pressed", String(+btn.dataset.v === +S.run.termo)));
-    const nx = $("#cfg-next"); if (nx !== document.activeElement) nx.value = S.cfg.nextSession || "";
-    renderOutcomes();
+    addEventListener("resize", apply);
+    addEventListener("hashchange", () => { const n = parseInt(location.hash.slice(1), 10); if (n >= 1 && n <= els.length) go(n - 1); });
+    const n0 = parseInt((location.hash || "").slice(1), 10);              // #N abre directo en la lámina N
+    if (n0 >= 1 && n0 <= els.length) cur = n0 - 1;
+    setTimeout(() => { cv.style.transition = "none"; apply(); void cv.offsetWidth; setTimeout(() => (cv.style.transition = ""), 50); }, 60);   // la primera vez, sin animación
   }
-  $("#runsheet").addEventListener("change", (e) => {
-    const b = e.target.dataset.blk; if (!b) return;
-    S.run.checks = { ...(S.run.checks || {}), [b]: e.target.checked };
-    $("#" + b).classList.toggle("done", e.target.checked); renderOutcomes();
-    upsert("prog/sesion1", { checks: { [b]: e.target.checked } });
-  });
-  $("#runsheet").addEventListener("input", (e) => {
-    const b = e.target.dataset.note; if (!b) return;
-    S.run.notes = { ...(S.run.notes || {}), [b]: e.target.value };
-    const v = e.target.value;
-    debounce("note-" + b, () => upsert("prog/sesion1", { notes: { [b]: v } }));
-  });
-  $("#termo").addEventListener("click", (e) => {
-    const v = +e.target.dataset.v; if (!v || readOnly) return;
-    S.run.termo = v; renderRun(); upsert("prog/sesion1", { termo: v });
-  });
-  $("#cfg-next").addEventListener("change", (e) => {
-    S.cfg.nextSession = e.target.value; renderStatus(); upsert("prog/config", { nextSession: e.target.value });
-  });
-  $("#to-log").addEventListener("click", () => {
-    const notes = S.run.notes || {};
-    const raw = BLOCKS.filter((b) => (notes[b.id] || "").trim()).map((b) => b.title + ": " + notes[b.id].trim()).join("\n");
-    resetSesForm();
-    $("#ses-fecha").value = todayStr();
-    $("#ses-etapa").value = "2";
-    $("#ses-notas").value = raw;
-    sesTermo = +S.run.termo || 0; renderSesTermo();
-    showTab("bitacora");
-    setTimeout(() => $("#ses-form").scrollIntoView({ behavior: "smooth", block: "start" }), 60);
-    toast(raw ? "Notas copiadas. Ordénalas con IA o revisa y guarda." : "No hay notas todavía; llena el registro a mano.");
-  });
 
-  // Clock (per viewer)
-  let clock = ls.get("m1-clock", { start: null, acc: 0 });
-  let clockT = null;
-  function elapsed() { return clock.acc + (clock.start ? (Date.now() - clock.start) / 1000 : 0); }
+  const PANELS = { sesion1: panelSesion, cadaquien: panelCada, ruta: panelRuta, acuerdo: panelAcuerdo, metas: panelMetas, compromisos: panelCompromisos, bitacora: panelBitacora, radar: panelRadar,  };
+
+  function renderTabs() {
+    $("#tabs").innerHTML = TABS.map(([id, label]) => `<button class="tab" role="tab" id="tab-${id}" aria-controls="${id}" aria-selected="false" type="button">${esc(label)}</button>`).join("");
+    $("#main").innerHTML = TABS.map(([id]) => `<section id="${id}" role="tabpanel" aria-labelledby="tab-${id}" hidden>${PANELS[id]()}</section>`).join("");
+  }
+  function showTab(t) {
+    if (!TABS.some(([id]) => id === t)) t = "sesion1";
+    TABS.forEach(([id]) => { $("#" + id).hidden = id !== t; const b = $("#tab-" + id); b.setAttribute("aria-selected", String(id === t)); b.tabIndex = id === t ? 0 : -1; });
+    ls.set("tab", t);
+  }
+
+  function renderFooter() {
+    const gen = DATA && DATA._meta && DATA._meta.generado;
+    const links = [];
+    if (isV && cfg("pagina_fernando")) links.push(`<a href="${esc(cfg("pagina_fernando"))}" target="_blank" rel="noopener">Página de ${esc(F)}</a>`);
+    if (/^https?:\/\//i.test(String(cfg("carpeta") || ""))) links.push(`<a href="${esc(cfg("carpeta"))}" target="_blank" rel="noopener">Seguimiento compartido</a>`);
+    $("#footer").innerHTML = `<span>${gen ? "Actualizado el " + esc(fmtD(gen.slice(0, 10), { day: "numeric", month: "long", year: "numeric" })) + " a las " + esc(gen.slice(11, 16)) : ""}${gen ? " · " : ""}Etapas: Building Rapport, Setting Direction, Relationship Progression, Winding Down y Moving On (MentorcliQ).</span>${links.length ? `<span>${links.join(" · ")}</span>` : ""}`;
+  }
+
+  // ---------- Session clock (per browser) ----------
+  let clock = ls.get("clock", { start: null, acc: 0 }), clockT = null;
+  const elapsed = () => clock.acc + (clock.start ? (Date.now() - clock.start) / 1000 : 0);
   function renderClock() {
-    const s = Math.floor(elapsed());
-    const over = s > 3600;
-    const shown = over ? s - 3600 : s;
+    if (!$("#clock")) return;
+    const s = Math.floor(elapsed()), over = s > 3600, shown = over ? s - 3600 : s;
     $("#clock-time").innerHTML = (over ? "+" : "") + pad(Math.floor(shown / 60)) + ":" + pad(shown % 60) + " <small>" + (over ? "tiempo extra" : "/ 60:00") + "</small>";
     $("#clock-bar").style.width = Math.min(100, (s / 3600) * 100) + "%";
     $("#clock").classList.toggle("over", over);
-    const min = s / 60;
-    const cur = clock.start || clock.acc ? BLOCKS.find((b) => min >= b.from && min < b.to) : null;
-    BLOCKS.forEach((b) => $("#" + b.id).classList.toggle("is-now", !!cur && cur.id === b.id));
-    $("#clock-now").textContent = !clock.start && !clock.acc ? "Listo para empezar" : over ? "Hora de cerrar" : cur ? "Ahora: " + cur.title + (clock.start ? "" : " (en pausa)") : "";
+    const min = s / 60, running = clock.start || clock.acc;
+    let cur = null;
+    $$(".blk").forEach((b) => { const f = parseFloat(b.dataset.from), t = parseFloat(b.dataset.to); const on = !!running && !isNaN(f) && !isNaN(t) && min >= f && min < t; b.classList.toggle("is-now", on); if (on) cur = b.querySelector("h3").textContent; });
+    $("#clock-now").textContent = !running ? "Listo para empezar" : over ? "Hora de cerrar" : cur ? "Ahora: " + cur + (clock.start ? "" : " (en pausa)") : "";
     $("#clock-go").textContent = clock.start ? "Pausar" : clock.acc ? "Continuar" : "Iniciar";
   }
-  function tick() { renderClock(); }
-  $("#clock-go").addEventListener("click", () => {
-    if (clock.start) { clock.acc = elapsed(); clock.start = null; clearInterval(clockT); }
-    else { clock.start = Date.now(); clockT = setInterval(tick, 1000); }
-    ls.set("m1-clock", clock); renderClock();
-  });
-  $("#clock-reset").addEventListener("click", () => { clock = { start: null, acc: 0 }; clearInterval(clockT); ls.set("m1-clock", clock); renderClock(); });
-  if (clock.start) clockT = setInterval(tick, 1000);
 
-  // ---------- Acuerdo ----------
-  function renderAgreement() {
-    $$("[data-ag]").forEach((el) => { if (el !== document.activeElement) { const v = S.agr[el.dataset.ag] || ""; if (el.value !== v) el.value = v; } });
-    [["okM", "#sign-m", "#ag-okM-s"], ["okF", "#sign-f", "#ag-okF-s"]].forEach(([k, box, sub]) => {
-      const on = !!S.agr[k]; $("#ag-" + k).checked = on; $(box).classList.toggle("ok", on);
-      $(sub).textContent = on ? "Aceptado" + (S.agr[k + "At"] ? " el " + fmtD(S.agr[k + "At"], { day: "numeric", month: "long" }) : "") : "Pendiente";
-    });
-    renderStatus();
-  }
-  $("#acuerdo").addEventListener("input", (e) => {
-    const k = e.target.dataset.ag; if (!k) return;
-    S.agr[k] = e.target.value; const v = e.target.value;
-    $("#agr-saved").textContent = "Guardando…";
-    debounce("ag-" + k, async () => { await upsert("prog/acuerdo", { [k]: v }); $("#agr-saved").textContent = db && !readOnly ? "Guardado" : ""; });
-  });
-  ["okM", "okF"].forEach((k) => $("#ag-" + k).addEventListener("change", (e) => {
-    const on = e.target.checked;
-    S.agr[k] = on; S.agr[k + "At"] = on ? todayStr() : "";
-    renderAgreement();
-    upsert("prog/acuerdo", { [k]: on, [k + "At"]: on ? todayStr() : "" });
-    if (S.agr.okM && S.agr.okF) toast("Acuerdo aceptado por ambos");
-  }));
-
-  // ---------- Metas ----------
-  function goalStatus(g) {
-    const p = +g.avance || 0, d = daysTo(g.fecha);
-    if (p >= 100) return ["Lograda", "good"];
-    if (d != null && d < 0) return ["Vencida", "bad"];
-    if (d != null && d <= 14) return ["Vence en " + d + (d === 1 ? " día" : " días"), "warn"];
-    return ["En curso", ""];
-  }
-  const areaName = (id) => (id === MENTOR_AREA.id ? MENTOR_AREA.name : (AREAS.find((a) => a.id === id) || {}).name || "");
-  function renderGoals() {
-    guarded($("#goals-wrap"), () => {
-      const goals = [...S.goals].sort((a, b) => (a.fecha || "9").localeCompare(b.fecha || "9"));
-      const card = (g) => {
-          const [st, cls] = goalStatus(g); const p = +g.avance || 0;
-          const row = (l, v) => v ? `<div><dt>${l}</dt><dd>${esc(v)}</dd></div>` : "";
-          return `<article class="goal" data-id="${esc(g.id)}">
-            <div class="chips"><span class="chip ${cls}">${esc(st)}</span>${g.area ? `<span class="chip">${esc(areaName(g.area))}</span>` : ""}${g.fecha ? `<span class="chip">Para el ${esc(fmtD(g.fecha, { day: "numeric", month: "short", year: "numeric" }))}</span>` : ""}</div>
-            <h3>${esc(g.titulo)}</h3>
-            <dl class="smart">${row("S", g.s)}${row("M", g.m)}${row("A", g.a)}${row("R", g.r)}</dl>
-            <div class="prog"><div class="row"><span>Avance</span><span class="mono">${p} %</span></div><div class="meter"><i style="width:${p}%"></i></div>
-            <label class="field" style="margin-top:4px"><span class="dim" style="font-size:12px;font-weight:500">Actualizar avance</span><input type="range" min="0" max="100" step="10" value="${p}" id="gp-${esc(g.id)}" data-gp="${esc(g.id)}" aria-label="Avance de la meta"></label></div>
-            <div class="card-actions"><button class="x" type="button" data-del-goal="${esc(g.id)}">Borrar</button></div>
-          </article>`;
-      };
-      $("#goals-wrap").innerHTML = ["mentee"].map((role) => {
-        const list = goals.filter((g) => (g.duenio || "mentee") === role);
-        const none = role === "mentee"
-          ? `Aún sin metas. Elijan una sugerencia de arriba o escríbanla en el formulario; lo ideal son entre 1 y 3.`
-          : `Opcional: lo que ${esc(M())} quiere ganar al mentorear. Cambia las sugerencias a “${esc(M())}” para ver ideas.`;
-        return `<div class="goal-group"><div class="group-h"><h3>Tus metas</h3><span class="dim mono">${list.length}</span></div>${list.length ? `<div class="goals">${list.map(card).join("")}</div>` : `<div class="empty"><span>${none}</span></div>`}</div>`;
-      }).join("");
-      applyRO();
-    });
-    renderStatus();
-  }
-  $("#goals-wrap").addEventListener("input", (e) => {
-    const id = e.target.dataset.gp; if (!id) return;
-    const card = e.target.closest(".goal"); const v = +e.target.value;
-    card.querySelector(".meter i").style.width = v + "%"; card.querySelector(".prog .mono").textContent = v + " %";
-  });
-  $("#goals-wrap").addEventListener("change", (e) => {
-    const id = e.target.dataset.gp; if (!id) return;
-    const v = +e.target.value; const g = S.goals.find((x) => x.id === id); if (g) g.avance = v;
-    upsert("metas/" + id, { avance: v }); e.target.blur(); renderGoals();
-    if (v >= 100) toast("Meta lograda. ¡A celebrarlo en la próxima sesión!");
-  });
-  $("#goals-wrap").addEventListener("click", (e) => {
-    const b = e.target.closest("[data-del-goal]"); if (!b || readOnly) return;
-    if (b.dataset.confirm) { const id = b.dataset.delGoal; S.goals = S.goals.filter((g) => g.id !== id); renderGoals(); delDoc("metas/" + id); }
-    else { b.dataset.confirm = "1"; b.textContent = "¿Borrar? Toca otra vez"; setTimeout(() => { if (b.isConnected) { delete b.dataset.confirm; b.textContent = "Borrar"; } }, 3000); }
-  });
-  $("#g-area").innerHTML = '<option value="">Sin área</option>' + [...AREAS, MENTOR_AREA].map((a) => `<option value="${a.id}">${esc(a.name)}</option>`).join("");
-  $("#goal-form").addEventListener("submit", (e) => {
-    e.preventDefault(); if (readOnly) return;
-    const g = { duenio: $("#g-duenio").value === "mentor" ? "mentor" : "mentee", titulo: $("#g-titulo").value.trim(), s: $("#g-s").value.trim(), m: $("#g-m").value.trim(), a: $("#g-a").value.trim(), r: $("#g-r").value.trim(), fecha: $("#g-fecha").value, area: $("#g-area").value, avance: 0, creada: new Date().toISOString() };
-    if (!g.titulo) return;
-    const id = uid(); S.goals = [...S.goals, { id, ...g }]; renderGoals();
-    setDoc("metas/" + id, g); e.target.reset(); toast("Meta de " + nameOf(g.duenio) + " guardada");
-  });
-
-  // Suggested goals (static bank + tailored ones from the AI, kept in memory)
-  let suggWho = "mentee";
-  const aiSugg = { mentee: [], mentor: [] };
-  function renderSugg() {
-    $$("#sugg-who button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.who === suggWho)));
-    const list = [...aiSugg[suggWho].map((x) => ({ ...x, ai: true })), ...SUGG[suggWho]];
-    $("#sugg")._list = list;
-    $("#sugg").innerHTML = list.map((s, i) => `<div class="sg"><div class="chips">${s.ai ? '<span class="chip warn">A la medida</span>' : ""}<span class="chip">${esc(areaName(s.area) || "General")}</span><span class="chip">${esc(s.plazo)} días</span></div><b>${fill(s.titulo)}</b><span class="m"><span class="letter">M</span>${fill(s.m)}</span><div class="foot"><button class="btn small ghost" type="button" data-use="${i}" data-w>Usar</button></div></div>`).join("");
-    applyRO();
-  }
-  $("#sugg-who").addEventListener("click", (e) => { const b = e.target.closest("[data-who]"); if (!b) return; suggWho = b.dataset.who; $("#sugg-status").textContent = ""; renderSugg(); });
-  $("#sugg").addEventListener("click", (e) => {
-    const b = e.target.closest("[data-use]"); if (!b || readOnly) return;
-    const s = ($("#sugg")._list || [])[+b.dataset.use]; if (!s) return;
-    $("#g-duenio").value = suggWho;
-    $("#g-titulo").value = txt(s.titulo); $("#g-s").value = txt(s.s); $("#g-m").value = txt(s.m); $("#g-a").value = txt(s.a); $("#g-r").value = txt(s.r);
-    $("#g-area").value = s.area || ""; $("#g-fecha").value = addDays(+s.plazo || 60);
-    $("#goal-form").scrollIntoView({ behavior: "smooth", block: "start" });
-    setTimeout(() => $("#g-titulo").focus({ preventScroll: true }), 350);
-    toast("Ajusten la meta a su realidad y guárdenla");
-  });
-  $("#sugg-ai").addEventListener("click", async () => {
-    if (!sample || readOnly) return;
-    const who = suggWho, st = $("#sugg-status"), btn = $("#sugg-ai");
-    btn.disabled = true; st.textContent = "Leyendo el Radar IA y las notas de la primera sesión…";
-    const latestEval = [...S.evals].sort((a, b) => (a.fecha || "").localeCompare(b.fecha || "")).pop();
-    const notes = S.run.notes || {};
-    const data = {
-      radarIA: latestEval ? Object.fromEntries(AREAS.map((a) => [a.name, latestEval.valores && latestEval.valores[a.id]])) : "sin evaluación todavía",
-      notasPrimeraSesion: { rompehielos: notes.b2 || "", rumboYAspiraciones: notes.b3 || "", ideasDeMetas: notes.b5 || "" },
-      metasQueYaTiene: S.goals.filter((g) => (g.duenio || "mentee") === who).map((g) => g.titulo),
-      duracionDelCiclo: S.agr.ciclo || "unos 4 meses",
-    };
-    const valid = [...AREAS.map((a) => a.id), MENTOR_AREA.id];
-    const para = who === "mentee"
-      ? `para ${F()}, quien recibe la mentoría. Enfócalas en IA aplicada a su trabajo, en sus áreas más bajas del Radar IA y en lo que dijo en la primera sesión. Al menos una debe dar un resultado visible en 30 días.`
-      : `para ${M()}, quien mentorea: lo que quiere ganar al mentorear (habilidades de mentoría, red de contactos, aprender de ${F()} sobre IA en otra área).`;
-    try {
-      const out = await sample.json(`${CONTEXT()}
-
-Propón 3 metas SMART ${para} No repitas las metas que ya tiene. Si faltan datos, propón metas útiles y concretas de todas formas. Escribe cada meta en primera persona.
-Responde SOLO con JSON con esta forma exacta:
-{"metas": [{"titulo": "la meta en una frase", "s": "qué exactamente", "m": "cómo se mide", "a": "con qué apoyo es alcanzable", "r": "por qué importa", "plazo": número de días entre 14 y 180, "area": "uno de: ${valid.join(", ")}"}]}
-
-Datos:
-${JSON.stringify(data, null, 1).slice(0, 12000)}`, { modelTier: "default" });
-      const list = out && Array.isArray(out.metas) ? out.metas : [];
-      aiSugg[who] = list.filter((m) => m && m.titulo).slice(0, 4).map((m) => ({ titulo: String(m.titulo), s: String(m.s || ""), m: String(m.m || ""), a: String(m.a || ""), r: String(m.r || ""), plazo: Math.max(14, Math.min(180, Math.round(+m.plazo) || 60)), area: valid.includes(m.area) ? m.area : "" }));
-      st.textContent = aiSugg[who].length ? "Listo: las metas a la medida aparecen primero." : "La respuesta no tuvo el formato esperado. Intenta de nuevo.";
-      if (suggWho === who) renderSugg();
-    } catch (e) { st.textContent = aiErr(e); }
-    finally { btn.disabled = readOnly; }
-  });
-
-  // ---------- Compromisos ----------
-  function renderActions() {
-    guarded($("#acts-wrap"), () => {
-      const goalsById = Object.fromEntries(S.goals.map((g) => [g.id, g]));
-      const item = (a) => {
-        const d = daysTo(a.fecha); const over = !a.hecho && d != null && d < 0;
-        return `<li class="act ${a.hecho ? "done" : ""}" data-id="${esc(a.id)}">
-          <input type="checkbox" id="act-${esc(a.id)}" data-act="${esc(a.id)}" ${a.hecho ? "checked" : ""} aria-label="Marcar como hecho">
-          <div style="min-width:0"><label class="t" for="act-${esc(a.id)}">${esc(a.texto)}</label>
-            <div class="m"><span class="chip">${esc(a.owner === "mentor" ? M() : F())}</span>${a.fecha ? `<span class="${over ? "chip bad" : ""}">${over ? "Venció " : "Para el "}${esc(fmtD(a.fecha))}</span>` : ""}${a.meta && goalsById[a.meta] ? `<span>Meta: ${esc(goalsById[a.meta].titulo)}</span>` : ""}${a.origen ? `<span>De la sesión ${esc(a.origen)}</span>` : ""}</div></div>
-          <button class="x" type="button" data-del-act="${esc(a.id)}" aria-label="Borrar compromiso">Borrar</button></li>`;
-      };
-      const pend = S.actions.filter((a) => !a.hecho).sort((a, b) => (a.fecha || "9").localeCompare(b.fecha || "9"));
-      const done = S.actions.filter((a) => a.hecho).sort((a, b) => (b.hechoAt || "").localeCompare(a.hechoAt || ""));
-      if (!S.actions.length) {
-        $("#acts-wrap").innerHTML = `<div class="empty" style="margin-top:18px"><b>Sin compromisos todavía</b><span>Al cierre de cada sesión, agreguen al menos uno para cada quien con la fila de arriba.</span><span class="ex">Ejemplos de tamaño correcto: “Probar 3 prompts para resumir el reporte semanal” o “Compartir 2 lecturas sobre agentes”.</span></div>`;
-      } else {
-        $("#acts-wrap").innerHTML =
-          `<div class="group-h"><h3>Pendientes</h3><span class="dim mono">${pend.length}</span></div>` +
-          (pend.length ? `<ul class="acts">${pend.map(item).join("")}</ul>` : `<p class="dim">Todo al día.</p>`) +
-          (done.length ? `<div class="group-h"><h3>Cumplidos</h3><span class="dim mono">${done.length}</span></div><ul class="acts">${done.map(item).join("")}</ul>` : "");
-      }
-      applyRO();
-    });
-    renderStatus();
-  }
-  $("#acts-wrap").addEventListener("change", (e) => {
-    const id = e.target.dataset.act; if (!id) return;
-    const a = S.actions.find((x) => x.id === id); if (!a) return;
-    a.hecho = e.target.checked; a.hechoAt = e.target.checked ? new Date().toISOString() : "";
-    e.target.blur(); renderActions();
-    upsert("compromisos/" + id, { hecho: a.hecho, hechoAt: a.hechoAt });
-  });
-  $("#acts-wrap").addEventListener("click", (e) => {
-    const b = e.target.closest("[data-del-act]"); if (!b || readOnly) return;
-    if (b.dataset.confirm) { const id = b.dataset.delAct; S.actions = S.actions.filter((a) => a.id !== id); renderActions(); delDoc("compromisos/" + id); }
-    else { b.dataset.confirm = "1"; b.textContent = "¿Seguro?"; setTimeout(() => { if (b.isConnected) { delete b.dataset.confirm; b.textContent = "Borrar"; } }, 3000); }
-  });
-  function addAction(texto, owner, fecha, origen) {
-    const a = { texto, owner, fecha: fecha || "", hecho: false, hechoAt: "", meta: "", origen: origen || "", creada: new Date().toISOString() };
-    const id = uid(); S.actions = [...S.actions, { id, ...a }]; renderActions(); setDoc("compromisos/" + id, a);
-  }
-  $("#act-form").addEventListener("submit", (e) => {
-    e.preventDefault(); if (readOnly) return;
-    const t = $("#a-texto").value.trim(); if (!t) return;
-    addAction(t, $("#a-owner").value, $("#a-fecha").value);
-    $("#a-texto").value = ""; $("#a-fecha").value = ""; $("#a-texto").focus(); toast("Compromiso agregado");
-  });
-
-  // ---------- Bitácora ----------
-  let sesTermo = 0, editingSes = null;
-  $("#ses-etapa").innerHTML = STAGES.map((s) => `<option value="${s.n}">${s.n} · ${esc(s.name)}</option>`).join("");
-  function renderSesTermo() { $$("#ses-termo button").forEach((b) => b.setAttribute("aria-pressed", String(+b.dataset.v === sesTermo))); }
-  $("#ses-termo").addEventListener("click", (e) => { const v = +e.target.dataset.v; if (!v) return; sesTermo = v; renderSesTermo(); });
-  function resetSesForm() {
-    $("#ses-form").reset(); editingSes = null; sesTermo = 0; renderSesTermo();
-    $("#ses-form-h").textContent = "Registrar sesión"; $("#ses-cancel").hidden = true;
-    $("#ses-fecha").value = todayStr(); $("#ses-etapa").value = String(S.cfg.stage || 1);
-    $("#ses-suggested").hidden = true; $("#ses-suggested").innerHTML = ""; $("#ses-ai-status").textContent = "";
-  }
-  $("#ses-cancel").addEventListener("click", resetSesForm);
-  function renderSessions() {
-    guarded($("#sessions-wrap"), () => {
-      const list = [...S.sessions].sort((a, b) => (b.n || 0) - (a.n || 0));
-      if (!list.length) {
-        $("#sessions-wrap").innerHTML = `<div class="empty"><b>La bitácora está vacía</b><span>Al terminar la primera sesión usa “Pasar notas a la bitácora”, o llena el registro de la derecha. Cada sesión guarda temas, aprendizajes, acuerdos y un termómetro del 1 al 5.</span></div>`;
-      } else {
-        $("#sessions-wrap").innerHTML = list.map((s) => {
-          const st = STAGES[(+s.etapa || 1) - 1];
-          const sec = (l, v) => v ? `<div class="sec"><span class="lbl">${l}</span><p>${esc(v)}</p></div>` : "";
-          const dots = s.termometro ? `<span class="dots" aria-label="Termómetro ${s.termometro} de 5">${[1, 2, 3, 4, 5].map((i) => `<i class="${i <= s.termometro ? "on" : ""}"></i>`).join("")}</span>` : "";
-          return `<article class="ses" data-id="${esc(s.id)}">
-            <div class="hd"><h3>Sesión ${esc(s.n)} <span class="dim" style="font-weight:500">· ${esc(fmtD(s.fecha, { weekday: "short", day: "numeric", month: "long" }))}</span></h3>${dots}</div>
-            <div><span class="chip ${+s.etapa <= 2 ? "warm" : ""}">Etapa ${st.n} · ${esc(st.name)}</span></div>
-            ${sec("Temas", s.temas)}${sec("Aprendizajes", s.aprendizajes)}${sec("Acuerdos", s.acuerdos)}
-            ${!s.temas && !s.aprendizajes && !s.acuerdos && s.notas ? sec("Notas", s.notas) : ""}
-            <div class="card-actions"><button class="x" type="button" data-edit-ses="${esc(s.id)}">Editar</button><button class="x" type="button" data-del-ses="${esc(s.id)}">Borrar</button></div>
-          </article>`;
-        }).join("");
-      }
-      applyRO();
-    });
-    renderStatus();
-  }
-  $("#sessions-wrap").addEventListener("click", (e) => {
-    const ed = e.target.closest("[data-edit-ses]");
-    if (ed && !readOnly) {
-      const s = S.sessions.find((x) => x.id === ed.dataset.editSes); if (!s) return;
-      editingSes = s.id;
-      $("#ses-fecha").value = s.fecha || ""; $("#ses-etapa").value = String(s.etapa || 1); $("#ses-notas").value = s.notas || "";
-      $("#ses-temas").value = s.temas || ""; $("#ses-aprend").value = s.aprendizajes || ""; $("#ses-acuerdos").value = s.acuerdos || "";
-      sesTermo = +s.termometro || 0; renderSesTermo();
-      $("#ses-form-h").textContent = "Editar sesión " + s.n; $("#ses-cancel").hidden = false;
-      $("#ses-form").scrollIntoView({ behavior: "smooth", block: "start" });
-      return;
-    }
-    const b = e.target.closest("[data-del-ses]"); if (!b || readOnly) return;
-    if (b.dataset.confirm) { const id = b.dataset.delSes; S.sessions = S.sessions.filter((s) => s.id !== id); renderSessions(); delDoc("sesiones/" + id); if (editingSes === id) resetSesForm(); }
-    else { b.dataset.confirm = "1"; b.textContent = "¿Seguro?"; setTimeout(() => { if (b.isConnected) { delete b.dataset.confirm; b.textContent = "Borrar"; } }, 3000); }
-  });
-  $("#ses-form").addEventListener("submit", (e) => {
-    e.preventDefault(); if (readOnly) return;
-    const prev = editingSes ? S.sessions.find((x) => x.id === editingSes) : null;
-    const n = prev ? prev.n : S.sessions.reduce((m, s) => Math.max(m, +s.n || 0), 0) + 1;
-    const s = { n, fecha: $("#ses-fecha").value, etapa: +$("#ses-etapa").value, notas: $("#ses-notas").value.trim(), temas: $("#ses-temas").value.trim(), aprendizajes: $("#ses-aprend").value.trim(), acuerdos: $("#ses-acuerdos").value.trim(), termometro: sesTermo, creada: prev ? prev.creada : new Date().toISOString() };
-    const id = editingSes || uid();
-    S.sessions = [...S.sessions.filter((x) => x.id !== id), { id, ...s }];
-    setDoc("sesiones/" + id, s);
-    if (!prev && s.etapa > (S.cfg.stage || 1)) setStage(s.etapa);
-    resetSesForm(); renderSessions(); toast(prev ? "Sesión actualizada" : "Sesión " + n + " guardada en la bitácora");
-  });
-
-  // ---------- AI (sample) ----------
-  function aiErr(e) {
-    const c = e && e.code;
-    if (c === "cancelled") return "";
-    if (c === "not_granted") return "No hay permiso para usar el asistente de IA en esta página. Actívalo desde el menú de permisos de la página.";
-    if (c === "rate_limited") return "Demasiadas solicitudes seguidas. Espera un minuto y vuelve a intentar.";
-    if (c === "invalid_json") return "La respuesta llegó incompleta. Intenta de nuevo, quizá con menos texto.";
-    return "No se pudo completar. Intenta de nuevo en un momento.";
-  }
-  const CONTEXT = () => `Contexto: programa de mentoría con la metodología MentorcliQ (5 etapas: 1 Construir confianza, 2 Definir dirección, 3 Avanzar con check-in de mitad de ciclo, 4 Cerrar el ciclo con networking, 5 Siguiente paso). Tema de la mentoría: inteligencia artificial. Quien mentorea: ${M()}. Quien recibe la mentoría (mentee): ${F()}. Escribe en español de México, claro y cálido, frases cortas.`;
-  $("#ses-ai").addEventListener("click", async () => {
-    if (!sample || readOnly) return;
-    const notes = $("#ses-notas").value.trim();
-    const st = $("#ses-ai-status");
-    if (!notes) { st.textContent = "Primero pega o escribe tus notas en bruto."; return; }
-    const btn = $("#ses-ai"); btn.disabled = true; st.textContent = "Ordenando notas… puede tardar unos segundos.";
-    try {
-      const out = await sample.json(`${CONTEXT()}
-
-Convierte estas notas en bruto de una sesión en un resumen para la bitácora. No inventes nada que no esté en las notas; si un apartado no tiene información, déjalo como cadena vacía.
-Responde SOLO con JSON con esta forma exacta:
-{"temas": "viñetas separadas por saltos de línea, cada una empieza con '• '", "aprendizajes": "igual", "acuerdos": "igual", "compromisos": [{"texto": "acción concreta en infinitivo", "responsable": "mentor" o "mentee"}]}
-
-Notas:
-"""${notes.slice(0, 12000)}"""`, { modelTier: "default" });
-      if (out && typeof out === "object") {
-        if (out.temas) $("#ses-temas").value = String(out.temas);
-        if (out.aprendizajes) $("#ses-aprend").value = String(out.aprendizajes);
-        if (out.acuerdos) $("#ses-acuerdos").value = String(out.acuerdos);
-        const cs = Array.isArray(out.compromisos) ? out.compromisos.filter((c) => c && c.texto).slice(0, 6) : [];
-        const box = $("#ses-suggested");
-        if (cs.length) {
-          box.hidden = false;
-          box.innerHTML = `<span class="lbl" style="margin-top:10px">Compromisos detectados</span>` + cs.map((c, i) => `<div><span>${esc(c.texto)} <span class="dim">· ${esc(c.responsable === "mentor" ? M() : F())}</span></span><button class="btn small ghost" type="button" data-sug="${i}">Agregar</button></div>`).join("");
-          box._items = cs;
-        } else { box.hidden = true; box.innerHTML = ""; }
-        st.textContent = "Listo. Revisa, ajusta y guarda.";
-      } else st.textContent = "La respuesta no tuvo el formato esperado. Intenta de nuevo.";
-    } catch (e) { st.textContent = aiErr(e); }
-    finally { btn.disabled = readOnly; }
-  });
-  $("#ses-suggested").addEventListener("click", (e) => {
-    const b = e.target.closest("[data-sug]"); if (!b || readOnly) return;
-    const c = $("#ses-suggested")._items[+b.dataset.sug]; if (!c) return;
-    const n = editingSes ? (S.sessions.find((x) => x.id === editingSes) || {}).n : S.sessions.reduce((m, s) => Math.max(m, +s.n || 0), 0) + 1;
-    addAction(String(c.texto), c.responsable === "mentor" ? "mentor" : "mentee", S.cfg.nextSession || "", n);
-    b.textContent = "Agregado"; b.disabled = true;
-  });
-
-  function renderPrep() {
-    const p = S.prep, out = $("#prep-out");
-    if (!p || !Array.isArray(p.agenda)) { out.innerHTML = ""; return; }
-    out.innerHTML = `
-      ${p.objetivo ? `<div><span class="lbl">Objetivo sugerido</span><p style="font-family:var(--f-display);font-size:1.05rem;font-weight:500">${esc(p.objetivo)}</p></div>` : ""}
-      <div><span class="lbl">Agenda</span><ol>${p.agenda.map((a) => `<li><span class="mono">${esc(a.min)}</span><span><b>${esc(a.bloque)}</b>${a.detalle ? ". " + esc(a.detalle) : ""}</span></li>`).join("")}</ol></div>
-      ${Array.isArray(p.preguntas) && p.preguntas.length ? `<div><span class="lbl">Preguntas</span><ul>${p.preguntas.map((q) => `<li>${esc(q)}</li>`).join("")}</ul></div>` : ""}
-      ${p.alerta ? `<div class="banner" style="margin:0">${esc(p.alerta)}</div>` : ""}
-      ${p.creada ? `<span class="dim" style="font-size:12px">Propuesta del ${esc(fmtD(p.creada.slice(0, 10), { day: "numeric", month: "long" }))}</span>` : ""}`;
-  }
-  $("#prep-go").addEventListener("click", async () => {
-    if (!sample || readOnly) return;
-    const st = $("#prep-status"), btn = $("#prep-go");
-    btn.disabled = true; st.textContent = "Leyendo metas, compromisos y bitácora…";
-    const stage = STAGES[(S.cfg.stage || 1) - 1];
-    const last = [...S.sessions].sort((a, b) => (b.n || 0) - (a.n || 0)).slice(0, 2);
-    const latestEval = [...S.evals].sort((a, b) => (a.fecha || "").localeCompare(b.fecha || "")).pop();
-    const data = {
-      etapaActual: stage.n + " " + stage.name + " (acción clave: " + stage.key.replace("{F}", F()) + ")",
-      proximaSesion: S.cfg.nextSession || "sin fecha",
-      sesionesRegistradas: S.sessions.length,
-      metas: S.goals.map((g) => ({ meta: g.titulo, medible: g.m, fecha: g.fecha, avance: (+g.avance || 0) + "%", area: areaName(g.area) })),
-      compromisosPendientes: S.actions.filter((a) => !a.hecho).map((a) => ({ texto: a.texto, responsable: a.owner === "mentor" ? M() : F(), fecha: a.fecha })),
-      ultimasSesiones: last.map((s) => ({ n: s.n, fecha: s.fecha, temas: s.temas || s.notas, acuerdos: s.acuerdos, termometro: s.termometro })),
-      radarIA: latestEval ? Object.fromEntries(AREAS.map((a) => [a.name, latestEval.valores && latestEval.valores[a.id]])) : "sin evaluación",
-      acuerdo: { frecuencia: S.agr.frecuencia, duracion: S.agr.duracion, aceptado: !!(S.agr.okM && S.agr.okF) },
-    };
-    try {
-      const out = await sample.json(`${CONTEXT()}
-
-Con estos datos de la mentoría, propone la agenda de la PRÓXIMA sesión de 60 minutos, adecuada a la etapa actual. Empieza revisando compromisos pendientes. Si la sesión que viene es la 3 o la 4, incluye el check-in de mitad de ciclo. Si no hay acuerdo aceptado o no hay metas, prioriza eso.
-Responde SOLO con JSON con esta forma exacta:
-{"objetivo": "una frase", "agenda": [{"min": "00–10", "bloque": "título corto", "detalle": "una frase"}], "preguntas": ["3 preguntas poderosas para ${F()}"], "alerta": "una frase si algo necesita atención (compromisos vencidos, metas sin avance, falta fecha), o null"}
-
-Datos:
-${JSON.stringify(data, null, 1).slice(0, 14000)}`, { modelTier: "default" });
-      if (out && Array.isArray(out.agenda)) {
-        const prep = { objetivo: String(out.objetivo || ""), agenda: out.agenda.slice(0, 8).map((a) => ({ min: String(a.min || ""), bloque: String(a.bloque || ""), detalle: String(a.detalle || "") })), preguntas: Array.isArray(out.preguntas) ? out.preguntas.slice(0, 5).map(String) : [], alerta: out.alerta ? String(out.alerta) : "", creada: new Date().toISOString() };
-        S.prep = prep; renderPrep(); setDoc("prog/prep", prep); st.textContent = "";
-      } else st.textContent = "La respuesta no tuvo el formato esperado. Intenta de nuevo.";
-    } catch (e) { st.textContent = aiErr(e); }
-    finally { btn.disabled = readOnly; }
-  });
-
-  // ---------- Radar (dumbbell) ----------
-  const xPct = (v) => ((Math.max(1, Math.min(5, v)) - 1) / 4) * 100;
-  function renderRadarFields() {
-    const latest = [...S.evals].sort((a, b) => (a.fecha || "").localeCompare(b.fecha || "")).pop();
-    $("#rad-fields").innerHTML = AREAS.map((a) => {
-      const v = latest && latest.valores && latest.valores[a.id] ? latest.valores[a.id] : 2;
-      return `<div class="rad-f"><div class="top-l"><b>${esc(a.name)}</b><output id="out-${a.id}">${v} · ${LEVELS[v]}</output></div>
-        <input type="range" min="1" max="5" step="1" value="${v}" id="rad-${a.id}" data-rad="${a.id}" aria-label="${esc(a.name)}"><small>${esc(a.hint)}</small></div>`;
-    }).join("");
-    if (!$("#rad-fecha").value) $("#rad-fecha").value = todayStr();
-    $("#rad-label").value = S.evals.length ? "Seguimiento" : "Línea base";
-    applyRO();
-  }
-  $("#rad-fields").addEventListener("input", (e) => { const id = e.target.dataset.rad; if (!id) return; const v = +e.target.value; $("#out-" + id).textContent = v + " · " + LEVELS[v]; });
-  function renderChart() {
-    const evals = [...S.evals].sort((a, b) => (a.fecha || "").localeCompare(b.fecha || "") || (a.creada || "").localeCompare(b.creada || ""));
-    const base = evals[0], now = evals.length > 1 ? evals[evals.length - 1] : null;
-    const chart = $("#chart");
-    if (!base) {
-      chart.innerHTML = `<div class="empty"><b>Aún no hay evaluaciones</b><span>Pide a ${esc(F())} que califique cada área del 1 al 5 antes de la primera sesión. Esa será la línea base; al repetirla verán aquí cuánto se movió cada área.</span></div>`;
-      $("#rad-table").innerHTML = ""; return;
-    }
-    const ticks = [1, 2, 3, 4, 5].map((v) => `<span style="left:${xPct(v)}%">${v}</span>`).join("");
-    const grid = [1, 2, 3, 4, 5].map((v) => `<span class="g" style="left:${xPct(v)}%"></span>`).join("");
-    const legend = now
-      ? `<span><i class="sw-base"></i>${esc(base.etiqueta || "Línea base")} · ${esc(fmtD(base.fecha, { day: "numeric", month: "short" }))}</span><span><i class="sw-now"></i>${esc(now.etiqueta || "Actual")} · ${esc(fmtD(now.fecha, { day: "numeric", month: "short" }))}</span>`
-      : `<span><i class="sw-now"></i>${esc(base.etiqueta || "Línea base")} · ${esc(fmtD(base.fecha, { day: "numeric", month: "short" }))}</span><span class="dim">Guarda otra evaluación para ver el avance</span>`;
-    const rows = AREAS.map((a) => {
-      const b = +(base.valores || {})[a.id] || 0, n = now ? +(now.valores || {})[a.id] || 0 : null;
-      let marks = "", delta = "", tipTxt = "";
-      if (now && b && n) {
-        const lo = Math.min(b, n), hi = Math.max(b, n);
-        marks = `<span class="conn" style="left:${xPct(lo)}%;width:${xPct(hi) - xPct(lo)}%"></span><span class="dot base" style="left:${xPct(b)}%"></span><span class="dot now" style="left:${xPct(n)}%"></span>`;
-        const d = n - b; delta = `<span class="delta ${d === 0 ? "zero" : ""}">${d > 0 ? "+" + d : d === 0 ? "=" : d}</span>`;
-        tipTxt = `${a.name}: ${b} (${LEVELS[b]}) → ${n} (${LEVELS[n]})`;
-      } else if (b) {
-        marks = `<span class="dot now" style="left:${xPct(b)}%"></span>`; delta = `<span class="delta zero mono">${b}</span>`;
-        tipTxt = `${a.name}: ${b} (${LEVELS[b]})`;
-      }
-      return `<div class="db-row" tabindex="0" data-tip="${esc(tipTxt)}" aria-label="${esc(tipTxt)}"><span class="name">${esc(a.name)}</span><div class="db-track">${grid}${marks}</div>${delta}</div>`;
-    }).join("");
-    chart.innerHTML = `<div class="legend">${legend}</div><div class="db-axis"><span></span><div class="ticks">${ticks}</div><span></span></div>${rows}<p class="scale-note">1 Curiosidad · 2 Exploro · 3 Lo uso seguido · 4 Lo aplico con impacto · 5 Lo enseño a otros</p><div class="tip" id="tip" hidden></div>`;
-    // history table (the chart's table view)
-    $("#rad-table").innerHTML = `<table><thead><tr><th>Momento</th><th>Fecha</th>${AREAS.map((a) => `<th title="${esc(a.name)}">${esc(a.name.split(" ")[0])}</th>`).join("")}<th></th></tr></thead><tbody>${evals.map((e) => `<tr><td>${esc(e.etiqueta || "")}</td><td>${esc(fmtD(e.fecha, { day: "numeric", month: "short", year: "numeric" }))}</td>${AREAS.map((a) => `<td class="num">${esc((e.valores || {})[a.id] || "–")}</td>`).join("")}<td><button class="x" type="button" data-del-eval="${esc(e.id)}">Borrar</button></td></tr>`).join("")}</tbody></table>`;
-    applyRO();
-  }
-  function showTip(row) {
-    const tip = $("#tip"); if (!tip || !row.dataset.tip) return;
-    tip.textContent = row.dataset.tip; tip.hidden = false;
-    const c = $("#chart").getBoundingClientRect(), r = row.getBoundingClientRect();
-    tip.style.top = (r.top - c.top - tip.offsetHeight - 4) + "px";
-    tip.style.left = Math.max(0, Math.min(c.width - tip.offsetWidth, r.left - c.left + r.width / 2 - tip.offsetWidth / 2)) + "px";
-  }
-  const hideTip = () => { const t = $("#tip"); if (t) t.hidden = true; };
-  $("#chart").addEventListener("mouseover", (e) => { const r = e.target.closest(".db-row"); if (r) showTip(r); });
-  $("#chart").addEventListener("mouseleave", hideTip);
-  $("#chart").addEventListener("focusin", (e) => { const r = e.target.closest(".db-row"); if (r) showTip(r); });
-  $("#chart").addEventListener("focusout", hideTip);
-  $("#rad-table").addEventListener("click", (e) => {
-    const b = e.target.closest("[data-del-eval]"); if (!b || readOnly) return;
-    if (b.dataset.confirm) { const id = b.dataset.delEval; S.evals = S.evals.filter((x) => x.id !== id); renderChart(); delDoc("radar/" + id); }
-    else { b.dataset.confirm = "1"; b.textContent = "¿Seguro?"; setTimeout(() => { if (b.isConnected) { delete b.dataset.confirm; b.textContent = "Borrar"; } }, 3000); }
-  });
-  $("#rad-form").addEventListener("submit", (e) => {
-    e.preventDefault(); if (readOnly) return;
-    const ev = { etiqueta: $("#rad-label").value, fecha: $("#rad-fecha").value || todayStr(), valores: Object.fromEntries(AREAS.map((a) => [a.id, +$("#rad-" + a.id).value])), creada: new Date().toISOString() };
-    const id = uid(); S.evals = [...S.evals, { id, ...ev }]; renderChart(); renderRadarFields(); setDoc("radar/" + id, ev);
-    toast("Evaluación guardada");
-  });
-
-  // ---------- Tabs ----------
-  function showTab(t) {
-    if (!TABS.includes(t)) t = "sesion1";
-    TABS.forEach((k) => { $("#" + k).hidden = k !== t; $("#tab-" + k).setAttribute("aria-selected", String(k === t)); $("#tab-" + k).tabIndex = k === t ? 0 : -1; });
-    ls.set("m1-tab", t);
-    renderBanner();
-    if (t === "cadaquien") renderParts();
-  }
-  $$(".tab").forEach((b) => b.addEventListener("click", () => { showTab(b.id.slice(4)); }));
-  $(".tabs").addEventListener("keydown", (e) => {
-    if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
-    const i = TABS.findIndex((k) => $("#tab-" + k).getAttribute("aria-selected") === "true");
-    const n = TABS[(i + (e.key === "ArrowRight" ? 1 : TABS.length - 1)) % TABS.length];
-    showTab(n); $("#tab-" + n).focus();
-  });
+  // ---------- Events ----------
   document.addEventListener("click", (e) => {
-    const g = e.target.closest("[data-goto]"); if (g) { if (g.dataset.who) { suggWho = g.dataset.who; renderSugg(); } showTab(g.dataset.goto); window.scrollTo({ top: $(".tabbar").offsetTop - 4, behavior: "smooth" }); return; }
+    const tab = e.target.closest(".tab"); if (tab) { showTab(tab.id.slice(4)); return; }
     const sb = e.target.closest(".stage-btn");
     if (sb) { showTab("ruta"); setTimeout(() => { const c = $("#stage-" + sb.dataset.stage); if (c) c.scrollIntoView({ behavior: "smooth", block: "center" }); }, 40); return; }
-    const ss = e.target.closest(".stage-set"); if (ss) setStage(+ss.dataset.stage);
+    if (e.target.closest("#clock-go")) { if (clock.start) { clock.acc = elapsed(); clock.start = null; clearInterval(clockT); } else { clock.start = Date.now(); clockT = setInterval(renderClock, 1000); } ls.set("clock", clock); renderClock(); return; }
+    if (e.target.closest("#clock-reset")) { clock = { start: null, acc: 0 }; clearInterval(clockT); ls.set("clock", clock); renderClock(); }
   });
-  $("#swap")?.addEventListener("click", () => {
-    if (readOnly) return;
-    const m = M(), f = F(); S.cfg.mentor = f; S.cfg.mentee = m; applyNames(); renderAll();
-    upsert("prog/config", { mentor: f, mentee: m }); toast("Ahora " + f + " mentorea a " + m);
-  });
-
-  function renderAll() { renderStatus(); renderStages(); renderRun(); renderAgreement(); renderGoals(); renderActions(); renderSessions(); renderPrep(); renderChart(); renderSugg(); }
-
-  // ---------- Local store (this browser only) ----------
-  function localDb() {
-    const KEY = "mentoria-db-v1";
-    const store = ls.get(KEY, {}) || {};
-    const subs = [];
-    const save = () => ls.set(KEY, store);
-    const clone = (o) => JSON.parse(JSON.stringify(o));
-    const inColl = (coll, p) => p.startsWith(coll + "/") && !p.slice(coll.length + 1).includes("/");
-    const snapDoc = (path) => { const d = store[path]; return { id: path.split("/").pop(), exists: !!d, data: () => (d ? clone(d) : undefined), metadata: { fromCache: false, hasPendingWrites: false } }; };
-    const snapColl = (coll) => { const docs = Object.keys(store).filter((p) => inColl(coll, p)).sort().map(snapDoc); return { docs, size: docs.length, empty: !docs.length }; };
-    const notify = (path) => setTimeout(() => subs.slice().forEach((s) => {
-      if (s.kind === "doc" && s.path === path) s.fn(snapDoc(path));
-      else if (s.kind === "coll" && inColl(s.path, path)) s.fn(snapColl(s.path));
-    }), 0);
-    const merge = (a, b) => { for (const k of Object.keys(b)) { const x = a[k], y = b[k]; if (y && typeof y === "object" && !Array.isArray(y) && x && typeof x === "object" && !Array.isArray(x)) merge(x, y); else a[k] = y; } return a; };
-    const listen = (kind, path, fn, snap) => { const s = { kind, path, fn }; subs.push(s); setTimeout(() => fn(snap()), 0); return () => { const i = subs.indexOf(s); if (i >= 0) subs.splice(i, 1); }; };
-    const docRef = (path) => ({
-      id: path.split("/").pop(), path,
-      async get() { return snapDoc(path); },
-      async set(data) { store[path] = clone(data); save(); notify(path); },
-      async update(data) { if (!store[path]) throw { code: "invalid_argument", message: "Document does not exist" }; merge(store[path], clone(data)); save(); notify(path); },
-      async delete() { delete store[path]; save(); notify(path); },
-      onSnapshot(fn) { return listen("doc", path, fn, () => snapDoc(path)); },
-    });
-    return {
-      doc: docRef,
-      collection: (path) => ({ path, doc: (id) => docRef(path + "/" + id), onSnapshot(fn) { return listen("coll", path, fn, () => snapColl(path)); } }),
-    };
-  }
-
-  // "¿Quién eres?" decides whose part is "yours" in this browser
-  function renderWho() { $$(".who-seg button").forEach((b) => b.setAttribute("aria-pressed", String(!!localMeName && localMeName === (b.dataset.me === "m" ? M() : F())))); }
-  document.addEventListener("click", (e) => {
-    const b = e.target.closest(".who-seg [data-me]"); if (!b) return;
-    localMeName = b.dataset.me === "m" ? M() : F(); ls.set("m1-me", localMeName);
-    renderWho(); renderStatus(); toast("Listo, " + localMeName + ": lo tuyo aparece resaltado");
-  });
-
-  // ---------- Mandar avances a Valeria ----------
-  function buildSummary() {
-    const L = [], sm = { day: "numeric", month: "short" };
-    L.push(`Avances de ${F()} · Mentoría en IA (${fmtD(todayStr(), { weekday: "long", day: "numeric", month: "long" })})`, "");
-    const pc = (S.parts.mentee && S.parts.mentee.checks) || {};
-    L.push(`Preparación para la sesión 1: ${prepDone("mentee")} de ${ROLE.mentee.prep.length}`);
-    ROLE.mentee.prep.forEach((p) => L.push(`${pc[p.id] ? "✅" : "⬜"} ${txt(p.t)}`));
-    const ev = [...S.evals].sort((a, b) => (a.fecha || "").localeCompare(b.fecha || "") || (a.creada || "").localeCompare(b.creada || "")).pop();
-    if (ev) {
-      L.push("", `Radar IA (${ev.etiqueta || "evaluación"}, ${fmtD(ev.fecha, sm)}):`);
-      AREAS.forEach((a) => { const v = +((ev.valores || {})[a.id]) || 0; if (v) L.push(`• ${a.name}: ${v} · ${LEVELS[v]}`); });
-    }
-    const notes = S.run.notes || {}, nb = BLOCKS.filter((b) => (notes[b.id] || "").trim());
-    if (nb.length) { L.push("", "Mis notas de la sesión 1:"); nb.forEach((b) => L.push(`• ${b.title}: ${notes[b.id].trim()}`)); }
-    const goals = S.goals.filter((g) => (g.duenio || "mentee") === "mentee");
-    if (goals.length) { L.push("", "Mis metas:"); goals.forEach((g) => L.push(`• ${g.titulo} · ${+g.avance || 0} %${g.fecha ? " · para el " + fmtD(g.fecha, sm) : ""}`)); }
-    const acts = S.actions.filter((a) => a.owner === "mentee");
-    if (acts.length) { L.push("", "Mis compromisos:"); acts.forEach((a) => L.push(`${a.hecho ? "✅" : "⬜"} ${a.texto}${a.fecha ? " · " + fmtD(a.fecha, sm) : ""}`)); }
-    const last = [...S.sessions].sort((a, b) => (b.n || 0) - (a.n || 0))[0];
-    if (last && (last.aprendizajes || last.acuerdos)) { L.push("", `Sesión ${last.n}:`); if (last.aprendizajes) L.push(`Aprendí: ${last.aprendizajes}`); if (last.acuerdos) L.push(`Acordamos: ${last.acuerdos}`); }
-    return L.join("\n");
-  }
-  document.addEventListener("click", async (e) => {
-    const id = e.target && e.target.id; if (!["send-wa", "send-mail", "send-copy"].includes(id)) return;
-    const text = buildSummary(); const pre = $("#send-preview"); if (pre) pre.textContent = text;
-    if (id === "send-wa") window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank", "noopener");
-    else if (id === "send-mail") location.href = "mailto:?subject=" + encodeURIComponent("Avances de " + F() + " · mentoría en IA") + "&body=" + encodeURIComponent(text);
-    else {
-      try { await navigator.clipboard.writeText(text); toast("Copiado. Pégalo en el chat con " + M()); }
-      catch { const r = document.createRange(); r.selectNodeContents(pre); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); toast("Texto seleccionado: cópialo y pégalo en el chat con " + M()); }
-    }
+  document.addEventListener("keydown", (e) => {
+    if (!e.target.closest || !e.target.closest(".tabs") || (e.key !== "ArrowRight" && e.key !== "ArrowLeft")) return;
+    const i = TABS.findIndex(([id]) => $("#tab-" + id).getAttribute("aria-selected") === "true");
+    const n = TABS[(i + (e.key === "ArrowRight" ? 1 : TABS.length - 1)) % TABS.length][0];
+    showTab(n); $("#tab-" + n).focus();
   });
 
   // ---------- Boot ----------
-  const initial = (location.hash || "").slice(1);
-  showTab(TABS.includes(initial) ? initial : ls.get("m1-tab", "sesion1"));
-  applyNames(); renderAll(); renderRadarFields(); resetSesForm(); renderClock();
-
-  (async () => {
-    const dbNs = localDb(), userNs = null, sampleNs = null;
-    myId = "local";
-    localMeName = F(); renderWho();
-    sample = sampleNs;
-    $$(".ai-only").forEach((el) => (el.hidden = !sample));
-    if (!dbNs) { offline = true; renderBanner(); return; }
-    db = dbNs;
-    if (userNs) {
-      try { const cw = await userNs.can("data.write"); if (cw === false) setReadOnly(true); } catch {}
-      try { isOwnerV = await userNs.isOwner(); } catch {}
-      try { myId = await userNs.id(); } catch {}
-      renderStatus();
-    }
-    const err = (e) => { if (e && e.code === "revoked") { offline = true; renderBanner(); } };
-    const docs = (qs) => qs.docs.map((d) => ({ id: d.id, ...d.data() }));
-    db.doc("prog/config").onSnapshot((s) => { S.cfg = { ...DEFAULT_CFG, ...(s.exists ? s.data() : {}) }; applyNames(); renderWho(); renderStatus(); renderStages(); renderRun(); renderActions(); renderSessions(); }, err);
-    db.doc("prog/acuerdo").onSnapshot((s) => { S.agr = s.exists ? { ...s.data() } : {}; renderAgreement(); }, err);
-    db.doc("prog/sesion1").onSnapshot((s) => { const d = s.exists ? s.data() : {}; S.run = { checks: { ...(d.checks || {}) }, notes: { ...(d.notes || {}) }, termo: d.termo || 0 }; renderRun(); }, err);
-    db.doc("prog/prep").onSnapshot((s) => { S.prep = s.exists ? s.data() : null; renderPrep(); }, err);
-    ["mentor", "mentee"].forEach((role) => db.doc("partes/" + role).onSnapshot((s) => { S.parts[role] = { checks: { ...((s.exists && s.data().checks) || {}) } }; renderRailPrep(); renderParts(); }, err));
-    if (myId) db.doc("data/users/" + myId + "/notas").onSnapshot((s) => { S.priv = s.exists ? String(s.data().texto || "") : ""; const t = $("#priv-notas"); if (t && t !== document.activeElement) t.value = S.priv; }, err);
-    db.collection("metas").onSnapshot((qs) => { S.goals = docs(qs); renderGoals(); renderActions(); }, err);
-    db.collection("compromisos").onSnapshot((qs) => { S.actions = docs(qs); renderActions(); }, err);
-    db.collection("sesiones").onSnapshot((qs) => { S.sessions = docs(qs); renderSessions(); }, err);
-    db.collection("radar").onSnapshot((qs) => { S.evals = docs(qs); renderChart(); if (!$("#rad-form").contains(document.activeElement)) renderRadarFields(); }, err);
-  })();
+  if (!DATA || !DATA.tblConfig) {
+    document.body.insertAdjacentHTML("afterbegin", `<div class="wrap" style="padding-block:40px">${empty("Esta es la plantilla", "Abre la página generada en la carpeta «paginas».")}</div>`);
+    return;
+  }
+  if (LAM) { montarLaminas(); return; }
+  renderHeader(); renderTabs(); renderFooter();
+  const h = (location.hash || "").slice(1);
+  showTab(TABS.some(([id]) => id === h) ? h : ls.get("tab", "sesion1"));
+  renderClock(); if (clock.start) clockT = setInterval(renderClock, 1000);
 })();
 </script>
 </body>
